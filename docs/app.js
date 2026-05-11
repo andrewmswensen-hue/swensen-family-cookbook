@@ -1,17 +1,17 @@
 // Swensen Family Cookbook — single-page app
 // Hash-based routes:
-//   #/                    home (search + section grid)
-//   #/section/:section     section page (recipes grouped by subsection)
-//   #/section/:section/:subsection  drill into a specific subsection
-//   #/recipe/:id           individual recipe
-//   #/search/:query        search results
-//   #/submit               submit-a-recipe form
+//   #/                              home (search + section grid)
+//   #/section/:section              section page — if it has subsections,
+//                                   shows subsection cards; otherwise flat list
+//   #/section/:section/:subsection  flat recipe list for that subsection
+//   #/recipe/:id                    individual recipe
+//   #/search/:query                 permalink to a search result
 
 const app = document.getElementById("app");
 const countEl = document.getElementById("recipe-count");
 
-let RECIPES = [];          // array
-let BY_ID = new Map();     // id → recipe
+let RECIPES = [];
+let BY_ID = new Map();
 
 // Section ordering + emoji icons for the home grid
 const SECTION_META = [
@@ -29,36 +29,61 @@ const SECTION_META = [
   { name: "Kid's Stuff", icon: "🎨" },
 ];
 
+const SUBSECTION_META = {
+  // Appetizers
+  "Dips & Spreads": "🥣",
+  "Salsas": "🌶️",
+  "Wings": "🍗",
+  "Other Appetizers": "🥨",
+  // Breads
+  "Loaf & Quick Breads": "🍞",
+  "Cinnamon Rolls & Crescents": "🥐",
+  "Muffins & Scones": "🧁",
+  "Biscuits & Savory": "🥯",
+  "Jams": "🍓",
+  // Vegetables & Sides
+  "Potatoes": "🥔",
+  "Vegetables": "🥦",
+  "Other Sides": "🌽",
+  // Rice, Beans & Pasta
+  "Rice": "🍚",
+  "Beans": "🫘",
+  "Pasta": "🍝",
+  // Main Dishes
+  "Beef": "🥩",
+  "Chicken & Turkey": "🍗",
+  "Pork & Sausage": "🥓",
+  "Seafood": "🐟",
+  // Desserts
+  "Cookies": "🍪",
+  "Brownies & Bars": "🟫",
+  "Cakes": "🎂",
+  "Pies": "🥧",
+  "Other Desserts": "🍮",
+  "Frostings & Icings": "🍦",
+  "Candy": "🍬",
+};
+
 // ── Scroll-position memory ────────────────────────────────────────────────
-// On forward navigation (clicking into a recipe or section) we jump to the top
-// of the new page.  On back navigation (browser back, or one of our "← Back"
-// links), we restore the scroll position you were at on the previous view.
-const scrollPositions = {};   // hash → scroll offset
+const scrollPositions = {};
 let lastHash = location.hash || "#/";
-let backNav = false;          // true when popstate just fired
+let backNav = false;
 
 window.addEventListener("popstate", () => { backNav = true; });
-
-// Disable the browser's automatic scroll-restore — we handle it manually so
-// the timing lines up with our render() calls.
 if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
 function saveScroll() {
   scrollPositions[lastHash] = window.scrollY || document.documentElement.scrollTop;
 }
-
 function applyScroll(newHash) {
   if (backNav && scrollPositions[newHash] !== undefined) {
-    // Restore the position from where we left off.  Defer until after render.
     requestAnimationFrame(() => window.scrollTo(0, scrollPositions[newHash]));
   } else {
-    // Forward navigation — start at the top of the new view.
     window.scrollTo(0, 0);
   }
   backNav = false;
   lastHash = newHash;
 }
-
 function routeWithScroll() {
   saveScroll();
   route();
@@ -92,7 +117,6 @@ function route() {
   }
   if (parts[0] === "recipe" && parts[1]) return renderRecipe(parts[1]);
   if (parts[0] === "search" && parts[1]) return renderSearch(parts[1]);
-  if (parts[0] === "submit") return renderSubmit();
 
   return renderHome();
 }
@@ -106,12 +130,7 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
 }
-
 function escapeAttr(str) { return escapeHtml(str); }
-
-function slugify(s) {
-  return s.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-");
-}
 
 function recipesInSection(section, subsection) {
   return RECIPES.filter(r =>
@@ -121,18 +140,33 @@ function recipesInSection(section, subsection) {
 }
 
 function uniqueSubsections(section) {
-  const subs = new Set();
+  // Return in source order so the cards mirror the cookbook's natural progression.
+  const subs = [];
+  const seen = new Set();
   for (const r of RECIPES) {
-    if (r.section === section && r.subsection) subs.add(r.subsection);
+    if (r.section === section && r.subsection && !seen.has(r.subsection)) {
+      subs.push(r.subsection);
+      seen.add(r.subsection);
+    }
   }
-  return Array.from(subs);
+  return subs;
+}
+
+function searchRecipes(q) {
+  const needle = q.toLowerCase().trim();
+  if (!needle) return [];
+  return RECIPES.filter(r => {
+    if (r.title.toLowerCase().includes(needle)) return true;
+    if (r.credit && r.credit.toLowerCase().includes(needle)) return true;
+    if (r.section.toLowerCase().includes(needle)) return true;
+    if (r.subsection && r.subsection.toLowerCase().includes(needle)) return true;
+    if (r.tags && r.tags.some(t => t.toLowerCase().includes(needle))) return true;
+    if (r.body.toLowerCase().includes(needle)) return true;
+    return false;
+  });
 }
 
 // ── Body markdown → HTML ──────────────────────────────────────────────────
-// The body uses a custom markdown:
-//   "### Foo"            → subheader
-//   short ingredient line → bulleted ingredient
-//   longer prose         → instruction step
 function classifyLine(raw) {
   const line = raw.trim();
   if (!line) return null;
@@ -149,21 +183,77 @@ function classifyLine(raw) {
 
 function renderBody(bodyMd) {
   const lines = bodyMd.split("\n").map(classifyLine).filter(Boolean);
-  const html = [];
-  for (const item of lines) {
-    if (item.type === "subheader") html.push(`<h3 class="subheader">${escapeHtml(item.text)}</h3>`);
-    else if (item.type === "ingredient") html.push(`<div class="ingredient">${escapeHtml(item.text)}</div>`);
-    else html.push(`<p class="step">${escapeHtml(item.text)}</p>`);
-  }
-  return html.join("\n");
+  return lines.map(item => {
+    if (item.type === "subheader") return `<h3 class="subheader">${escapeHtml(item.text)}</h3>`;
+    if (item.type === "ingredient") return `<div class="ingredient">${escapeHtml(item.text)}</div>`;
+    return `<p class="step">${escapeHtml(item.text)}</p>`;
+  }).join("\n");
 }
+
+// ── Search-bar wiring (shared between Home and Search views) ──────────────
+//
+// CRITICAL: the input element is created ONCE per view and never re-rendered
+// while the user is typing.  Re-rendering destroys the focused element and
+// closes the mobile keyboard — which was the bug.  Live results land in a
+// separate <div id="inline-results"> that we update in place.
+function wireSearchInput({ inputEl, resultsEl, gridEl, initialQuery }) {
+  function update() {
+    const q = inputEl.value.trim();
+    if (!q) {
+      if (resultsEl) resultsEl.style.display = "none";
+      if (gridEl) gridEl.style.display = "grid";
+      return;
+    }
+    const matches = searchRecipes(q);
+    if (gridEl) gridEl.style.display = "none";
+    if (resultsEl) {
+      resultsEl.style.display = "block";
+      resultsEl.innerHTML = `
+        <header class="section-header">
+          <h1>Search: "${escapeHtml(q)}"</h1>
+          <div class="subtitle">${matches.length} ${matches.length === 1 ? "match" : "matches"}</div>
+        </header>
+        ${renderRecipeList(matches)}
+      `;
+    }
+  }
+
+  inputEl.addEventListener("input", update);
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      inputEl.blur();   // dismiss the mobile keyboard on submit
+      const q = inputEl.value.trim();
+      if (q) {
+        // Commit to a shareable URL.  We use replaceState to avoid spamming
+        // history with one entry per keystroke.
+        history.replaceState(null, "", `#/search/${encodeURIComponent(q)}`);
+      }
+    }
+  });
+
+  if (initialQuery) {
+    inputEl.value = initialQuery;
+    update();
+  }
+}
+
+const SEARCH_BAR_HTML = (placeholder = "Search recipes, ingredients, or tags…") => `
+  <div class="search-bar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input id="search-input" type="search" placeholder="${escapeAttr(placeholder)}" autocomplete="off" enterkeyhint="search" />
+  </div>
+`;
 
 // ── Views ─────────────────────────────────────────────────────────────────
 function renderHome() {
-  const sections = SECTION_META.map(meta => {
-    const count = RECIPES.filter(r => r.section === meta.name).length;
-    return { ...meta, count };
-  }).filter(s => s.count > 0);
+  const sections = SECTION_META.map(meta => ({
+    ...meta,
+    count: RECIPES.filter(r => r.section === meta.name).length,
+  })).filter(s => s.count > 0);
 
   const cards = sections.map(s => `
     <a class="section-card" href="#/section/${encodeURIComponent(s.name)}">
@@ -179,23 +269,16 @@ function renderHome() {
     <section class="hero">
       <h1>What are we cooking?</h1>
       <p>${RECIPES.length} family recipes, one search away.</p>
-      <div class="search-bar">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input id="search-input" type="search" placeholder="Search recipes, ingredients, or tags…" autocomplete="off" autofocus />
-      </div>
+      ${SEARCH_BAR_HTML()}
     </section>
-    <div class="section-grid">${cards}</div>
+    <div id="inline-results" style="display:none"></div>
+    <div id="section-grid" class="section-grid">${cards}</div>
   `;
 
-  const input = document.getElementById("search-input");
-  input.addEventListener("input", (e) => {
-    const q = e.target.value.trim();
-    if (q.length >= 2) {
-      // Live-search: update hash without full re-render until they press enter
-      // For simplicity, jump to search route on every change >= 2 chars
-      // (Cheap because RECIPES is in memory)
-      location.hash = `#/search/${encodeURIComponent(q)}`;
-    }
+  wireSearchInput({
+    inputEl: document.getElementById("search-input"),
+    resultsEl: document.getElementById("inline-results"),
+    gridEl: document.getElementById("section-grid"),
   });
 }
 
@@ -206,39 +289,53 @@ function renderSection(sectionName, subsection) {
   }
 
   const subsections = uniqueSubsections(sectionName);
-  const filtered = subsection
+  const showingSubsection = !!subsection;
+  const recipes = showingSubsection
     ? recipesInSection(sectionName, subsection)
     : recipesInSection(sectionName);
 
-  // Group display
-  let groupedHtml;
-  if (subsection || subsections.length === 0) {
-    groupedHtml = renderRecipeList(filtered);
-  } else {
-    // Render each subsection in turn
-    const groups = subsections.map(sub => ({ sub, items: recipesInSection(sectionName, sub) }));
-    const ungrouped = RECIPES.filter(r => r.section === sectionName && !r.subsection);
-    if (ungrouped.length) groups.unshift({ sub: null, items: ungrouped });
-    groupedHtml = groups.filter(g => g.items.length > 0).map(g => `
-      ${g.sub ? `<h2 class="subsection-header">${escapeHtml(g.sub)}</h2>` : ""}
-      ${renderRecipeList(g.items)}
-    `).join("");
-  }
-
   const icon = section ? section.icon : "🍴";
   const back = `<a href="#/" class="btn btn-back">← Back to home</a>`;
-  const subBreadcrumb = subsection
+  const subBreadcrumb = showingSubsection
     ? `<div class="recipe-section-trail"><a href="#/section/${encodeURIComponent(sectionName)}">${escapeHtml(sectionName)}</a> · ${escapeHtml(subsection)}</div>`
     : "";
 
+  // Case 1: subsection cards (intermediate level)
+  if (!showingSubsection && subsections.length > 0) {
+    const subsectionCards = subsections.map(sub => {
+      const count = recipesInSection(sectionName, sub).length;
+      const subIcon = SUBSECTION_META[sub] || icon;
+      return `
+        <a class="section-card" href="#/section/${encodeURIComponent(sectionName)}/${encodeURIComponent(sub)}">
+          <div>
+            <div class="icon">${subIcon}</div>
+            <div class="name">${escapeHtml(sub)}</div>
+          </div>
+          <div class="count">${count} ${count === 1 ? "recipe" : "recipes"}</div>
+        </a>
+      `;
+    }).join("");
+
+    app.innerHTML = `
+      ${back}
+      <header class="section-header">
+        <h1>${icon} ${escapeHtml(sectionName)}</h1>
+        <div class="subtitle">${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"} in ${subsections.length} ${subsections.length === 1 ? "category" : "categories"}</div>
+      </header>
+      <div class="section-grid">${subsectionCards}</div>
+    `;
+    return;
+  }
+
+  // Case 2: flat list (no subsections, or a specific subsection is selected)
   app.innerHTML = `
     ${back}
     ${subBreadcrumb}
     <header class="section-header">
-      <h1>${icon} ${escapeHtml(subsection || sectionName)}</h1>
-      <div class="subtitle">${filtered.length} ${filtered.length === 1 ? "recipe" : "recipes"}</div>
+      <h1>${showingSubsection ? (SUBSECTION_META[subsection] || icon) : icon} ${escapeHtml(subsection || sectionName)}</h1>
+      <div class="subtitle">${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"}</div>
     </header>
-    ${groupedHtml}
+    ${renderRecipeList(recipes)}
   `;
 }
 
@@ -288,40 +385,22 @@ function renderRecipe(id) {
 }
 
 function renderSearch(query) {
-  const q = query.toLowerCase().trim();
-  const matches = RECIPES.filter(r => {
-    if (r.title.toLowerCase().includes(q)) return true;
-    if (r.credit && r.credit.toLowerCase().includes(q)) return true;
-    if (r.section.toLowerCase().includes(q)) return true;
-    if (r.subsection && r.subsection.toLowerCase().includes(q)) return true;
-    if (r.tags && r.tags.some(t => t.toLowerCase().includes(q))) return true;
-    if (r.body.toLowerCase().includes(q)) return true;
-    return false;
-  });
-
+  // /search/<q> is a permalink view — but we still keep the input stable
+  // so typing more characters doesn't kill focus on mobile.
   app.innerHTML = `
     <a href="#/" class="btn btn-back">← Back to home</a>
-    <header class="section-header">
-      <h1>Search: "${escapeHtml(query)}"</h1>
-      <div class="subtitle">${matches.length} ${matches.length === 1 ? "match" : "matches"}</div>
-    </header>
-    <div class="search-bar" style="margin: 1.2rem 0 1.8rem;">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      <input id="search-input" type="search" value="${escapeAttr(query)}" autofocus />
-    </div>
-    ${renderRecipeList(matches)}
+    <section class="hero" style="padding: 1rem 0 0.5rem;">
+      ${SEARCH_BAR_HTML()}
+    </section>
+    <div id="inline-results"></div>
   `;
-  const input = document.getElementById("search-input");
-  input.setSelectionRange(input.value.length, input.value.length);
-  input.addEventListener("input", (e) => {
-    const v = e.target.value.trim();
-    if (v.length >= 2) {
-      history.replaceState(null, "", `#/search/${encodeURIComponent(v)}`);
-      renderSearch(v);
-    } else if (v.length === 0) {
-      location.hash = "#/";
-    }
+  wireSearchInput({
+    inputEl: document.getElementById("search-input"),
+    resultsEl: document.getElementById("inline-results"),
+    gridEl: null,
+    initialQuery: query,
   });
+  document.getElementById("search-input").focus();
 }
 
 function renderNotFound(msg) {
@@ -332,127 +411,4 @@ function renderNotFound(msg) {
       <p><a href="#/">Return home</a></p>
     </div>
   `;
-}
-
-// ── Submit a recipe ───────────────────────────────────────────────────────
-function renderSubmit() {
-  const allSections = [...new Set(RECIPES.map(r => r.section))];
-  const subsections = JSON.stringify(
-    Object.fromEntries(allSections.map(s => [s, [...new Set(RECIPES.filter(r => r.section === s && r.subsection).map(r => r.subsection))]]))
-  );
-
-  app.innerHTML = `
-    <a href="#/" class="btn btn-back">← Back to home</a>
-    <header class="section-header">
-      <h1>Submit a Recipe</h1>
-      <div class="subtitle">Add a new family recipe to the cookbook</div>
-    </header>
-    <div class="note">
-      Fill in the form below.  When you click <strong>Generate</strong>, you'll get a recipe JSON snippet
-      that you (or Andrew) can paste into <code>recipes.json</code> and commit to GitHub to publish the new recipe.
-      Use <strong>Open GitHub Issue</strong> to send it straight to the cookbook repository.
-    </div>
-    <form class="submit-form" id="submit-form">
-      <label>Recipe title <input name="title" required placeholder="e.g. Grandma's Apple Pie" /></label>
-
-      <div class="form-row">
-        <div>
-          <label>Section
-            <select name="section" id="section-select" required>
-              <option value="">— choose —</option>
-              ${allSections.map(s => `<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join("")}
-            </select>
-          </label>
-        </div>
-        <div>
-          <label>Subsection (optional)
-            <select name="subsection" id="subsection-select">
-              <option value="">—</option>
-            </select>
-          </label>
-        </div>
-      </div>
-
-      <label>Credit / who contributed <input name="credit" placeholder="e.g. Mom K., Grandma Ida, Stephanie" /></label>
-
-      <label>Ingredients — one per line
-        <textarea name="ingredients" rows="8" placeholder="2 cups flour
-1 cup sugar
-1 tsp salt
-…" required></textarea>
-      </label>
-
-      <label>Instructions — one paragraph per line / step
-        <textarea name="instructions" rows="6" placeholder="Preheat the oven to 350°F.
-Mix dry ingredients in a large bowl.
-…" required></textarea>
-      </label>
-
-      <label>Tags (optional, comma-separated) <input name="tags" placeholder="e.g. dessert, baked, holiday" /></label>
-
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Generate snippet</button>
-        <button type="button" class="btn btn-ghost" id="copy-btn" disabled>Copy to clipboard</button>
-        <button type="button" class="btn btn-ghost" id="gh-issue-btn" disabled>Open GitHub Issue</button>
-      </div>
-    </form>
-    <pre class="submit-output" id="output" style="display:none"></pre>
-  `;
-
-  const subMap = JSON.parse(subsections);
-  const sectionSel = document.getElementById("section-select");
-  const subSel = document.getElementById("subsection-select");
-  sectionSel.addEventListener("change", () => {
-    const subs = subMap[sectionSel.value] || [];
-    subSel.innerHTML = `<option value="">—</option>` + subs.map(s => `<option value="${escapeAttr(s)}">${escapeHtml(s)}</option>`).join("");
-  });
-
-  const form = document.getElementById("submit-form");
-  const out = document.getElementById("output");
-  const copyBtn = document.getElementById("copy-btn");
-  const ghBtn = document.getElementById("gh-issue-btn");
-  let lastSnippet = null;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form));
-    const ingredients = data.ingredients.split("\n").map(s => s.trim()).filter(Boolean);
-    const instructions = data.instructions.split("\n").map(s => s.trim()).filter(Boolean);
-    const body = ingredients.join("\n") + "\n\n" + instructions.join("\n");
-    const tags = data.tags
-      ? data.tags.split(",").map(s => s.trim().toLowerCase()).filter(Boolean)
-      : [];
-    const id = slugify(`${data.section || "misc"}-${data.title}`).slice(0, 80);
-    const recipe = {
-      id,
-      title: data.title.trim(),
-      alt_title: null,
-      section: data.section,
-      subsection: data.subsection || null,
-      credit: data.credit ? data.credit.trim() : null,
-      body,
-      tags,
-    };
-    lastSnippet = JSON.stringify(recipe, null, 2);
-    out.textContent = lastSnippet;
-    out.style.display = "block";
-    copyBtn.disabled = false;
-    ghBtn.disabled = false;
-  });
-
-  copyBtn.addEventListener("click", async () => {
-    if (!lastSnippet) return;
-    await navigator.clipboard.writeText(lastSnippet);
-    copyBtn.textContent = "Copied!";
-    setTimeout(() => copyBtn.textContent = "Copy to clipboard", 1500);
-  });
-
-  ghBtn.addEventListener("click", () => {
-    if (!lastSnippet) return;
-    const title = encodeURIComponent(`New recipe: ${JSON.parse(lastSnippet).title}`);
-    const bodyText = `Please add this recipe to \`recipes.json\`:\n\n\`\`\`json\n${lastSnippet}\n\`\`\``;
-    const body = encodeURIComponent(bodyText);
-    const repo = window.COOKBOOK_REPO || "andrewmswensen-hue/swensen-family-cookbook";
-    window.open(`https://github.com/${repo}/issues/new?title=${title}&body=${body}`, "_blank");
-  });
 }
