@@ -29,6 +29,42 @@ const SECTION_META = [
   { name: "Kid's Stuff", icon: "🎨" },
 ];
 
+// ── Scroll-position memory ────────────────────────────────────────────────
+// On forward navigation (clicking into a recipe or section) we jump to the top
+// of the new page.  On back navigation (browser back, or one of our "← Back"
+// links), we restore the scroll position you were at on the previous view.
+const scrollPositions = {};   // hash → scroll offset
+let lastHash = location.hash || "#/";
+let backNav = false;          // true when popstate just fired
+
+window.addEventListener("popstate", () => { backNav = true; });
+
+// Disable the browser's automatic scroll-restore — we handle it manually so
+// the timing lines up with our render() calls.
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+function saveScroll() {
+  scrollPositions[lastHash] = window.scrollY || document.documentElement.scrollTop;
+}
+
+function applyScroll(newHash) {
+  if (backNav && scrollPositions[newHash] !== undefined) {
+    // Restore the position from where we left off.  Defer until after render.
+    requestAnimationFrame(() => window.scrollTo(0, scrollPositions[newHash]));
+  } else {
+    // Forward navigation — start at the top of the new view.
+    window.scrollTo(0, 0);
+  }
+  backNav = false;
+  lastHash = newHash;
+}
+
+function routeWithScroll() {
+  saveScroll();
+  route();
+  applyScroll(location.hash || "#/");
+}
+
 // ── Boot ──────────────────────────────────────────────────────────────────
 fetch("recipes.json")
   .then(r => r.json())
@@ -36,8 +72,9 @@ fetch("recipes.json")
     RECIPES = data;
     BY_ID = new Map(RECIPES.map(r => [r.id, r]));
     countEl.textContent = `${RECIPES.length} recipes`;
-    window.addEventListener("hashchange", route);
+    window.addEventListener("hashchange", routeWithScroll);
     route();
+    applyScroll(location.hash || "#/");
   })
   .catch(err => {
     app.innerHTML = `<div class="empty-state"><h2>Couldn't load recipes</h2><p>${err.message}</p></div>`;
