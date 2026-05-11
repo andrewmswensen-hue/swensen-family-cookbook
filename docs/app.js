@@ -91,7 +91,12 @@ function routeWithScroll() {
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────
-fetch("recipes.json")
+// `cache: "no-cache"` forces the browser to revalidate with the server on
+// every load (using ETag), so a freshly-edited recipes.json on GitHub Pages
+// shows up immediately instead of being stuck behind the 10-minute CDN cache.
+// If the file hasn't changed, the server returns 304 Not Modified and we
+// keep the local copy — no extra bandwidth cost.
+fetch("recipes.json", { cache: "no-cache" })
   .then(r => r.json())
   .then(data => {
     RECIPES = data;
