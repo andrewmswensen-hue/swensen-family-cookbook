@@ -16,7 +16,7 @@ let BY_ID = new Map();
 // Section ordering + emoji icons for the home grid
 const SECTION_META = [
   { name: "Appetizers", icon: "🧀" },
-  { name: "Beverages", icon: "🍋" },
+  { name: "Beverages", icon: "🥤" },
   { name: "Breads", icon: "🥖" },
   { name: "Soups", icon: "🍲" },
   { name: "Salads", icon: "🥗" },
@@ -152,18 +152,71 @@ function uniqueSubsections(section) {
   return subs;
 }
 
+// Search with relevance ranking.  A recipe scores points for each field it
+// matches; we filter out zero-score recipes and return them sorted by score
+// (highest first).  The hierarchy roughly says:
+//   1. exact title match
+//   2. title starts with query
+//   3. word-boundary match in title
+//   4. substring in title
+//   5. tag match
+//   6. credit match
+//   7. section / subsection match
+//   8. body match (lowest weight)
+function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
+function scoreRecipe(r, q) {
+  const ql = q.toLowerCase().trim();
+  if (!ql) return 0;
+
+  const title      = r.title.toLowerCase();
+  const credit     = (r.credit     || "").toLowerCase();
+  const section    =  r.section.toLowerCase();
+  const subsection = (r.subsection || "").toLowerCase();
+  const tags       = (r.tags       || []).map(t => t.toLowerCase());
+  const body       =  r.body.toLowerCase();
+
+  // word-boundary regex (only built once per call)
+  const wb = new RegExp(`\\b${escapeRegex(ql)}\\b`);
+
+  let score = 0;
+  if (title === ql)                score += 1000;
+  else if (title.startsWith(ql))   score += 500;
+  else if (wb.test(title))         score += 300;
+  else if (title.includes(ql))     score += 200;
+
+  if (tags.includes(ql))                       score += 150;
+  else if (tags.some(t => t.includes(ql)))     score += 80;
+
+  if (credit === ql)         score += 80;
+  else if (credit.includes(ql)) score += 40;
+
+  if (section === ql || subsection === ql)               score += 60;
+  else if (section.includes(ql) || subsection.includes(ql)) score += 30;
+
+  if (body.includes(ql)) {
+    // Body matches are the weakest signal.  Cap their contribution so a
+    // recipe with the query buried in its instructions can never outrank
+    // a recipe whose title matches.
+    const occurrences = body.split(ql).length - 1;
+    score += Math.min(25, 5 + occurrences * 2);
+  }
+
+  return score;
+}
+
 function searchRecipes(q) {
   const needle = q.toLowerCase().trim();
   if (!needle) return [];
-  return RECIPES.filter(r => {
-    if (r.title.toLowerCase().includes(needle)) return true;
-    if (r.credit && r.credit.toLowerCase().includes(needle)) return true;
-    if (r.section.toLowerCase().includes(needle)) return true;
-    if (r.subsection && r.subsection.toLowerCase().includes(needle)) return true;
-    if (r.tags && r.tags.some(t => t.toLowerCase().includes(needle))) return true;
-    if (r.body.toLowerCase().includes(needle)) return true;
-    return false;
-  });
+  return RECIPES
+    .map(r => ({ recipe: r, score: scoreRecipe(r, needle) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => {
+      // Higher score first; ties broken by title alphabetically for stable display.
+      if (b.score !== a.score) return b.score - a.score;
+      return a.recipe.title.localeCompare(b.recipe.title);
+    })
+    .map(x => x.recipe);
 }
 
 // ── Body markdown → HTML ──────────────────────────────────────────────────
