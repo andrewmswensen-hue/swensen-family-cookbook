@@ -1,0 +1,98 @@
+# Family Cookbook Project
+
+## What this is
+A multi-format home for the Swensen family cookbook.  **394 recipes** across
+12 sections, all generated from a single master JSON file
+(`docs/recipes.json`).  Outputs: a printable DOCX, a printable PDF, and an
+interactive web app that's deployable to GitHub Pages.
+
+**Live site:** see the GitHub repo's Pages URL (set up in *Deploying* below).
+
+## Layout
+```
+Family Cookbook/
+├── CLAUDE.md
+├── .gitignore
+├── Swensen  ckbk 2025.docx          # ORIGINAL — kept untouched for reference
+├── cookbook_raw.md                   # Pandoc dump of the original (intermediate)
+├── parse_cookbook.py                 # Parses raw markdown → docs/recipes.json
+├── build_docx.js                     # Builds the formatted printable DOCX
+├── Swensen_Family_Cookbook.docx      # Generated printable cookbook with TOC
+├── Swensen_Family_Cookbook.pdf       # Generated PDF
+├── recipes_inventory.md              # Human-readable index of every recipe
+└── docs/                             # GitHub Pages serves from this folder
+    ├── index.html                    # web app entry
+    ├── styles.css
+    ├── app.js
+    └── recipes.json                  # SINGLE SOURCE OF TRUTH for all recipes
+```
+
+## The master recipes.json
+There's exactly **one** `recipes.json` in this project: `docs/recipes.json`.
+The web app reads it directly, the DOCX builder reads it directly, and the
+parser writes it directly.  Don't keep duplicate copies — that's how data
+drift happens.
+
+Each recipe is an object with these fields:
+- `id` — kebab-case slug, stable (used as anchor links)
+- `title` — recipe name
+- `alt_title` — parenthetical alternate name, or `null`
+- `section` — top-level group (Appetizers, Soups, Desserts, etc.)
+- `subsection` — sub-group, or `null` (Main Dishes → Beef, Desserts → Cookies, etc.)
+- `credit` — who contributed it (e.g. "Mom K.", "Steph"), or `null`
+- `body` — markdown-formatted ingredients + instructions; use `### Header` for sub-parts
+- `tags` — auto-generated search tags
+
+## Editing recipes — typical workflow
+
+### A) Quick edit on GitHub (easiest)
+Edit `docs/recipes.json` directly in the GitHub web UI, commit, and the live
+site updates within ~1 minute.  The PDF won't regenerate from a GitHub edit —
+do that locally if you want a fresh print version.
+
+### B) Local edit
+1. Edit `docs/recipes.json` in your editor (or use the web app's "+ Submit a recipe"
+   form to generate a JSON snippet you can paste in).
+2. Rebuild the formatted DOCX:  `node build_docx.js`
+3. Re-export to PDF:  `soffice --headless --convert-to pdf Swensen_Family_Cookbook.docx`
+4. Commit & push to GitHub.
+
+### C) Re-parse from the original docx
+If Mom adds recipes to the original `Swensen  ckbk 2025.docx`:
+```
+pandoc "Swensen  ckbk 2025.docx" -o cookbook_raw.md
+python3 parse_cookbook.py
+```
+*Warning:* this overwrites `docs/recipes.json`, so manual edits since the
+last parse will be lost.
+
+## Quickstart — viewing the web app locally
+```
+cd "~/Documents/Claude/Projects/Family Cookbook"
+python3 -m http.server 8000 --directory docs
+```
+Open <http://localhost:8000/> in any browser.
+
+## Color palette ("Warm Mom Kitchen")
+Used in both the printable cookbook and the web app:
+- Primary (deep terracotta):  `#A04A3B`
+- Accent (warm gold):         `#C89E5A`
+- Background tint (cream):    `#FBF6EE`
+- Soft sage divider:          `#7E8C6B`
+- Text (warm charcoal):       `#3C2E26`
+
+## Deploying / re-deploying to GitHub Pages
+This repo is configured to serve GitHub Pages from `/docs` on `main`.
+Pushing to `main` automatically updates the live site within a minute.
+
+To set Pages up from scratch on a new repo:
+1. **Settings → Pages → Source = Deploy from a branch**
+2. **Branch: main**, **Folder: /docs**, Save.
+3. Wait a minute, then visit `https://<owner>.github.io/<repo>/`.
+
+## Design rules
+- Each recipe stays together using Word's `keepNext` + `keepLines` so it
+  doesn't usually split across page breaks.  Multiple short recipes share a page.
+- Headings: H1 = section, H2 = subsection, H3 = recipe title.
+- Web app: home → section → recipe with breadcrumbs and back navigation,
+  global search, tag-based filter, mobile-responsive.

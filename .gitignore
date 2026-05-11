@@ -1,0 +1,5 @@
+.DS_Store
+preview-*.jpg
+preview-*.png
+node_modules/
+*.tmp
