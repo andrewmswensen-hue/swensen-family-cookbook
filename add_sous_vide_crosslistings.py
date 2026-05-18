@@ -30,12 +30,24 @@ def strip_sous_vide(title):
 
 # (source_id, target_section, target_subsection)
 CROSSLISTINGS = [
-    ("sous-vide-tri-tip",                    "Main Dishes",        "Beef"),
-    ("sous-vide-marinated-chicken-breast",   "Main Dishes",        "Chicken & Turkey"),
-    ("sous-vide-pork-chops",                 "Main Dishes",        "Pork & Sausage"),
-    ("sous-vide-better-than-braised-beets",  "Vegetables & Sides", "Vegetables"),
-    ("sous-vide-perfect-asparagus",          "Vegetables & Sides", "Vegetables"),
-    ("sous-vide-crispy-smashed-potatoes",    "Vegetables & Sides", "Potatoes"),
+    # Andrew's three originals
+    ("sous-vide-tri-tip",                       "Main Dishes",        "Beef"),
+    ("sous-vide-marinated-chicken-breast",      "Main Dishes",        "Chicken, Turkey & Poultry"),
+    ("sous-vide-pork-chops",                    "Main Dishes",        "Pork & Sausage"),
+    # The first batch of ATK veggies
+    ("sous-vide-better-than-braised-beets",     "Vegetables & Sides", "Vegetables"),
+    ("sous-vide-perfect-asparagus",             "Vegetables & Sides", "Vegetables"),
+    ("sous-vide-crispy-smashed-potatoes",       "Vegetables & Sides", "Potatoes"),
+    # Second ATK batch (added May 2026)
+    ("sous-vide-foolproof-poached-chicken",     "Main Dishes",        "Chicken, Turkey & Poultry"),
+    ("sous-vide-seared-duck-breasts",           "Main Dishes",        "Chicken, Turkey & Poultry"),
+    ("sous-vide-easy-boneless-turkey-breast",   "Main Dishes",        "Chicken, Turkey & Poultry"),
+    ("sous-vide-short-rib-pot-roast",           "Main Dishes",        "Beef"),
+    ("sous-vide-peppercorn-crusted-roast-beef", "Main Dishes",        "Beef"),
+    ("sous-vide-osso-buco",                     "Main Dishes",        "Beef"),
+    ("sous-vide-pork-tenderloin-steaks",        "Main Dishes",        "Pork & Sausage"),
+    ("sous-vide-spiral-sliced-ham",             "Main Dishes",        "Pork & Sausage"),
+    ("sous-vide-honey-glazed-carrots",          "Vegetables & Sides", "Vegetables"),
 ]
 
 

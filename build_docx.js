@@ -62,7 +62,7 @@ const SIZE = {
 // ── Recipe order (by section/subsection) ────────────────────────────────────
 const SECTION_ORDER = [
   ["Main Dishes", "Beef"],
-  ["Main Dishes", "Chicken & Turkey"],
+  ["Main Dishes", "Chicken, Turkey & Poultry"],
   ["Main Dishes", "Pork & Sausage"],
   ["Main Dishes", "Seafood"],
   ["Appetizers", "Dips & Spreads"],

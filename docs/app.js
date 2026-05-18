@@ -57,7 +57,7 @@ const SUBSECTION_META = {
   "Pasta": "🍝",
   // Main Dishes
   "Beef": "🥩",
-  "Chicken & Turkey": "🍗",
+  "Chicken, Turkey & Poultry": "🍗",
   "Pork & Sausage": "🥓",
   "Seafood": "🐟",
   // Sous Vide

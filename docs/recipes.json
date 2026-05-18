@@ -1898,8 +1898,8 @@
     "credit": "America's Test Kitchen",
     "body": "2 pounds small red potatoes, scrubbed\n½ cup chicken broth\nSalt and pepper\n6 Tbl vegetable oil\n1 Tbl chopped fresh rosemary\n3 garlic cloves, minced\n\nHeat the water bath to 194 °F.\n\nCombine the potatoes, broth, and ¾ tsp salt in a 1-gallon zip-top freezer bag. Seal and double-bag. Lower into the water bath, keeping the bag fully submerged (use a rack or magnets if it tries to float). Cook for 60 to 75 minutes.\n\nAdjust an oven rack to upper-middle position and heat the oven to 450 °F. In a microwave-safe bowl, microwave the oil, rosemary, and garlic, stirring occasionally, until the garlic begins to brown — 2 to 4 minutes. Strain into a large bowl, reserving the garlic and rosemary.\n\nDrain the potatoes and let them sit until the surfaces are dry, about 10 minutes. Add the potatoes and ½ tsp salt to the bowl with the herb oil and toss. Arrange the potatoes on a rimmed baking sheet, place a second baking sheet on top, and press firmly to flatten each potato to ⅓ to ½ inch thick. Remove the top sheet.\n\nRoast for 40 to 50 minutes, flipping halfway through, until the potatoes are crisp and well browned. Transfer to a serving bowl, add the reserved garlic and rosemary, and gently toss to combine. Season with salt and pepper to taste. Serve.",
     "tags": [
-      "vegetables",
       "potatoes",
+      "vegetables",
       "side",
       "sous-vide"
     ],
@@ -2160,12 +2160,29 @@
     "credit": "America's Test Kitchen",
     "body": "2 pounds thick asparagus, trimmed\n1 tomato, cored, seeded, and chopped fine (about ¾ cup)\n1 shallot, minced\n1½ Tbl lemon juice\n1 Tbl chopped fresh basil\n3 Tbl extra-virgin olive oil\nSalt and pepper\n\nHeat the water bath to 180 °F.\n\nArrange the asparagus in a single layer in a 1-gallon zip-top freezer bag and seal, pressing out as much air as possible. Double-bag for safety. Lower the bag into the water bath. Asparagus has a tendency to float — make sure it stays fully submerged, using a rack or magnets if needed.\n\nCook for 20 minutes.\n\nWhile the asparagus cooks, whisk the tomato, shallot, lemon juice, basil, olive oil, and ¼ tsp salt in a bowl. Season with salt and pepper to taste.\n\nTransfer the asparagus to a serving platter and drizzle with the vinaigrette. Serve.\n\n### Variations\n\n**Soy-Ginger Vinaigrette** — Substitute 2 minced scallions (¼ cup) and 3 Tbl lime juice for the tomato and basil. Add 1 Tbl sesame oil, 2 Tbl soy sauce, 1 Tbl honey, 1 Tbl grated fresh ginger, and 2 minced garlic cloves.\n\n**Mustard-Thyme Vinaigrette** — Substitute 1 Tbl chopped fresh thyme and ¼ tsp Dijon mustard for the tomato and basil.",
     "tags": [
-      "vegetables",
       "asparagus",
+      "vegetables",
       "side",
       "sous-vide"
     ],
     "_source_id": "sous-vide-perfect-asparagus",
+    "_crosslisting": true
+  },
+  {
+    "id": "vegetables-sides-sous-vide-honey-glazed-carrots-with-lemon-and-thyme",
+    "title": "Honey-Glazed Carrots with Lemon and Thyme",
+    "alt_title": null,
+    "section": "Vegetables & Sides",
+    "subsection": "Vegetables",
+    "credit": "America's Test Kitchen",
+    "body": "1 pound (450 grams) carrots, peeled, halved lengthwise, and sliced ⅓ inch thick on bias\n2 tablespoons (28 grams) unsalted butter, plus 2 tablespoons (28 grams) cut into 2 pieces and chilled\n¼ cup (45 grams) chicken broth\n2 tablespoons (42 grams) honey\n4 teaspoons (20 grams) lemon juice\n3 sprigs (1 gram) fresh thyme\nSalt and pepper\n2 tablespoons (4 grams) minced fresh chives\n\nUsing sous vide circulator, bring water to 190 °F (88 °C) in a 7-quart container.\n\nPlace carrots, 2 tablespoons (28 grams) butter, broth, honey, lemon juice, thyme sprigs, and ½ teaspoon (1.5 grams) salt in a 1-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Place bag in a second 1-gallon zipper-lock freezer bag and seal.  Gently lower bags into prepared water bath, weight bag down (see page 14) until carrots are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for 1 to 2 hours.\n\nDrain carrots through fine-mesh strainer set over 12-inch skillet; transfer carrots to bowl and discard thyme sprigs.  Bring cooking liquid to a simmer over medium-high heat and cook until reduced to 2 tablespoons (40 grams), 5 to 7 minutes.  Off heat, whisk in remaining 2 tablespoons chilled butter until mixture is smooth and glossy.  Add carrots and chives and toss to combine.  Season with salt and pepper to taste.  Serve.\n\n### Variation: Honey-Ginger Glazed Carrots\n\nSubstitute 1 1-inch piece fresh ginger (12 grams), peeled and sliced thin, and ¼ teaspoon cayenne pepper for the thyme sprigs.",
+    "tags": [
+      "vegetables",
+      "carrots",
+      "side",
+      "sous-vide"
+    ],
+    "_source_id": "sous-vide-honey-glazed-carrots",
     "_crosslisting": true
   },
   {
@@ -2998,12 +3015,62 @@
     "credit": "Andrew",
     "body": "1 whole tri-tip (Costco is a great source)\n2 to 3 Tbl steak seasoning of choice (see notes)\n1 Tbl butter, for searing\n\nFor the seasoning, Andrew likes [Big Papa's Double Secret Steak Seasoning](https://a.co/d/0j8JB0d6) or [Spade L Beef Seasoning](https://a.co/d/0e6Bz0Cu).\n\nIf you'd like, cut the tri-tip into two equal pieces by weight. Half feeds one to two people; the whole tri-tip serves three to four.\n\nCover the meat generously with seasoning on all sides. Place it in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).\n\nSous vide at 132 °F for a good medium-rare, or 140 °F for medium. Two to four hours is plenty; six hours is even better. Add one hour if cooking from frozen.\n\nTo finish, pat the meat dry and sear hard — on a screaming-hot grill, or in a cast-iron pan with butter, about 45 to 60 seconds per side and on each edge. Slice against the grain to serve.",
     "tags": [
-      "beef",
       "easy",
       "main",
+      "beef",
       "sous-vide"
     ],
     "_source_id": "sous-vide-tri-tip",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-short-rib-pot-roast",
+    "title": "Short Rib \"Pot Roast\"",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "3½ pounds (1.5 kilograms) boneless beef short ribs, trimmed\nSalt and pepper\n2 tablespoons (28 grams) vegetable oil\n1 large onion (350 grams), chopped\n2 celery ribs (60 grams), chopped\n1 carrot (80 grams), peeled and chopped\n1 tablespoon (15 grams) tomato paste\n1 garlic clove (5 grams), minced\n1 cup (225 grams) dry red wine\n1 cup (225 grams) beef broth\n8 sprigs (4 grams) fresh thyme\n2 bay leaves (1 gram)\n2 tablespoons (8 grams) minced fresh parsley\n\nUsing sous vide circulator, bring water to 167 °F (75 °C) in a 7-quart container.\n\nPat ribs dry with paper towels and season with salt and pepper.  Heat 1 tablespoon (14 grams) oil in a Dutch oven over medium-high heat until just smoking.  Brown half the ribs on all sides, 8 to 12 minutes; transfer to a plate.  Repeat with the remaining 1 tablespoon of oil and remaining ribs.\n\nAdd onion, celery, carrot, ½ teaspoon (1 gram) salt, and ¼ teaspoon (1 gram) pepper to fat left in the pot and cook over medium heat until softened and lightly browned, 8 to 10 minutes.  Stir in tomato paste and garlic and cook until fragrant, about 1 minute.  Stir in wine, scraping up any browned bits, and cook until reduced by half, 2 to 4 minutes.  Stir in broth and simmer for 2 minutes.  Transfer mixture to a blender and process until smooth, about 1 minute.\n\nDivide ribs, sauce, thyme sprigs, and bay leaves between two 1-gallon zipper-lock freezer bags and toss to coat.  Arrange ribs in a single layer and seal bags, pressing out as much air as possible.  Place each bag in a second 1-gallon zipper-lock freezer bag and seal.  Gently lower bags into prepared water bath until ribs are fully submerged, and then clip top corner of each bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of each zipper, release remaining air bubbles, and reseal bags.  Cover and cook for at least 20 hours or up to 24 hours.\n\nUsing tongs, transfer ribs to a serving dish.  Tent with aluminum foil and let rest while finishing sauce.  Strain cooking liquid through a fine-mesh strainer into a medium saucepan, pressing on solids to extract as much liquid as possible; discard solids.  Bring to a simmer over medium heat and cook until reduced to 2 cups, 4 to 6 minutes.  Season with salt and pepper to taste.  Spoon sauce over ribs, sprinkle with parsley, and serve.\n\n### To Make Ahead\n\nShort rib can be rapidly chilled in an ice bath and then refrigerated in zipper-lock bags after the sous vide cook for up to 5 days.  To reheat, return sealed bags to water bath set to 167 °F / 75 °C and let sit for 30 minutes, then proceed with the sauce-finishing step.",
+    "tags": [
+      "main",
+      "beef",
+      "sous-vide"
+    ],
+    "_source_id": "sous-vide-short-rib-pot-roast",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-peppercorn-crusted-roast-beef",
+    "title": "Peppercorn-Crusted Roast Beef",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "1 5-pound (2.3 kilograms) boneless beef chuck-eye roast, pulled into 2 pieces at natural seam and trimmed of large pieces of fat\nKosher salt and pepper\n2 tablespoons (28 grams) vegetable oil\n1 egg white (30 grams)\n¼ cup (30 grams) coarsely ground black, green, and pink peppercorns\n2 tablespoons (20 grams) flake sea salt\n\nSprinkle beef with 4 teaspoons (16 grams) kosher salt.  Arrange pieces side by side along natural seam, and then tie together at 1-inch intervals to create a 1 evenly shaped roast.  Transfer roast to a large plate and refrigerate, uncovered, for at least 24 hours or up to 96 hours.\n\nUsing sous vide circulator, heat water to 133 °F / 56 °C in a 12-quart container.\n\nHeat oil in a 12-inch skillet over medium-high heat until just smoking.  Brown roast on all sides, 6 to 8 minutes.  Season roast with pepper and place into a 2-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until roast is fully submerged, then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 18 hours or up to 24 hours.\n\nAdjust oven rack to middle position and heat oven to 475 °F (246 °C).  Set wire rack in aluminum foil–lined rimmed baking sheet and spray with vegetable spray.  Transfer roast to prepared rack and let rest for 10 to 15 minutes.  Pat roast dry with paper towels.\n\nWhisk egg white in a bowl until frothy, about 30 seconds.  Combine peppercorns and flake sea salt in a shallow dish.  Brush roast on all sides with egg white, then coat with peppercorn mixture, pressing to adhere.  Return roast to prepared rack and roast until surface is evenly browned and fragrant, 15 to 20 minutes, rotating sheet halfway through roasting.\n\nTransfer roast to carving board and slice into ½-inch-thick slices and serve.\n\n### To Make Ahead\n\nWe don't recommend making this recipe in advance.",
+    "tags": [
+      "main",
+      "beef",
+      "sous-vide",
+      "holiday"
+    ],
+    "_source_id": "sous-vide-peppercorn-crusted-roast-beef",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-osso-buco",
+    "title": "Osso Buco",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "1 large onion (280 grams), chopped\n2 carrots (160 grams), peeled and chopped\n2 celery ribs (120 grams), chopped\n8 garlic cloves (40 grams), minced\n1 14.5-ounce can (411 grams) diced tomatoes, drained\n4 12-ounce (340 grams) veal shanks, 2 inches thick, trimmed and tied around equator\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n2 tablespoons (32 grams) tomato paste\n1¼ cups (290 grams) dry white wine\n4 bay leaves (1 gram)\n½ cup (5 grams) chopped fresh parsley\n\nUsing sous vide circulator, bring water to 176 °F (80 °C) in a 7-quart container.\n\nPulse onion, carrots, celery, and garlic in food processor until finely chopped, 12 to 14 pulses; transfer to bowl.  Pulse tomatoes in now-empty processor until finely chopped, 8 to 10 pulses.\n\nPat shanks dry with paper towels and season with salt and pepper.  Heat 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Brown shanks, 3 to 4 minutes per side; transfer to plate.\n\nHeat remaining 2 tablespoons (28 grams) oil in now-empty skillet over medium heat.  Add chopped vegetables, ½ teaspoon (3 grams) salt, and ¼ teaspoon (2 grams) pepper and cook until softened and lightly browned, 16 to 20 minutes.\n\nStir in tomato paste and cook until fragrant, about 1 minute.  Stir in wine, scraping up any browned bits, and cook until almost completely evaporated, 4 to 6 minutes.  Stir in tomatoes and cook until mixture is thick and lightly browned, 16 to 20 minutes.\n\nTransfer mixture to 2 1-gallon zipper-lock freezer bags.  Add shanks and bay leaves and toss to coat.  Arrange shanks in single layer and seal bags, pressing out as much air as possible.  Place bag into second 2-gallon zipper-lock freezer bag and seal bag.  Gently lower bag into prepared water bath until shanks are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 24 hours or up to 26 hours.\n\nTransfer shanks to serving dish, leaving sauce in bag.  Discard bay leaves.  Stir parsley into sauce and season with salt and pepper to taste.  Pour sauce over shanks and serve.\n\n### To Make Ahead\n\nShanks can be rapidly chilled in an ice bath and refrigerated in zipper-lock bags for up to 5 days.  To reheat, return sealed bag to water bath set to 176 °F / 80 °C for 1 hour, then proceed with step 7.",
+    "tags": [
+      "veal",
+      "main",
+      "sous-vide",
+      "italian"
+    ],
+    "_source_id": "sous-vide-osso-buco",
     "_crosslisting": true
   },
   {
@@ -3011,7 +3078,7 @@
     "title": "Chicken with Rice Bake",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mom S.",
     "body": "1 cup uncooked rice\n\n2 cups water\n\n1 cut up chicken\n\n1 can cream of chicken/mushroom soup\n\nsalt and pepper to taste\n\nPlace rice, water, soup, and seasonings in the bottom of a 9\"x13\"\nbaking dish. Stir well. Place chicken on top of rice. Bake uncovered at\n350 degrees for about 1 hour.",
     "tags": [
@@ -3028,7 +3095,7 @@
     "title": "Skillet Herb Roasted Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "¼ tsp ground sage\n\n¼ tsp dried thyme leaves, crushed\n\n4 skinless, boneless chicken breast halves\n\n1 can Campbell's Cream of Chicken Soup (undiluted)\n\n½ cup water\n\n3-4 cups hot cooked rice\n\nSprinkle chicken with sage and thyme. Spray a non-stick pan with\nvegetable cooking spray. Heat over medium heat 1 minute. Cook chicken 15\nminutes, turning half-way through, or until chicken is done. Remove and\nkeep warm. Add soup and water (in same pan) and heat through. Serve over\nchicken with rice.",
     "tags": [
@@ -3044,7 +3111,7 @@
     "title": "Rosemary Garlic Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mom S.",
     "body": "4 whole chicken breasts - split\n\n¼ cup butter\n\n2 cups sliced fresh mushrooms (about 1/3 pound)\n\n1 clove garlic, crushed\n\n2 cans Cream of Chicken soup\n\ndash of crushed thyme\n\n1/8 tsp crushed rosemary\n\n2/3 cup cream\n\nBrown chicken in butter until lightly browned on both sides. Remove\nchicken from pan. Brown mushrooms in the same pan in remaining butter\nand juices. Stir in garlic, soup, thyme, and rosemary. Add chicken,\ncover and cook over low heat for 25 minutes. Blend in cream and heat\nslowly. Serve over wild rice. Serves 8.",
     "tags": [
@@ -3060,7 +3127,7 @@
     "title": "Parmesan Dijon Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Todd & Steph",
     "body": "½ cup butter, melted\n\n2 tsp Dijon mustard\n\n1 tsp Worcestershire sauce\n\n½ tsp salt\n\n1 cup dry bread crumbs (unseasoned)\n\n½ cup grated Parmesan cheese\n\n6-8 boneless skinless breast halves\n\nIn a pie plate or shallow bowl, combine butter, mustard, Worcestershire\nsauce and salt. In a plastic bag, combine crumbs and Parmesan cheese.\nDip chicken in butter mixture, then shake in crumb mixture. Place in an\nungreased 13\" x 9\" x 2\" baking pan. Drizzle with any remaining butter\nmixture. Bake at 350 degrees for 40-45 minutes or until chicken is no\nlonger pink and juices run clear. Yield: 6-8 servings.",
     "tags": [
@@ -3079,7 +3146,7 @@
     "title": "Chicken Cordon Bleu",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Ruth Olsen",
     "body": "8 boneless, skinless chicken breasts\n\n8 slices baked ham\n\n8 sticks Swiss cheese (1/2 x ½ x 4 inches)\n\n1/3 cup melted butter\n\n1 ½ cup crushed corn flakes\n\nSauce (only do ½ recipe if putting all in a 9\"x13\" pan)\n\n3 cans cream of chicken soup\n\n1 ½ pt whipping cream\n\n1 Tbl lemon juice\n\nPound chicken breasts until ½ inch thick. Place ham and cheese on top of\neach and roll up, securing with a toothpick. Dip in butter, then roll in\ncorn flakes until covered. Place in a pan. Bake at 400 degrees for 20\nminutes. Make sauce by combining all ingredients and stirring well.\nAfter chicken has cooked for 20 minutes, pour sauce over the meat. Bake\nanother 40 minutes (1 hour total). Serve with rice.",
     "tags": [
@@ -3100,7 +3167,7 @@
     "title": "Chicken Broccoli Casserole",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "JaNae",
     "body": "1 16 oz. pkg. frozen broccoli, or 2 cups fresh\n\n2 cups cubed chicken\n\n1 can condensed Cream of Chicken soup\n\n½ cup sour cream\n\n1 Tbl lemon juice\n\n2 oz. shredded cheddar cheese\n\n½ cup soft breadcrumbs\n\n2 Tbl margarine or butter, melted\n\nHeat oven to 350 degrees. Grease an 8\" x 12\" baking dish. Cook and drain\nbroccoli. Arrange broccoli in the pan. Layer chicken over broccoli. In a\nsmall bowl, combine soup, sour cream, and lemon juice; mix well. Spread\nover top of chicken. In a small bowl combine bread crumbs and butter;\nsprinkle on top of mixture. Bake uncovered for 30 -- 35 minutes or until\nhot all the way through. Serves 5.",
     "tags": [
@@ -3121,7 +3188,7 @@
     "title": "Chicken Saltimboca",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Buca de Beppo",
     "body": "4 5-oz. chicken breasts\n\n4 thin slices Prosciutto ham\n\n1 Tbl fresh sage, finely chopped\n\n3 oz. olive oil\n\n1 oz. flour\n\n5 oz. artichoke hearts, quartered\n\n½ oz capers\n\n4 oz. white wine\n\n2 oz. fresh lemon juice\n\n2 oz. heavy cream\n\n1 Tbl butter\n\n1 Tbl salt\n\nLightly salt the chicken. Sprinkle evenly with chopped sage. Place a\nslice of Prosciutto ham on top of each chicken breast. Pound each breast\nuntil it is 3/8-inch thick.\n\nHeat the olive oil in a sauté pan. Lightly flour the chicken. Place in\nheated oil, ham side down. Brown the chicken on one side, then turn and\nbrown the other side. Keep chicken warm in the oven. Drain of any excess\noil and deglaze with the white wine.\n\nAdd the artichokes, fresh lemon juice, cream, and butter and cook until\nthe sauce is thickened.\n\nOn a large platter, place chicken breasts, top with sauce, and garnish\nwith capers. Serves 4.",
     "tags": [
@@ -3139,7 +3206,7 @@
     "title": "Orzo al Limone with Crispy Parmesan Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Todd",
     "body": "### Chicken\n\n3/4 cup all purpose flour\n\n1/2 tsp kosher salt\n\n1/2 tsp black pepper\n\n2 eggs\n\n1 c panko\n\n3/4 c finely grated parmesan cheese\n\n1/2 tsp garlic powder\n\n1 lb chicken breast (2 breasts)\n\nIn a shallow bowl, combine flour, salt and pepper. In another bowl,\nwhisk the eggs with a fork. In a third bowl, combine the panko,\nParmesan, and garlic powder.\n\nCut the two boneless chicken breasts in half horizontally to create 4\nthin slices. Place each between two pieces of parchment and pound to 1/4\ninch thick.\n\nDredge each piece in flour mixture, then in egg, then in panko mixture.\nSet aside on a large plate.\n\nHeat 2 tsp olive oil in a large skillet over med-high heat. Once oil is\nshimmering, add breaded chicken to the pan (you may need to do this in\nbatches.) Cook for about 4 minutes per side until golden and crispy. Add\noil as needed.\n\nOnce cooked, transfer to a paper-towel lined plate and sprinkle on flaky\nsalt.\n\n### Orzo\n\n1 Tbl olive oil\n\n1Tbl butter\n\n1 small shallot, chopped\n\n4 cloves garlic, minced\n\n1/2 ts pblack pepper\n\n1 c uncooked orzo\n\n2 c chicken broth, plus more if needed\n\n1 lemon (zest and juice)\n\n1/4 c finely grated Parmesan cheese\n\n1/4 c heavy cream\n\nHeat the oil and butter in a high-rimmed pan over medium heat. Add the\nshallot and garlic and stir to combine. Cook for 1 minute. Add pepper\nand cook for another minute.\n\nMix in orzo and toast for 2 minutes, stirring to coat and get it all\ntoasted. Pour in broth and bring to a boil. Lower heat to a simmer. Cook\nstirring often until orzo is cooked and most of the liquid is absorbed.\nIf the liquid absorbs before the orzo is done, add a bit more water or\nbroth. This can take 10-15 minutes depending. Once the orzo is close to\nbeing cooked, add in the lemon zest and juice (about 1 Tbl zest and 3\nTbl juice). Turn off the heat and stir in the Parmesan until melted and\nwell combined. Add the cream and stir until combined.\n\nDivide orzo among 4 plates and top with chicken (can cut this is into\nstrips before serving.)",
     "tags": [
@@ -3156,7 +3223,7 @@
     "title": "Chicken au Poivre",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "NY Times Cooking",
     "body": "1 Tbl whole black peppercorns\n\n2 Tbl olive oil\n\n8 boneless, skinless chicken thighs\n\nsalt\n\n2 Tbl unsalted butter\n\n2 Tbl minced shallot\n\n1 c low-sodium chicken broth\n\n1/2 c heavy cream\n\n3 thyme sprigs\n\n1 Tbl lemon juice\n\n1 Tbl finely chopped parsley\n\ncrusty bread or egg noodles, for serving\n\nPlace peppercorns in a re-sealable bag. Using a mallet, gently crush\nuntil coarsely cracked (can also use mortar/pestle).\n\nIn 12-inch heavy skillet, heat oil over medium heat. Season chicken with\nsalt. In two batches, sear chicken until light golden all over, about 5\nminutes per batch. Transfer to a plate. Pour off any remaining oil in\nskillet.\n\nAdd butter and shallot to the pan and cook, stirring until the butter is\nmelted and the shallot is soft, about 1 minute. Add broth, cream, thyme,\npeppercorns and mix well, stirring to lift up any browned bits on the\nbottom of the pan.\n\nAdd chicken and juices, bring to a simmer and cook, turning and basting\noccasionally with the sauce, until cooked through (165 degrees inside),\nabout 6-8 minutes.\n\nDivide chicken among 4 plates and discard thyme. Add lemon juice to\nskillet and stir until sauce is slightly thickened, about 2 minutes.\nSeason with salt and stir in parsley.\n\nSpoon sauce over chicken and serve with bread or noodles.",
     "tags": [
@@ -3172,7 +3239,7 @@
     "title": "Chicken Marsala",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Julie Park",
     "body": "4 skinless, boneless chicken breast halves\n\nsalt and pepper\n\n½ cup flour\n\nup to ½ cup olive or vegetable oil for frying\n\n8 oz. mushrooms, sliced and cleaned\n\n2 Tbl butter\n\n½ cup sweet Marsala wine\n\n¼ cup chicken stock\n\n¼ cup sherry or dry white wine\n\n2 Tbl heavy cream\n\nPlace each piece of chicken between two sheets of plastic wrap and pound\nuntil about ¼\" thick. Season the chicken with salt and pepper on both\nsides. Dredge in flour.\n\nHeat the oil in a pan over medium-high heat. Fry each piece of chicken\nuntil they are golden brown. You may need to do this in small batches.\nRemove chicken and cover with foil to keep them warm.\n\nReduce heat to medium and add butter to the pan. Add mushrooms and sauté\nfor 4-5 minutes, seasoning with salt and pepper. Add the wines, chicken\nstock, and cream. Cook for about 3 minutes to allow the liquid to reduce\nslightly.\n\nPour the mushrooms over the chicken and serve.",
     "tags": [
@@ -3188,7 +3255,7 @@
     "title": "Spicy Miso Chicken Tacos",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": null,
     "body": "Relish.com\n\n### Sauce/Marinade:\n\n1 cup reduced-sodium soy sauce\n\n1 cup mirin\n\n1 cup sugar\n\n1 tsp red chili flakes\n\n¼ cup garlic, minced\n\n¼ cup chopped green onions\n\n¼ cup rice vinegar (brown or white)\n\n¼ cup brown miso\n\n### Chicken:\n\n12 boneless chicken thighs, fat trimmed\n\n1 Tbl oil\n\n1 onion, sliced\n\n2 jalapenos, sliced\n\nThinly sliced cabbage\n\nChopped cilantro\n\nLime wedges\n\nCombine all marinade ingredients in a small saucepan and bring to a\nboil. Remove from heat and let cool. Once it is cooled, set aside ¼ cup\nfor glazing chicken.\n\nPlace chicken in a Ziplock bag. Add remaining marinade and seal bag.\nRefrigerate for at least 12 hours.\n\nHeat oil in a large saucepan. Add chicken and sauté until cooked, about\n12 minutes. Remove chicken from pan. Add onions and jalapenos and sauté\nfor 5 minutes.\n\nPlace chicken on tortillas, drizzle with saved sauce, and top with onion\nand peppers, cabbage, cilantro, and lime wedges.\n\nServes 12.**\\",
     "tags": [
@@ -3206,7 +3273,7 @@
     "title": "Sour Cream Enchiladas",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mom S.",
     "body": "2 cans cream of chicken soup\n\n1 bunch green onions, chopped\n\n1 cup water\n\n1 sm. can chopped green chilies\n\n1 cup sour cream\n\n2 lb. chicken, cooked and shredded\n\n1/3 - ½ pkg. dry taco seasoning\n\ngrated Jack and Cheddar cheese\n\n1 pkg. tortillas\n\nMix first five ingredients in a medium bowl. Cover the bottom of\n9\"x13\" baking dish with 1/3 of the sauce. Set aside 1 cup of the\nremaining sauce, add the taco seasoning to it. Warm each tortilla\nseparately. Put some meat and two spoons of seasoned sauce in each\ntortilla. Roll up and place in pan. Pour remaining plain sauce over the\ntop of filled baking dish. Top with grated cheese. Bake, uncovered, at\n350 degrees for 40 minutes.",
     "tags": [
@@ -3227,7 +3294,7 @@
     "title": "Chicken with the Golden Coat",
     "alt_title": "Crispy Oven-Baked Chicken",
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Stephanie",
     "body": "1 4-lb chicken, cut up\n\n1 cup crushed cornflakes\n\n½ cup flour\n\n1 tsp seasoned salt\n\n1 tsp onion salt\n\ndash of pepper, sage, garlic powder\n\n¼ cup (or more) melted margarine\n\nCombine dry ingredients and place in a shallow bowl or in a large\nresealable bag. Dip chicken pieces in water or milk, then in crumb\nmixture. Shake well to coat. Melt butter in 13\" x 9\" baking pan. Place\nchicken in pan, meaty side down. Bake at 425 degrees for 20 minutes,\nthen turn all pieces over. Continue to bake for 20 minutes or until\njuices run clear.",
     "tags": [
@@ -3245,7 +3312,7 @@
     "title": "Chicken Roll-ups",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "8 oz. cream cheese\n\n2 cups cubed cooked chicken\n\n2 Tbl milk\n\n1 Tbl chopped onion\n\n1 Tbl chopped celery\n\n3 Tbl melted butter\n\n¼ tsp salt\n\n¼ tsp pepper\n\n2 (8 oz.) cans crescent rolls\n\n¾ cup bread crumbs or crushed croutons\n\nCombine cream cheese, chicken, milk, vegetables, and spices in a large\nbowl; mix well. Separate rolls into 16 triangles and flatten out just a\nbit. Spoon ¼ cup (or less) of the chicken mixture onto each flattened\ntriangle. Roll up, starting at the wide end. Brush with melted butter\nand roll in crumbs. Place on a cookie sheet and bake uncovered at 350\ndegrees for 15-18 minutes or until golden.\n\nServe with a sauce made from 1 can cream of chicken soup and 1 cup sour\ncream. Combine in a saucepan and heat through.",
     "tags": [
@@ -3265,7 +3332,7 @@
     "title": "Easy Ranch Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Six Sisters",
     "body": "1 pkg. chicken breasts\n\n½ cup cornflake crumbs\n\n½ cup grated Parmesan\n\n1 pkg. dry Ranch dressing mix\n\n½ cup butter, melted\n\nCombine dry ingredients. Dip chicken in to the melted butter, and then\nroll in the crumb mix. Place in a baking dish and bake at 350 degrees\nfor 45 minutes.",
     "tags": [
@@ -3283,7 +3350,7 @@
     "title": "Starvin' Guy Chicken Pot Pie",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Looney Spoons",
     "body": "1 cup chopped onion\n\n1 clove garlic, minced\n\n1 cup chicken broth\n\n1½ cups peeled, cubed potatoes\n\n1½ cups chopped carrots\n\n1 cup sliced green beans (I use frozen)\n\n1 can cream of chicken soup (undiluted)\n\n1½ Tbl flour\n\n2 cups chopped cooked chicken breast\n\n2 Tbl chopped fresh parsley\n\n½ tsp dried basil\n\n½ tsp ground thyme\n\n¼ tsp black pepper\n\n### Biscuit Crust:\n\n1 cup flour\n\n2 tsp baking powder\n\n½ tsp ground sage\n\n¼ tsp salt\n\n2 Tbl butter\n\n1/3 cup skim milk\n\nSpray a large saucepan with nonstick spray. Add onions and garlic. Cook\nover medium heat until tender, about 5 minutes. Add broth, potatoes,\ncarrots, and beans. Bring to a boil. Reduce heat to medium-low.\nPartially cover and simmer 12 minutes. The potatoes should be slightly\nunder cooked. Remove from heat. In a small bowl, stir together soup,\nflour, and spices. Add to vegetables along with chicken. Stir well. Pour\ninto medium casserole dish.\n\nTo prepare crust, combine dry ingredients in a large bowl. Using a\npastry blender, cut in butter or margarine until mixture resembles\ncoarse crumbs. Stir in milk. Form a ball with the dough (add more flour\nif dough is too sticky.) Roll out on a floured surface to a size that\nwill fit the top of the casserole. Place dough on top of chicken\nmixture. Prick several times with a fork.\n\nBake at 400 degrees for 25 minutes, until top is golden brown. Let cool\nfor 15 minutes before serving.",
     "tags": [
@@ -3303,7 +3370,7 @@
     "title": "A'roma Chicken Lasagna",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mom S.",
     "body": "1 (8 oz.) pkg. lasagna, cooked & drained\n\n½ cup butter\n\n1 small onion, finely chopped\n\n¼ lb. fresh mushrooms, sliced\n\n½ cup flour\n\n2 cups chicken broth\n\n1 cup milk\n\n1 tsp chicken base (not bouillon)\n\n½ tsp pepper\n\n½ tsp dried basil\n\n2-3 cups cooked chicken, diced\n\n1 (16 oz.) tub ricotta or cottage cheese\n\n1 bunch fresh spinach, rinsed & dried\n\n1 lb. mozzarella cheese, grated\n\n¼ cup Parmesan cheese, grated\n\nMelt butter in large saucepan. Sauté onion until soft but not brown. Add\nmushrooms and sauté three minutes. Blend in flour and cook for one\nminute. Stir in broth, milk, chicken base, pepper and basil and cook\nuntil mixture thickens. Add chicken. Layer 1/3 chicken mixture in\ngreased 9\" x 13\" baking dish. Top with half the lasagna, ricotta or\ncottage cheese, spinach leaves and mozzarella; repeat layers topping\nwith chicken and Parmesan. Bake, uncovered, in preheated 350 degree oven\none hour. Let stand 10 minutes before cutting. Serves 6-8.\n\nYou can add ¼ cup extra liquid and use uncooked noodles. Let it cook\nslightly longer to ensure they are soft.",
     "tags": [
@@ -3321,7 +3388,7 @@
     "title": "Chicken Alfredo",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "½ cup butter\n\n8 oz. cream cheese, softened\n\n2 c milk\n\n1 tsp garlic\n\n½ c grated Parmesan\n\n12 oz cooked penne pasta\n\ngrilled chicken\n\nIn a heavy pot, melt the butter, then add the cream cheese and slowly\nmelt it, stirring constantly. Add the milk and stir to combine well. Add\nthe garlic and Parmesan and continue to stir until thick. Serve over\nnoodles with cut up grilled chicken.\n\n### Alfredo Sauce\n\n*Olive Garden*\n\n1 pint heavy cream\n\n½ cup butter\n\n2 Tbl cream cheese\n\n½ - ¾ grated Parmesan cheese\n\n1 tsp garlic powder (or less to taste)\n\nIn a saucepan combine butter, heavy cream, and cream cheese. Simmer\nuntil all is melted and mixed well. Add the cheese and garlic powder.\nSimmer for 1-20 minutes on low heat. Season with salt and pepper as\nneeded.\n\n**If you don't have cream, mix ½ cup plus 2 Tbl butter with ½ cup\nflour, then add milk. Cook on low, stirring constantly, until thickened\nslightly. Add cheeses and garlic, stir to melt. *Be careful not to over\nthicken. This will take much less time*.",
     "tags": [
@@ -3338,7 +3405,7 @@
     "title": "Enchilada Suizas",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": null,
     "body": "Combine:\n\n3 c shredded cooked chicken or turkey\n\n½ packet chicken taco mix\n\n12 white flour tortillas\n\n3 c salsa Verde\n\n2+ c shredded Monterey jack cheese (or 1 c each jack and cheddar)\n\n1 c heavy cream\n\nHeat tortillas to soften (I do 3 at a time for 30 secs in microwave).\nPut some chicken and cheese on each tortilla and roll up. Place 1 cup\nsalsa in the bottom of a 9\" x 13\" baking dish. Put rolled enchiladas on\ntop.\n\nPour remaining salsa and heavy cream of the top. Top with remaining\ngrated cheese (about 1 cup).\n\nBake at 350 degrees for 20 -- 30 minutes, or until cheese is melted and\nbubbly.",
     "tags": [
@@ -3357,7 +3424,7 @@
     "title": "Chicken Piccata",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Tasty Kitchen online",
     "body": "4 whole or 8 half boneless, skinless chicken breasts\n\nSalt & pepper to taste\n\n4 Tbl flour\n\n5 Tbl butter\n\n4 Tbl olive oil\n\n1 cup dry white wine\n\n¾ cup chicken broth\n\n2 whole lemons\n\n¾ cup heavy cream\n\ncapers (optional)\n\n1 lb angel hair pasta\n\nHave a pot of water simmering for the pasta.\n\nIf chicken breasts are thick, pound them to ¼\" or slice in half\nhorizontally. Sprinkle with salt and pepper, then dredge in flour.\n\nHeat 2 Tbl of butter and 2 Tbl of oil in a large skillet over\nmedium-high heat. Fry a few of the breasts at a time until golden brown\non both sides. Remove and keep warm while you fry the other breasts,\nusing more oil and butter as needed. Decrease the heat while you cook so\nthat later batches don't burn!\n\nAfter all chicken is done, set the heat to medium-low. Pour in the wine\nand chicken broth and squeeze in the juice of two lemons. Whisk the\nsauce, scraping the bottom of the pan. Allow the sauce to cook and\nthicken until reduced by about half. Add salt and pepper to taste.\n\nReduce heat to low and pour in the cream. Whisk together and allow it to\ncook for a couple more minutes until the sauce thickens. You can add\nmore cream if it's too tangy. You can also adjust the seasonings or add\ncapers at this point.\n\nCook the pasta right at the end. Top each mound of pasta on a plate with\na piece of chicken and sauce.",
     "tags": [
@@ -3372,7 +3439,7 @@
     "title": "Bombay House Chicken Tikka Masala",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mattawamum.com",
     "body": "### Marinade:\n\n1 ½ lb chicken, cut into 1\" chunks\n\n1 cup plain yoghurt\n\n2 Tbl lemon juice\n\n2 tsp cumin\n\n1 tsp red pepper\n\n1 tsp black pepper\n\n½ tsp cinnamon\n\n1 tsp salt\n\n1 tsp ground ginger\n\nCombine ingredients and add chicken. Cover and refrigerate for 2 hours.\nCook by either frying or grilling until chicken is cooked through.\n\n### Sauce:\n\n1 Tbl butter\n\n2 garlic cloves, minced\n\n1 jalapeno, chopped and seeds removed\n\n2 tsp ground coriander\n\n1 tsp cumin\n\n½ tsp paprika\n\n1 tsp garam masala\n\n½ tsp salt\n\n1 can (14.5 oz) tomato sauce\n\n1-2 cups heavy cream\n\n3-4 cups cooked jasmine rice\n\n¼ cup chopped cilantro\n\nMelt butter over medium heat. Add garlic and jalapeno and cook for one\nminute. Add spices and stir to combine. Add tomato sauce, stir to\ncombine, and simmer for about 15 minutes until thickened.\n\nAdd chicken to the sauce. Add cream to help control the heat (1 cup for\nhot to med heat, 2 cups for mild) and serve over rice. Garnish with\ncilantro.",
     "tags": [
@@ -3389,7 +3456,7 @@
     "title": "Crockpot Chicken Tikka Masala",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Thekitchn.com",
     "body": "*Serves 4 to 6*\n\n1 to 1 1/2 pounds boneless, skinless chicken thighs\n\n1 large onion, diced\n\n3 cloves garlic, minced\n\n1-inch piece whole ginger, peeled and grated\n\n2 tablespoons tomato paste\n\n1 to 2 tablespoons garam masala\n\n2 teaspoons paprika\n\n2 teaspoons kosher salt\n\n1 (28-ounce) can diced tomatoes\n\n3/4 cup heavy cream or coconut milk\n\nFresh cilantro, chopped\n\n2 cups cooked rice, to serve\n\nCut the chicken thighs into bite-sized pieces and transfer them to a\n3-quart or larger slow cooker. Stir in the onion, garlic, ginger, tomato\npaste, 1 tablespoon of garam masala, paprika, and kosher salt until the\nchicken is evenly covered with spices. Stir in the diced tomatoes with\ntheir juices.\n\n→ *If you have the time: Marinate the chicken in 1/2 cup yogurt for up\nto 6 hours. Shake to remove excess yogurt before transferring to the\nslow cooker.*\n\n*→ If you have the time: Sauté the onions and garlic in a little olive\noil over medium-high heat in a skillet until softened, then stir in the\nginger, tomato paste, and spices until fragrant. Transfer to the slow\ncooker with the chicken and diced tomatoes. This will give your tikka\nmasala more depth of flavor.*\n\nCover the slow cooker and cook for 4 hours on high or 8 hours on low.\nFifteen minutes before the end of cooking, stir in the heavy cream. If\nyou prefer a thicker sauce, leave the slow cooker uncovered for the last\n15 minutes. Taste and add more garam masala or salt to taste.\n\nServe over rice with fresh cilantro sprinkled over the top of each\nserving. The tikka masala can be refrigerated for 3 to 4 days or frozen\nfor 3 to 4 months.",
     "tags": [
@@ -3406,7 +3473,7 @@
     "title": "Honey-Lime Shredded Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Stephanie",
     "body": "½ - ¾ cup honey\n\n2 Tbl - ¼ cup olive oil\n\n½ cup lime juice\n\n1 ½ tsp cumin\n\n1 tsp cayenne pepper\n\n1 ½ tsp salt\n\n1 med hot green chili, seeded and finely diced\n\n6 cloves garlic, crushed\n\n8 boneless, skinless chicken thighs (1 long tray) or breasts (use\nincreased amounts)\n\nCombine marinade ingredients and mix well. Place chicken in a crock pot.\nPour marinade over the top. Cook on low for 6 hours. Shred meat and\nserve as a quesadilla filler or with any Mexican meal. *We like to make\nburritos with this, sweet Mexi rice, and black beans.*",
     "tags": [
@@ -3426,7 +3493,7 @@
     "title": "Baked Creamy Chicken Taquitos",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Our Best Bites",
     "body": "1/3 c cream cheese (3 oz)\n\n¼ c green salsa\n\n1 Tbl fresh lime juice\n\n½ tsp cumin\n\n1 tsp chili powder\n\n½ tsp onion powder\n\n¼ tsp garlic powder\n\n3 Tbl chopped cilantro\n\n2 Tbl chopped green onion\n\n2 c cooked, shredded mexi-chicken\n\n1 c shredded mexi-cheese\n\n8 flour tortillas\n\nPreheat oven to 425 degrees. Line a baking sheet with foil and spray\nwith non-stick spray.\n\nCombine first seven ingredients until creamy. Add next 4 ingredients.\nHeat tortillas to soften. Place 2-3 Tbl of mix in each and roll up\ntightly.\n\nSpray with non-stick spray and sprinkle lightly with salt. Bake for\n15-20 minutes or until lightly golden. Cool slightly and serve.****",
     "tags": [
@@ -3447,7 +3514,7 @@
     "title": "Roast Chicken Teriyaki",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Todd & Steph",
     "body": "½ cup soy sauce\n\n½ cup dry sherry or orange juice\n\n2 Tbl sugar\n\n2 cloves garlic, minced\n\n1 Tbl grated fresh ginger or 1 tsp dry\n\n1 tsp sesame oil\n\n3 lb. chicken pieces\n\nStir together all marinade ingredients until sugar has dissolved. Pour\nover chicken and refrigerate 2-48 hours, turning occasionally. Preheat\noven to 400 degrees. Place chicken, skin side down in baking dish,\nreserving marinade. Bake 15 minutes. Reduce heat to 350 degrees. Boil\nmarinade for at least 3 minutes. Pour onto chicken and bake 20 more\nminutes or until done, basting every 5 minutes. Serve with rice.",
     "tags": [
@@ -3465,7 +3532,7 @@
     "title": "Crockpot Teriyaki Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "MJHS -- Karen, Gaynol",
     "body": "1 lg. pkg. chicken thighs or breasts\n\n1 cup brown sugar\n\n1 cup [low-sodium]{.underline} soy sauce\n\n1 cup pineapple juice\n\nPlace chicken in a crock-pot. Combine the other ingredients and pour\nover the chicken. Cook on low for 4-6 hours. Shred or cube and serve\nwith rice.",
     "tags": [
@@ -3481,7 +3548,7 @@
     "title": "Lemonade Can Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "1 Tbl lemonade powder (ie. Country Time)\n\n1 Tbl brown sugar\n\n1 Tbl paprika\n\n2 tsp hickory-smoked salt (or plain)\n\n1 tsp lemon pepper\n\n1 tsp garlic powder\n\n1 tsp onion powder\n\n¼ tsp celery seed\n\n1 12-oz can lemonade\n\n1 whole chicken (3.5 -- 4 lb)\n\n2 tsp vegetable oil\n\nMix together spices in a small bowl. Pop the tab off of the lemonade\ncan. Pour out half of the lemonade and reserve for the sauce. Poke two\nmore holes in the top of the can. Remove the giblets and fat from inside\nthe chicken. Rinse inside and out; pat dry. Sprinkle 1 tsp of the rub\ninside the chicken cavity and ½ tsp inside the neck opening. Rub the\noutside of the bird with the oil. Sprinkle 1 Tbl of the rub all over the\noutside. Spoon the remaining rub into the lemonade can.\n\nSet the can in a shallow roasting pan. Carefully place the bird over the\ncan, using the legs to prop the bird into an upright position. Tuck the\nwings behind the neck, so it looks like the bird's arms are behind its\nhead. Roast at 350 degrees for 1 ¼ - 1 ½ hours. Allow it to rest for 5\nminutes before lifting the bird offof the can. Serve with sauce.\n\n### Lemonade-Mustard Sauce\n\n1 Tbl butter\n\n2-3 shallots or 1 small onion, finely chopped\n\n¾ cup lemonade (from can)\n\n½ cup firmly packed brown sugar\n\n6 Tbl Dijon mustard\n\n3 Tbl fresh lemon juice\n\n½ tsp grated lemon zest\n\nSalt and pepper to taste\n\nMelt butter over medium heat. Add shallots and cook until just beginning\nto turn brown. Add lemonade and turn to high heat. Boil until reduced to\n2 Tbl. Stir in remaining ingredients. Lower heat and simmer until thick\nand flavored. Adjust seasonings to taste.",
     "tags": [
@@ -3500,7 +3567,7 @@
     "title": "Roast Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "3 lb. roasting chicken, rinsed and patted dry\n\n¼ c butter, melted\n\n1 Tbl honey\n\n1 clove garlic, minced\n\n½ lemon, sliced\n\n1 sprig rosemary\n\nCombine butter, honey, and garlic. Rub under breast skin and all over\nchicken. Place the chicken breast-side up on a rack in a shallow\nroasting an. Place cut up lemon and rosemary in the cavity. Bake at 450\ndegrees for 15 minutes, and then reduce heat to 375 degrees for\nremaining cook time. When done, remove from the oven and flip the bird\nover for 10 minutes before cutting.\n\n2.5 -- 3 lb Cook 1.25 -- 1.75 hour\n\n3-4 lb Cook 1.75 to 2.25 hours",
     "tags": [
@@ -3517,7 +3584,7 @@
     "title": "Thai Drunken Zucchini Noodles with Spicy Honey Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "howsweeteats.com",
     "body": "Yield: serves 2 to 4 total time: 30 minutes\n\n### ingredients:\n\n1 tablespoon hoisin sauce\n\n1 tablespoon low-sodium soy sauce\n\n1/2 tablespoon oyster sauce\n\n2 tablespoons sweet chili sauce\n\n2 tablespoons coconut oil\n\n1 pound boneless, skinless chicken thighs cut into pieces\n\n1/2 teaspoon salt\n\n1/4 teaspoon pepper\n\n1 1/2 tablespoons chili garlic sauce\n\n1 1/2 tablespoons honey\n\n2 shallots, minced\n\n2 garlic cloves, minced\n\n1 red bell pepper, sliced\n\n2 scallions, sliced\n\n2 medium zucchini, spiraled (with blade A)\n\n2 teaspoons hot chili sesame oil\n\n1/4 cup chopped roasted peanuts\n\nfresh Thai basil for topping\n\n### Directions:\n\nHeat a large skillet over medium heat. Once hot, add the hoisin, soy\nsauce, oyster and sweet chili sauce and stir it together. Cook for 1 to\n2 minutes, until the sauce is combined and warm. Transfer it to a bowl.\n\nAdd the coconut oil to the same skillet over medium heat. Season the\nchicken with the salt and pepper. Add it to the skillet and cook until\nbrowned on all sides, about 6 to 8 minutes. Stir together the chili\ngarlic sauce (or sriracha) and honey and add it to the chicken. Stir\nwell and cook for another minute or two. Transfer the chicken to a bowl\nor plate.\n\nAdd the shallots, garlic and red pepper to the skillet. Cook until\nsoftened, about 5 minutes. Return the sauce and the chicken to the\nskillet. Cook for 1 to 2 minutes. Add in the scallions and the zucchini,\ntossing well to coat. Cook for 2 to 3 minutes, until the zucchini\nnoodles soften. Toss in the peanuts. Drizzle the entire skillet with hot\nchili sesame oil. Serve immediately.\n\n***This is really good served over rice or Asian noodles. If you do\nthis, add lots of veggies to the mix -- cut up zucchini, water\nchestnuts, carrots, etc.",
     "tags": [
@@ -3535,7 +3602,7 @@
     "title": "Chicken and Penne with Pesto Cream Sauce",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Lyndasrecipebox.com",
     "body": "16 oz. penne pasta, cooked per directions\n\n4-6 boneless chicken breast halves, sliced into thin strips\n\n4-5 cloves garlic, minced\n\n4 Tbl oil or butter\n\n1 ¼ cups heavy cream\n\n¼ c chicken broth\n\n3 Tbl pesto\n\n3 Tbl diced sundried tomatoes\n\nsalt and pepper to taste\n\nIn a large skillet, heat 2 Tbl oil or butter and sauté chicken breasts\nuntil barley done. Salt and pepper to taste. Remove to a plate.\n\nAdd 2 more Tbl oil or butter to the skillet and add the minced garlic.\nStir until it is very fragrant but not brown. Add the cream, broth,\npesto and tomatoes. Bring to a simmer and add chicken back to the pan.\nSimmer until sauce is slightly thickened. Taste and add more salt and\npepper if needed. Add pasta and toss to coat. Serve.",
     "tags": [
@@ -3550,7 +3617,7 @@
     "title": "Orange or Lemon Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Kaori Allen",
     "body": "4 chicken breasts, cut into bite-sized chunks\n\nsalt\n\npepper\n\ncornstarch\n\nCombine all ingredients; coat chicken pieces. Deep fry in vegetable oil\nuntil chicken is cooked.\n\n### Lemon Sauce\n\n3 Tbl soy sauce\n\n4 Tbl sugar\n\n1 Tbl water\n\n2 Tbl fresh lemon juice\n\nCombine soy sauce, sugar, and water. Heat until sugar has dissolved. Add\nlemon juice and pour over cooked chicken. Toss to coat. Serve with rice.\n\n### Orange Sauce\n\n6 Tbl orange marmalade\n\n2 cloves garlic, grated or minced\n\nginger (1/4 -- ½ tsp, depending on taste)\n\n4 Tbl rice vinegar\n\n2 Tbl soy sauce\n\n2 Tbl lemon juice\n\n2 Tbl cornstarch\n\n1 cup + 2 Tbl water\n\nsalt and pepper to taste\n\nMix ingredients and heat until thickened. Add chicken and toss to coat.\nServe with rice.",
     "tags": [
@@ -3567,7 +3634,7 @@
     "title": "Fresco Marinated Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "4-6 boneless, skinless chicken breasts\n\n1 envelope Lipton Recipe Secrets *Savory Herb and Garlic* soup mix\n\n1/3 cup water\n\n¼ olive or vegetable oil\n\n1 tsp lemon juice or vinegar\n\nPlace chicken in a large re-sealable bag. Combine marinade ingredients\nand pour over chicken. Turn to coat. Refrigerate and marinate for 3+\nhours. Discard marinade and grill chicken until done.",
     "tags": [
@@ -3585,7 +3652,7 @@
     "title": "Grilled Huli Huli Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": null,
     "body": "½ cup brown sugar\n\n1/3 cup catsup\n\n½ cup low sodium soy sauce\n\n12 oz pineapple juice\n\n¼ c rice vinegar\n\n1 Tbl Worcestershire sauce\n\n1 tsp minced ginger\n\n1 tsp minced garlic\n\n4 lb boneless skinless chicken thighs\n\nMix all and set aside 1 cup for basting. Add thighs to sauce and\nmarinate 2-3 hours.\n\nAdd 1 Tbl cornstarch to reserved sauce in a small pan. Stir to combine\nwell. Cook over medium heat until sauce thickens slightly. Cool and use\nto baste chicken while cooking.\n\nDrain and discard used marinade.\n\nGrill on oiled foil (not on grill rack) over med heat 6-8 minutes per\nside, basting during the last 5 minutes OR -- bake at 375 degrees for\n35-40 minutes, basting in the last five minutes.",
     "tags": [
@@ -3602,7 +3669,7 @@
     "title": "Tender Ranch Nuggets",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "1 cup crushed cornflake crumbs\n\n½ cup grated Parmesan cheese\n\n½ tsp salt\n\n¼ tsp pepper\n\n1/8 tsp garlic powder\n\n¼ cup prepared Ranch salad dressing\n\n1 lb. boneless skinless chicken breasts, cut into 1\" chunks\n\nAdditional Ranch dressing for dipping\n\nIn a shallow bowl, combine the first five ingredients. Place dressing in\nanother bowl. Toss chicken cubes in dressing, then roll in cornflake\nmixture. Place in a greased 11\" x 7\" x 2\" baking pan. Bake,\nuncovered, at 400 degrees for 12-15 minutes or until juices run clear.\nServe with additional dressing for dipping. Yield: 4 servings",
     "tags": [
@@ -3620,7 +3687,7 @@
     "title": "Chicken Nuggets",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Steph",
     "body": "1 cup flour\n\n4 tsp seasoned salt\n\n1 tsp paprika\n\n1 tsp poultry seasoning\n\n1 tsp ground mustard\n\n½ tsp pepper\n\n8 boneless, skinless chicken breast halves\n\n¼ cup oil for frying\n\nIn a re-sealable plastic bag, combine the first six ingredients. Pound\nchicken to ½ \" thickness and cut into 1 ½ \" pieces. Place chicken\npieces, a few at a time, into bag and shake to coat. Heat oil in a\nskillet; cook chicken, turning frequently, until browned and juices run\nclear, about 6-8 minutes. Yield: 8-10 servings.",
     "tags": [
@@ -3634,7 +3701,7 @@
     "title": "Tracy's Chicken Tenders",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Tracy Hawkins",
     "body": "1 sleeve Ritz crackers, crushed\n\n3 Tbl Parmesan cheese (from green can)\n\n1 Tbl garlic salt\n\nsour cream\n\nboneless, skinless chicken tenders or breast, cut into strips\n\nSpread sour cream onto chicken. Combine remaining ingredients. Roll\ncoated chicken in crumb mixture. Drizzle melted butter over the top.\nBake at 350 degrees for 20-30 minutes or until done.",
     "tags": [
@@ -3651,7 +3718,7 @@
     "title": "One Skillet Sweet 'n Salty Chicken Thighs",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Kiwiandbean.com",
     "body": "Serves: 4\n\n### Ingredients\n\nRice or Noodles -- prepped and ready to go\n\n1½ tablespoons apple cider vinegar\n\n1½ tablespoons tamari or soy sauce\n\n1½ tablespoons pure maple syrup\n\n½ teaspoon ground black pepper\n\n8 boneless skinless chicken thighs\n\nSea salt\n\n2 tablespoons cooking oil\n\n### Instructions\n\nCombine the apple cider vinegar, tamari, maple syrup and ground pepper\nin a small bowl. Set aside.\n\nUse a paper towel to pat the chicken thighs dry. Season with salt and\npepper. Heat the cooking oil in a large skillet set over medium-high\nheat.\n\nWhen the oil is shimmering, add the chicken thighs. When they begin to\nturn brown and crispy (after about 3-4 minutes), flip them over and\nbrown them on the other side.\n\nPour over the maple syrup mixture and bring it to a boil.\n\nTurn down the heat slightly and let the maple syrup mixture boil and\nreduce, while you flip the chicken thighs every minute or so (to ensure\nthey are completely coated in the glaze).\n\nWhen the chicken thighs are cooked through and the maple mixture is\nthick and syrupy, remove the chicken from the heat and serve immediately\n(with rice or veggies.)",
     "tags": [
@@ -3667,7 +3734,7 @@
     "title": "Pad Thai Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Thai Food Made Easy by June Williamson",
     "body": "1 14-oz pkg. rice sticks\n\nSauce:\n\n3/8 c chicken broth\n\n4 ½ Tbl fish sauce\n\n6 Tbl ketchup\n\n3 Tbl soy sauce\n\n3 Tbl lime juice (2 limes)\n\n6 Tbl brown sugar\n\n3 Tbl white sugar\n\n4 Tbl oil\n\n1 Tbl minced garlic\n\n4 eggs\n\n1 lb chicken\n\n1 small carrot or 1-cup carrot matchsticks\n\n1 small onion, sliced\n\n2 Tbl peanuts, chopped\n\nGarnish:\n\n1 bunch green onions, chopped\n\n1 lg lime, sliced into wedges\n\n1 cup bean sprouts\n\n1 tsp ground red pepper\n\ncilantro\n\nSoak noodles in a large bowl of hot water for at least 15 minutes, until\nsoft. Drain and set aside.\n\nMix all sauce ingredients.\n\nHeat oil in a large wok or pan. Lightly brown garlic. Stir in eggs; let\nthem fry; then coarsely chop with a spatula. Add chicken and cook until\ndone. Add carrots and onions, and cook for about 1 minute. Add drained\nnoodles and stir. Add the sauce and toss all together. Cover and turn\nheat to medium high. Simmer for 2 minutes. Stir. Stir in chopped\npeanuts. Garnish with green onions, sliced limes, bean sprouts, and\ncilantro as desired. Sprinkle with red pepper.\n\n### Teriyaki Sauce\n\n*Tracy Hawkins*\n\n2 Tbl brown sugar\n\n3 Tbl soy sauce\n\n1 Tbl oil\n\n¼ tsp ground ginger\n\n1/8 tsp garlic powder\n\n2 Tbl sherry\n\nCombine and use to marinate meat of any kind.",
     "tags": [
@@ -3685,7 +3752,7 @@
     "title": "Aunt Margaret's Chicken Marinade",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Mom S.",
     "body": "1 ½ cups salad oil\n\n¾ cup soy sauce\n\n¼ cup Worcestershire sauce\n\n2 Tbl dry mustard\n\n1 Tbl coarse pepper\n\n½ cup red wine vinegar\n\n1 ½ Tbl parsley\n\n2 cloves garlic, crushed\n\n1/3 cup lemon juice\n\nCombine all; mix well. Use to marinate chicken.",
     "tags": [
@@ -3701,7 +3768,7 @@
     "title": "Sweet & Sour Citrus Chicken Stir-Fry",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Ourbestbites.com",
     "body": "Rice (prepare ahead of time)\n\nSauce:\n\n2/3 cup orange juice\n\ngrated rind of 1 lime\n\n2 Tbl lime juice (from 1 lime)\n\n2 Tbl rice vinegar\n\n2 Tbl brown sugar\n\n3 Tbl soy sauce\n\n5 cloves garlic, minced\n\n2 tsp fresh ginger, minced or grated\n\nStir-Fry:\n\n1 lb boneless skinless chicken, cut into 1\" chunks\n\nsalt and pepper to taste\n\n3 Tbl corn starch\n\n1 ½ cups broccoli florets\n\n1 ½ cups green beans\n\n1 bell pepper, seeded and sliced\n\n1 small red onion halved and cut into ¼\" slices\n\nIn a large skillet or wok, whisk together the sauce ingredients. Bring\nto a boil over med-high heat and cook for 5 minutes. Remove from heat\nand pour into a bowl. Wipe out skillet or wok.\n\nSeason the chicken with salt and pepper, then sprinkle with cornstarch\nand rub it into the chicken. Add 1 Tbl oil to the wok and heat it up.\nAdd the chicken and cook 4 -- 5 minutes or until cooked through. Add the\nveggies and stir fry until beans and broccoli are tender-crisp. Add the\nsauce, a few spoons at a time, allowing it to bubble up after each\naddition. Serve immediately over hot rice.",
     "tags": [
@@ -3718,7 +3785,7 @@
     "title": "Vietnamese-style Turkey Meatballs",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Blue Apron",
     "body": "**Lemongrass Rice**:\n\n3/4 c long grain white rice\n\n1 ½ cup water\n\n1 stalk lemongrass (can also use several pieces of dried)\n\nRinse rice until water runs clear. In a medium saucepot, combine rice.\nlemongrass, big pinch of salt, and water. Heat to boiling. Reduce heat\nand cover; cook without stirring 20+ minutes until water is absorbed and\nrice is tender. Carefully discard lemongrass pieces, fluff rice, and\nserve.\n\n### Meatballs:\n\n1 lb ground turkey\n\n1/3 c panko breadcrumbs\n\nSautéed aromatics (2 Tbl chopped ginger, 2 Tbl chopped scallions, 2 tsp\nminced garlic, in 2 Tbl oil, salt and pepper)\n\nCombine all in a bowl and gently toss to combine. Shape into 16\nmeatballs. Place on a lined pan and bake 15 minutes at 450 degrees until\nlightly browned and cooked through.\n\n**Marinated Veggies**:\n\n9 oz carrots\n\n3 Persian cucumbers\n\n1 jalapeno\n\n3 Tbl rice vinegar\n\n1 ½ Tbl sugar\n\nsalt and pepper\n\nGrate carrots; thinly slice cucumber and jalapeno. Stir vinegar and\nsugar in a medium bowl until sugar is dissolved. Add vegetables (only\nadd as much pepper as you want -- it makes it spicy). Set aside to\nmarinate at least 10 minutes. Season with salt and pepper.\n\n### Toppings:\n\n3 Tbl sweet chili sauce\n\n2 Tbl mayo\n\n3 Tbl roasted peanuts\n\nStir chili sauce and mayo together until well blended.\n\nServe meatballs on top of rice with veggies, drizzle of sauce, and\npeanuts.",
     "tags": [
@@ -3737,7 +3804,7 @@
     "title": "Miso-Ginger Chicken",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Blue Apron",
     "body": "10 oz boneless skinless chicken breast, cut into 1\" chunks\n\n2 tsp chopped ginger\n\n1 Tbl rice vinegar\n\n1/2 cup long grain white rice\n\n1/2 lb broccoli, trimmed into small florets\n\n1 oz salted butter\n\n1 Tbl sesame oil\n\n1 yellow onion, peeled and chopped into 1/2\"-wide wedges\n\n2 cloves garlic, chopped\n\n1 Tbl sweet white miso paste\n\n2 tsp honey\n\nIn a bowl, whisk together miso paste, vinegar, honey, and 1/4 cup water.\nSeason with salt and pepper if desired. Set aside.\n\nRinse the rice. In a pot, heat a drizzle of olive oil until hot. Add the\nrice and chopped garlic. Stir frequently for 1 minute until lightly\nroasted. Add 1 cup of water and a big pinch of salt. Once boiling again,\ncover and reduce heat to low. Cover and let it cook for 15-20 minutes or\nuntil the water has been absorbed and rice is tender. Turn off heat and\nfluff with a fork. Stir in sesame oil. Cover to keep warm.\n\nMEANWHILE, place broccoli and onion on a baking sheet and drizzle with\noil. Season with salt and pepper and toss to coat. Arrange in an even\nlayer. Roast in 450-degree oven for 14-16 minutes or until all are\ntender. Remove from oven.\n\nPat chicken dry, season with salt and pepper. Heat a drizzle of olive\noil on med-high in a nonstick pan. Add chicken and cook without stirring\n3-4 minutes until lightly browned. Add the chopped ginger and cook,\nstirring occasionally 1-2 minutes until slightly softened. Add the\nbutter and sauce and cook another 2-3 minutes until chicken is coated\nand cooked through. Turn off heat.\n\nServe finished rice topped with chicken and roasted veggies.\n\n### Gravy from NO Drippings\n\n*Steph*\n\n2 cups water\n\n2-3 tsp chicken or turkey BASE (not bouillon)\n\n½ c flour\n\n½ c cold water\n\nBring 2 c water to a boil. Add the BASE and stir to dissolve. Combine\nthe flour and cold water. Slowly add to the hot mix, stirring\nconstantly. You may not need to add it all. Stir until desired\nconsistency.\n\n### Turkey Brine\n\n*Todd / Pioneer Woman*\n\n3 c apple juice or cider\n\n2 gallons cold water\n\n4 Tbl fresh rosemary leaves\n\n5 cloves garlic, minced\n\n1 ½ c kosher salt\n\n2 c brown sugar\n\n3 Tbl peppercorns\n\n5 whole bay leaves\n\nPeel of 3 large oranges\n\nCombine everything in a large pot and bring to boiling, stirring until\nsalt and sugar dissolve. Turn off heat and allow brine to cool\ncompletely.\n\nPlace the uncooked turkey in a large brining bag or pot (Home Depot\nbucket), pour the brine over it, and refrigerate for 16 -- 24 hours.\n\nBefore roasting, remove the turkey from the brine (discard brine!) and\nsubmerge in a pot or sink filled with fresh cold water for 15 minutes.\nThis removes excess salt from outside.\n\nRemove from water and pat dry. Cook according to your normal roasting\nmethod.",
     "tags": [
@@ -3756,17 +3823,69 @@
     "title": "Sous Vide Marinated Chicken Breast",
     "alt_title": null,
     "section": "Main Dishes",
-    "subsection": "Chicken & Turkey",
+    "subsection": "Chicken, Turkey & Poultry",
     "credit": "Andrew",
     "body": "2 to 4 chicken breasts, marinated as you like\n1 Tbl butter or oil, for searing\n\nAndrew's shortcut is to grab a tray of pre-marinated raw chicken from Harmon's. Otherwise, take plain chicken breasts and marinate them in whatever sauce you love — Italian dressing, teriyaki, lemon-herb, anything goes — for a few hours or overnight.\n\nPlace the chicken in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).\n\nSous vide at 150 °F for 90 minutes. Add one hour if cooking from frozen.\n\nTo finish, pat dry and sear in a screaming-hot pan, cast-iron, or on the grill — about 60 seconds per side. Go a little longer if you want more pronounced grill marks.",
     "tags": [
-      "easy",
-      "chicken",
-      "main",
       "sous-vide",
-      "poultry"
+      "easy",
+      "poultry",
+      "main",
+      "chicken"
     ],
     "_source_id": "sous-vide-marinated-chicken-breast",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-foolproof-poached-chicken",
+    "title": "Foolproof Poached Chicken",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Chicken, Turkey & Poultry",
+    "credit": "America's Test Kitchen",
+    "body": "4 8-ounce (226 grams) boneless, skinless chicken breasts, trimmed\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 150 °F (65.5 °C) in a 7-quart container.\n\nSeason chicken with salt and pepper.  Place chicken and oil in a 1-gallon zipper-lock freezer bag and toss to coat.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until chicken is fully submerged, then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1 hour or up to 3 hours.\n\nTransfer chicken to paper towel–lined plate and let rest for 5 to 10 minutes.  Serve.\n\n### To Make Ahead\n\nChicken can be rapidly chilled in an ice bath and then refrigerated in a zipper-lock bag for up to 5 days.  To reheat, return the sealed bag to a water bath set to 150 °F / 65.5 °C for 20 minutes, then proceed with the resting step.\n\n### Variation: Lemon-Thyme Poached Chicken\n\nCombine 1 teaspoon (6 grams) salt, ½ teaspoon (2 grams) pepper, ½ teaspoon (1 gram) garlic powder, ½ teaspoon (1 gram) minced fresh thyme, and 1 teaspoon (2 grams) grated lemon zest in a bowl.  Sprinkle the chicken with this mixture in place of the plain salt and pepper.\n\n### Variation: Soy-Ginger Poached Chicken\n\nOmit the salt and pepper.  Whisk ¼ cup (59 grams) soy sauce, ¼ cup (50 grams) sugar, 1 teaspoon (3 grams) grated fresh ginger, 1 teaspoon (5 grams) toasted sesame oil, and ½ teaspoon (2 grams) white pepper together in a bowl.  Substitute this soy sauce mixture for the oil.",
+    "tags": [
+      "sous-vide",
+      "easy",
+      "poultry",
+      "main",
+      "chicken"
+    ],
+    "_source_id": "sous-vide-foolproof-poached-chicken",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-seared-duck-breasts",
+    "title": "Seared Duck Breasts",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Chicken, Turkey & Poultry",
+    "credit": "America's Test Kitchen",
+    "body": "4 10-ounce (284 grams) boneless duck breasts, skin and fat cap trimmed to ¼ inch\n3 sprigs (4 grams) fresh thyme\n6 garlic cloves, peeled and smashed\nSalt and pepper\n2 tablespoons (28 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 135 °F (57 °C) in a 7-quart container.\n\nUsing a sharp knife, cut slits ½ inch apart in a cross-hatch pattern in the duck skin and fat cap, being careful not to cut into the meat.  Pat duck dry with paper towels.  Place duck skin side down in a cold 12-inch nonstick skillet.  Heat skillet over medium-high heat and cook until fat begins to render and skin is lightly browned, 6 to 8 minutes.  Flip duck, add thyme sprigs and garlic to skillet, and cook until second side of breasts are opaque, about 30 seconds.  Transfer duck and thyme sprigs to a large plate.  Discard garlic and fat left in skillet and wipe clean with paper towels.\n\nSeason duck with salt and pepper.  Place duck and thyme sprigs in a 1-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until duck is fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1½ hours or up to 2 hours.\n\nTransfer duck to a paper towel–lined plate and let rest for 5 to 10 minutes.  Pat duck dry with paper towels.  Heat oil in now-empty skillet over medium-high heat until just smoking.  Place duck skin side down in skillet and cook until well browned and crisp, 2 to 4 minutes.  Transfer to cutting board and slice into ¼-inch-thick slices.  Serve with Grapefruit-Balsamic Sauce.\n\n### Grapefruit-Balsamic Sauce\n\nMakes about ¾ cup.  The success of this sauce depends on using fresh grapefruit juice.\n\n2 tablespoons (30 grams) balsamic vinegar\n2 tablespoons (28 grams) sugar\n2 cups (472 grams) chicken broth\n1 cup (236 grams) fresh grapefruit juice\nSalt and pepper\n4 tablespoons (56 grams) unsalted butter, cut into 4 pieces and chilled\n\n_Cooking method for the sauce will be added once Andrew sends the next page of the recipe._",
+    "tags": [
+      "main",
+      "duck",
+      "poultry",
+      "sous-vide"
+    ],
+    "_source_id": "sous-vide-seared-duck-breasts",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-easy-boneless-turkey-breast",
+    "title": "Easy Boneless Turkey Breast",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Chicken, Turkey & Poultry",
+    "credit": "America's Test Kitchen",
+    "body": "1 7-pound (3.18 kilogram) bone-in turkey breast\n½ cup plus 2 tablespoons (140 grams) vegetable oil\nSalt and pepper\n\nUsing sous vide circulator, bring water to 145 °F (63 °C) in a 7-quart container.\n\nUsing a sharp knife, cut along the rib cage of the breast to remove the two breast halves; discard the bones.  Trim excess skin from the turkey and season with salt and pepper.  Place one breast half and ¼ cup (56 grams) oil in a 1-gallon zipper-lock freezer bag.  Repeat with the second breast half and another ¼ cup of oil.  Seal bags, pressing out as much air as possible.  Gently lower bags into prepared water bath until turkey is fully submerged, then clip top corner of each bag to side of water bath container, allowing remaining air bubbles to rise to top of bags.  Reopen 1 corner of each zipper, release remaining air bubbles, and reseal bags.  Cover and cook for at least 3½ hours or up to 5 hours.\n\nTransfer turkey to a paper towel–lined plate and let rest for 5 to 10 minutes.  Heat remaining 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Place turkey skin side down in skillet and cook, adjusting position with tongs as needed, until well browned and crisp, 4 to 6 minutes.  Transfer turkey to carving board and slice into ½-inch slices.  Serve.\n\n### All-Purpose Gravy\n\nMakes about 2 cups.\n\n3 tablespoons (42 grams) vegetable oil\n1 small onion (140 grams), chopped\n1 small carrot (60 grams), peeled and chopped\n1 small celery rib (60 grams), chopped\nSalt and pepper\n¼ cup (50 grams) all-purpose flour\n4 cups (945 grams) chicken broth\n¼ cup (60 grams) dry white wine\n2 sprigs (1 gram) fresh thyme\n1 bay leaf (0.5 grams)\n\nHeat oil in a large saucepan over medium heat until shimmering.  Add onion, carrot, celery, and ½ teaspoon (3 grams) pepper and cook over medium heat until vegetables are softened and well browned, about 8 minutes.  Stir in flour and cook for 1 minute.  Slowly whisk in broth and wine, scraping up any browned bits and smoothing out any lumps.  Stir in thyme sprigs and bay leaf, bring to a simmer, and cook until gravy is thickened and reduced to 3 cups, about 15 minutes.  Strain gravy through a fine-mesh strainer into a bowl, pressing on solids to extract as much liquid as possible; discard solids.  Season with salt and pepper to taste.",
+    "tags": [
+      "main",
+      "poultry",
+      "turkey",
+      "sous-vide"
+    ],
+    "_source_id": "sous-vide-easy-boneless-turkey-breast",
     "_crosslisting": true
   },
   {
@@ -4129,12 +4248,46 @@
     "credit": "Andrew",
     "body": "2 to 4 pork chops, about 1 inch thick\nMarinade or dry rub of choice (see notes)\n1 Tbl butter or oil, for searing\n\nAndrew's favorite marinade is Newman's Own Balsamic Vinaigrette; for a dry rub, Spade L Pork seasoning works great. Coat the pork chops generously in your chosen marinade or rub. Place the chops in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).\n\nSous vide at 140 °F for 2 to 4 hours. Add one hour if cooking from frozen.\n\nPat dry and finish on a screaming-hot grill or in a cast-iron pan, about 60 seconds per side. The result is a chop that's edge-to-edge tender and juicier than anything you'd get on the grill alone.",
     "tags": [
-      "easy",
-      "pork",
       "main",
-      "sous-vide"
+      "easy",
+      "sous-vide",
+      "pork"
     ],
     "_source_id": "sous-vide-pork-chops",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-seared-pork-tenderloin-steaks",
+    "title": "Seared Pork Tenderloin Steaks",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Pork & Sausage",
+    "credit": "America's Test Kitchen",
+    "body": "2 1-pound (450 grams) pork tenderloins, trimmed\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 140 °F (60 °C) in a 7-quart container.\n\nPound tenderloins to 1-inch thickness.  Halve each tenderloin crosswise into 2 steaks.  Sprinkle each steak with ½ teaspoon (3 grams) salt and ¼ teaspoon (0.5 grams) pepper.  Place steaks and 2 tablespoons (28 grams) oil in a 1-gallon zipper-lock freezer bag and toss to coat.  Arrange steaks in single layer and seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until steaks are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1 hour or up to 2 hours.\n\nTransfer steaks to paper towel–lined plate and let rest for 5 to 10 minutes.  Pat steaks dry with paper towels.  Heat remaining 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Brown steaks, 1 to 2 minutes per side.  Transfer to cutting board and slice into ½-inch-thick slices.  Serve with Scallion-Ginger Relish, if desired.\n\n### Scallion-Ginger Relish\n\nMakes about ½ cup.  We like the complexity of white pepper in this recipe; don't substitute black pepper.\n\n6 scallions (100 grams), white and green parts separated and sliced thin\n2 teaspoons (12 grams) grated fresh ginger\n½ teaspoon (1 gram) ground white pepper\n½ teaspoon (1 gram) grated lime zest plus 2 teaspoons (10 grams) juice\n¼ cup (56 grams) vegetable oil\n2 teaspoons (10 grams) soy sauce\n\nCombine scallion whites, ginger, pepper, and lime zest in a heatproof bowl.  Heat oil in a small saucepan until shimmering.  Pour oil over scallion mixture.  (Mixture will bubble.)  Stir until well combined and let cool completely, about 15 minutes.  Stir in scallion greens, lime juice, and soy sauce.  Let mixture sit for 15 minutes to allow flavors to meld.  Serve.\n\n### To Make Ahead\n\nSteaks can be rapidly chilled in an ice bath and then refrigerated in a zipper-lock bag for up to 5 days.  To reheat, return sealed bag to water bath set to 140 °F / 60 °C for 30 minutes, then proceed with searing.",
+    "tags": [
+      "main",
+      "sous-vide",
+      "pork"
+    ],
+    "_source_id": "sous-vide-pork-tenderloin-steaks",
+    "_crosslisting": true
+  },
+  {
+    "id": "main-dishes-sous-vide-spiral-sliced-ham",
+    "title": "Spiral-Sliced Ham",
+    "alt_title": null,
+    "section": "Main Dishes",
+    "subsection": "Pork & Sausage",
+    "credit": "America's Test Kitchen",
+    "body": "1 7-pound (3.2 kilograms) spiral-sliced bone-in ham\n½ cup (118 grams) ruby port\n½ cup (160 grams) cherry preserves\n1 cup packed (200 grams) dark brown sugar\nPepper\n\nUsing sous vide circulator, heat water to 140 °F (60 °C) in a 12-quart container.\n\nPlace ham into a 2-gallon zipper-lock freezer bag and seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until ham is fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 3 hours or up to 8 hours.\n\nCook port in small saucepan over medium heat until reduced to 2 tablespoons (35 grams), about 5 minutes.  Stir in cherry preserves, sugar, and 1 teaspoon (4 grams) pepper and cook, stirring occasionally, until sugar dissolves and mixture is thick, syrupy, and reduced to 1 cup, 5 to 10 minutes; set aside.\n\nAdjust oven rack to lower-middle position and heat oven to 475 °F (246 °C).  Set wire rack in aluminum foil–lined rimmed baking sheet and spray with vegetable oil spray.  Transfer ham, cut side down, to prepared rack and brush with half of glaze.  Cook ham until glaze becomes sticky, 5 to 10 minutes.  Brush ham with remaining glaze and cook until glaze becomes sticky and light mahogany, 5 to 10 minutes.  Carve and serve.\n\n### To Make Ahead\n\nWe don't recommend making this recipe ahead of time.",
+    "tags": [
+      "sous-vide",
+      "pork",
+      "holiday",
+      "main",
+      "ham"
+    ],
+    "_source_id": "sous-vide-spiral-sliced-ham",
     "_crosslisting": true
   },
   {
@@ -4431,6 +4584,50 @@
     ]
   },
   {
+    "id": "sous-vide-short-rib-pot-roast",
+    "title": "Short Rib \"Pot Roast\"",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "3½ pounds (1.5 kilograms) boneless beef short ribs, trimmed\nSalt and pepper\n2 tablespoons (28 grams) vegetable oil\n1 large onion (350 grams), chopped\n2 celery ribs (60 grams), chopped\n1 carrot (80 grams), peeled and chopped\n1 tablespoon (15 grams) tomato paste\n1 garlic clove (5 grams), minced\n1 cup (225 grams) dry red wine\n1 cup (225 grams) beef broth\n8 sprigs (4 grams) fresh thyme\n2 bay leaves (1 gram)\n2 tablespoons (8 grams) minced fresh parsley\n\nUsing sous vide circulator, bring water to 167 °F (75 °C) in a 7-quart container.\n\nPat ribs dry with paper towels and season with salt and pepper.  Heat 1 tablespoon (14 grams) oil in a Dutch oven over medium-high heat until just smoking.  Brown half the ribs on all sides, 8 to 12 minutes; transfer to a plate.  Repeat with the remaining 1 tablespoon of oil and remaining ribs.\n\nAdd onion, celery, carrot, ½ teaspoon (1 gram) salt, and ¼ teaspoon (1 gram) pepper to fat left in the pot and cook over medium heat until softened and lightly browned, 8 to 10 minutes.  Stir in tomato paste and garlic and cook until fragrant, about 1 minute.  Stir in wine, scraping up any browned bits, and cook until reduced by half, 2 to 4 minutes.  Stir in broth and simmer for 2 minutes.  Transfer mixture to a blender and process until smooth, about 1 minute.\n\nDivide ribs, sauce, thyme sprigs, and bay leaves between two 1-gallon zipper-lock freezer bags and toss to coat.  Arrange ribs in a single layer and seal bags, pressing out as much air as possible.  Place each bag in a second 1-gallon zipper-lock freezer bag and seal.  Gently lower bags into prepared water bath until ribs are fully submerged, and then clip top corner of each bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of each zipper, release remaining air bubbles, and reseal bags.  Cover and cook for at least 20 hours or up to 24 hours.\n\nUsing tongs, transfer ribs to a serving dish.  Tent with aluminum foil and let rest while finishing sauce.  Strain cooking liquid through a fine-mesh strainer into a medium saucepan, pressing on solids to extract as much liquid as possible; discard solids.  Bring to a simmer over medium heat and cook until reduced to 2 cups, 4 to 6 minutes.  Season with salt and pepper to taste.  Spoon sauce over ribs, sprinkle with parsley, and serve.\n\n### To Make Ahead\n\nShort rib can be rapidly chilled in an ice bath and then refrigerated in zipper-lock bags after the sous vide cook for up to 5 days.  To reheat, return sealed bags to water bath set to 167 °F / 75 °C and let sit for 30 minutes, then proceed with the sauce-finishing step.",
+    "tags": [
+      "sous-vide",
+      "beef",
+      "main"
+    ]
+  },
+  {
+    "id": "sous-vide-peppercorn-crusted-roast-beef",
+    "title": "Peppercorn-Crusted Roast Beef",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "1 5-pound (2.3 kilograms) boneless beef chuck-eye roast, pulled into 2 pieces at natural seam and trimmed of large pieces of fat\nKosher salt and pepper\n2 tablespoons (28 grams) vegetable oil\n1 egg white (30 grams)\n¼ cup (30 grams) coarsely ground black, green, and pink peppercorns\n2 tablespoons (20 grams) flake sea salt\n\nSprinkle beef with 4 teaspoons (16 grams) kosher salt.  Arrange pieces side by side along natural seam, and then tie together at 1-inch intervals to create a 1 evenly shaped roast.  Transfer roast to a large plate and refrigerate, uncovered, for at least 24 hours or up to 96 hours.\n\nUsing sous vide circulator, heat water to 133 °F / 56 °C in a 12-quart container.\n\nHeat oil in a 12-inch skillet over medium-high heat until just smoking.  Brown roast on all sides, 6 to 8 minutes.  Season roast with pepper and place into a 2-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until roast is fully submerged, then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 18 hours or up to 24 hours.\n\nAdjust oven rack to middle position and heat oven to 475 °F (246 °C).  Set wire rack in aluminum foil–lined rimmed baking sheet and spray with vegetable spray.  Transfer roast to prepared rack and let rest for 10 to 15 minutes.  Pat roast dry with paper towels.\n\nWhisk egg white in a bowl until frothy, about 30 seconds.  Combine peppercorns and flake sea salt in a shallow dish.  Brush roast on all sides with egg white, then coat with peppercorn mixture, pressing to adhere.  Return roast to prepared rack and roast until surface is evenly browned and fragrant, 15 to 20 minutes, rotating sheet halfway through roasting.\n\nTransfer roast to carving board and slice into ½-inch-thick slices and serve.\n\n### To Make Ahead\n\nWe don't recommend making this recipe in advance.",
+    "tags": [
+      "sous-vide",
+      "beef",
+      "main",
+      "holiday"
+    ]
+  },
+  {
+    "id": "sous-vide-osso-buco",
+    "title": "Osso Buco",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Beef",
+    "credit": "America's Test Kitchen",
+    "body": "1 large onion (280 grams), chopped\n2 carrots (160 grams), peeled and chopped\n2 celery ribs (120 grams), chopped\n8 garlic cloves (40 grams), minced\n1 14.5-ounce can (411 grams) diced tomatoes, drained\n4 12-ounce (340 grams) veal shanks, 2 inches thick, trimmed and tied around equator\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n2 tablespoons (32 grams) tomato paste\n1¼ cups (290 grams) dry white wine\n4 bay leaves (1 gram)\n½ cup (5 grams) chopped fresh parsley\n\nUsing sous vide circulator, bring water to 176 °F (80 °C) in a 7-quart container.\n\nPulse onion, carrots, celery, and garlic in food processor until finely chopped, 12 to 14 pulses; transfer to bowl.  Pulse tomatoes in now-empty processor until finely chopped, 8 to 10 pulses.\n\nPat shanks dry with paper towels and season with salt and pepper.  Heat 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Brown shanks, 3 to 4 minutes per side; transfer to plate.\n\nHeat remaining 2 tablespoons (28 grams) oil in now-empty skillet over medium heat.  Add chopped vegetables, ½ teaspoon (3 grams) salt, and ¼ teaspoon (2 grams) pepper and cook until softened and lightly browned, 16 to 20 minutes.\n\nStir in tomato paste and cook until fragrant, about 1 minute.  Stir in wine, scraping up any browned bits, and cook until almost completely evaporated, 4 to 6 minutes.  Stir in tomatoes and cook until mixture is thick and lightly browned, 16 to 20 minutes.\n\nTransfer mixture to 2 1-gallon zipper-lock freezer bags.  Add shanks and bay leaves and toss to coat.  Arrange shanks in single layer and seal bags, pressing out as much air as possible.  Place bag into second 2-gallon zipper-lock freezer bag and seal bag.  Gently lower bag into prepared water bath until shanks are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 24 hours or up to 26 hours.\n\nTransfer shanks to serving dish, leaving sauce in bag.  Discard bay leaves.  Stir parsley into sauce and season with salt and pepper to taste.  Pour sauce over shanks and serve.\n\n### To Make Ahead\n\nShanks can be rapidly chilled in an ice bath and refrigerated in zipper-lock bags for up to 5 days.  To reheat, return sealed bag to water bath set to 176 °F / 80 °C for 1 hour, then proceed with step 7.",
+    "tags": [
+      "sous-vide",
+      "veal",
+      "italian",
+      "main"
+    ]
+  },
+  {
     "id": "sous-vide-pork-chops",
     "title": "Juicy Sous Vide Pork Chops",
     "alt_title": null,
@@ -4443,6 +4640,36 @@
       "pork",
       "main",
       "easy"
+    ]
+  },
+  {
+    "id": "sous-vide-pork-tenderloin-steaks",
+    "title": "Seared Pork Tenderloin Steaks",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Pork",
+    "credit": "America's Test Kitchen",
+    "body": "2 1-pound (450 grams) pork tenderloins, trimmed\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 140 °F (60 °C) in a 7-quart container.\n\nPound tenderloins to 1-inch thickness.  Halve each tenderloin crosswise into 2 steaks.  Sprinkle each steak with ½ teaspoon (3 grams) salt and ¼ teaspoon (0.5 grams) pepper.  Place steaks and 2 tablespoons (28 grams) oil in a 1-gallon zipper-lock freezer bag and toss to coat.  Arrange steaks in single layer and seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until steaks are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1 hour or up to 2 hours.\n\nTransfer steaks to paper towel–lined plate and let rest for 5 to 10 minutes.  Pat steaks dry with paper towels.  Heat remaining 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Brown steaks, 1 to 2 minutes per side.  Transfer to cutting board and slice into ½-inch-thick slices.  Serve with Scallion-Ginger Relish, if desired.\n\n### Scallion-Ginger Relish\n\nMakes about ½ cup.  We like the complexity of white pepper in this recipe; don't substitute black pepper.\n\n6 scallions (100 grams), white and green parts separated and sliced thin\n2 teaspoons (12 grams) grated fresh ginger\n½ teaspoon (1 gram) ground white pepper\n½ teaspoon (1 gram) grated lime zest plus 2 teaspoons (10 grams) juice\n¼ cup (56 grams) vegetable oil\n2 teaspoons (10 grams) soy sauce\n\nCombine scallion whites, ginger, pepper, and lime zest in a heatproof bowl.  Heat oil in a small saucepan until shimmering.  Pour oil over scallion mixture.  (Mixture will bubble.)  Stir until well combined and let cool completely, about 15 minutes.  Stir in scallion greens, lime juice, and soy sauce.  Let mixture sit for 15 minutes to allow flavors to meld.  Serve.\n\n### To Make Ahead\n\nSteaks can be rapidly chilled in an ice bath and then refrigerated in a zipper-lock bag for up to 5 days.  To reheat, return sealed bag to water bath set to 140 °F / 60 °C for 30 minutes, then proceed with searing.",
+    "tags": [
+      "sous-vide",
+      "pork",
+      "main"
+    ]
+  },
+  {
+    "id": "sous-vide-spiral-sliced-ham",
+    "title": "Spiral-Sliced Ham",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Pork",
+    "credit": "America's Test Kitchen",
+    "body": "1 7-pound (3.2 kilograms) spiral-sliced bone-in ham\n½ cup (118 grams) ruby port\n½ cup (160 grams) cherry preserves\n1 cup packed (200 grams) dark brown sugar\nPepper\n\nUsing sous vide circulator, heat water to 140 °F (60 °C) in a 12-quart container.\n\nPlace ham into a 2-gallon zipper-lock freezer bag and seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until ham is fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 3 hours or up to 8 hours.\n\nCook port in small saucepan over medium heat until reduced to 2 tablespoons (35 grams), about 5 minutes.  Stir in cherry preserves, sugar, and 1 teaspoon (4 grams) pepper and cook, stirring occasionally, until sugar dissolves and mixture is thick, syrupy, and reduced to 1 cup, 5 to 10 minutes; set aside.\n\nAdjust oven rack to lower-middle position and heat oven to 475 °F (246 °C).  Set wire rack in aluminum foil–lined rimmed baking sheet and spray with vegetable oil spray.  Transfer ham, cut side down, to prepared rack and brush with half of glaze.  Cook ham until glaze becomes sticky, 5 to 10 minutes.  Brush ham with remaining glaze and cook until glaze becomes sticky and light mahogany, 5 to 10 minutes.  Carve and serve.\n\n### To Make Ahead\n\nWe don't recommend making this recipe ahead of time.",
+    "tags": [
+      "sous-vide",
+      "pork",
+      "ham",
+      "main",
+      "holiday"
     ]
   },
   {
@@ -4459,6 +4686,52 @@
       "poultry",
       "main",
       "easy"
+    ]
+  },
+  {
+    "id": "sous-vide-foolproof-poached-chicken",
+    "title": "Foolproof Poached Chicken",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Chicken",
+    "credit": "America's Test Kitchen",
+    "body": "4 8-ounce (226 grams) boneless, skinless chicken breasts, trimmed\nSalt and pepper\n¼ cup (56 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 150 °F (65.5 °C) in a 7-quart container.\n\nSeason chicken with salt and pepper.  Place chicken and oil in a 1-gallon zipper-lock freezer bag and toss to coat.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until chicken is fully submerged, then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1 hour or up to 3 hours.\n\nTransfer chicken to paper towel–lined plate and let rest for 5 to 10 minutes.  Serve.\n\n### To Make Ahead\n\nChicken can be rapidly chilled in an ice bath and then refrigerated in a zipper-lock bag for up to 5 days.  To reheat, return the sealed bag to a water bath set to 150 °F / 65.5 °C for 20 minutes, then proceed with the resting step.\n\n### Variation: Lemon-Thyme Poached Chicken\n\nCombine 1 teaspoon (6 grams) salt, ½ teaspoon (2 grams) pepper, ½ teaspoon (1 gram) garlic powder, ½ teaspoon (1 gram) minced fresh thyme, and 1 teaspoon (2 grams) grated lemon zest in a bowl.  Sprinkle the chicken with this mixture in place of the plain salt and pepper.\n\n### Variation: Soy-Ginger Poached Chicken\n\nOmit the salt and pepper.  Whisk ¼ cup (59 grams) soy sauce, ¼ cup (50 grams) sugar, 1 teaspoon (3 grams) grated fresh ginger, 1 teaspoon (5 grams) toasted sesame oil, and ½ teaspoon (2 grams) white pepper together in a bowl.  Substitute this soy sauce mixture for the oil.",
+    "tags": [
+      "sous-vide",
+      "chicken",
+      "poultry",
+      "main",
+      "easy"
+    ]
+  },
+  {
+    "id": "sous-vide-seared-duck-breasts",
+    "title": "Seared Duck Breasts",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Chicken",
+    "credit": "America's Test Kitchen",
+    "body": "4 10-ounce (284 grams) boneless duck breasts, skin and fat cap trimmed to ¼ inch\n3 sprigs (4 grams) fresh thyme\n6 garlic cloves, peeled and smashed\nSalt and pepper\n2 tablespoons (28 grams) vegetable oil\n\nUsing sous vide circulator, bring water to 135 °F (57 °C) in a 7-quart container.\n\nUsing a sharp knife, cut slits ½ inch apart in a cross-hatch pattern in the duck skin and fat cap, being careful not to cut into the meat.  Pat duck dry with paper towels.  Place duck skin side down in a cold 12-inch nonstick skillet.  Heat skillet over medium-high heat and cook until fat begins to render and skin is lightly browned, 6 to 8 minutes.  Flip duck, add thyme sprigs and garlic to skillet, and cook until second side of breasts are opaque, about 30 seconds.  Transfer duck and thyme sprigs to a large plate.  Discard garlic and fat left in skillet and wipe clean with paper towels.\n\nSeason duck with salt and pepper.  Place duck and thyme sprigs in a 1-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Gently lower bag into prepared water bath until duck is fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for at least 1½ hours or up to 2 hours.\n\nTransfer duck to a paper towel–lined plate and let rest for 5 to 10 minutes.  Pat duck dry with paper towels.  Heat oil in now-empty skillet over medium-high heat until just smoking.  Place duck skin side down in skillet and cook until well browned and crisp, 2 to 4 minutes.  Transfer to cutting board and slice into ¼-inch-thick slices.  Serve with Grapefruit-Balsamic Sauce.\n\n### Grapefruit-Balsamic Sauce\n\nMakes about ¾ cup.  The success of this sauce depends on using fresh grapefruit juice.\n\n2 tablespoons (30 grams) balsamic vinegar\n2 tablespoons (28 grams) sugar\n2 cups (472 grams) chicken broth\n1 cup (236 grams) fresh grapefruit juice\nSalt and pepper\n4 tablespoons (56 grams) unsalted butter, cut into 4 pieces and chilled\n\n_Cooking method for the sauce will be added once Andrew sends the next page of the recipe._",
+    "tags": [
+      "sous-vide",
+      "duck",
+      "poultry",
+      "main"
+    ]
+  },
+  {
+    "id": "sous-vide-easy-boneless-turkey-breast",
+    "title": "Easy Boneless Turkey Breast",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Chicken",
+    "credit": "America's Test Kitchen",
+    "body": "1 7-pound (3.18 kilogram) bone-in turkey breast\n½ cup plus 2 tablespoons (140 grams) vegetable oil\nSalt and pepper\n\nUsing sous vide circulator, bring water to 145 °F (63 °C) in a 7-quart container.\n\nUsing a sharp knife, cut along the rib cage of the breast to remove the two breast halves; discard the bones.  Trim excess skin from the turkey and season with salt and pepper.  Place one breast half and ¼ cup (56 grams) oil in a 1-gallon zipper-lock freezer bag.  Repeat with the second breast half and another ¼ cup of oil.  Seal bags, pressing out as much air as possible.  Gently lower bags into prepared water bath until turkey is fully submerged, then clip top corner of each bag to side of water bath container, allowing remaining air bubbles to rise to top of bags.  Reopen 1 corner of each zipper, release remaining air bubbles, and reseal bags.  Cover and cook for at least 3½ hours or up to 5 hours.\n\nTransfer turkey to a paper towel–lined plate and let rest for 5 to 10 minutes.  Heat remaining 2 tablespoons (28 grams) oil in a 12-inch skillet over medium-high heat until just smoking.  Place turkey skin side down in skillet and cook, adjusting position with tongs as needed, until well browned and crisp, 4 to 6 minutes.  Transfer turkey to carving board and slice into ½-inch slices.  Serve.\n\n### All-Purpose Gravy\n\nMakes about 2 cups.\n\n3 tablespoons (42 grams) vegetable oil\n1 small onion (140 grams), chopped\n1 small carrot (60 grams), peeled and chopped\n1 small celery rib (60 grams), chopped\nSalt and pepper\n¼ cup (50 grams) all-purpose flour\n4 cups (945 grams) chicken broth\n¼ cup (60 grams) dry white wine\n2 sprigs (1 gram) fresh thyme\n1 bay leaf (0.5 grams)\n\nHeat oil in a large saucepan over medium heat until shimmering.  Add onion, carrot, celery, and ½ teaspoon (3 grams) pepper and cook over medium heat until vegetables are softened and well browned, about 8 minutes.  Stir in flour and cook for 1 minute.  Slowly whisk in broth and wine, scraping up any browned bits and smoothing out any lumps.  Stir in thyme sprigs and bay leaf, bring to a simmer, and cook until gravy is thickened and reduced to 3 cups, about 15 minutes.  Strain gravy through a fine-mesh strainer into a bowl, pressing on solids to extract as much liquid as possible; discard solids.  Season with salt and pepper to taste.",
+    "tags": [
+      "sous-vide",
+      "turkey",
+      "poultry",
+      "main"
     ]
   },
   {
@@ -4503,6 +4776,21 @@
       "sous-vide",
       "vegetables",
       "potatoes",
+      "side"
+    ]
+  },
+  {
+    "id": "sous-vide-honey-glazed-carrots",
+    "title": "Honey-Glazed Carrots with Lemon and Thyme",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Veggies",
+    "credit": "America's Test Kitchen",
+    "body": "1 pound (450 grams) carrots, peeled, halved lengthwise, and sliced ⅓ inch thick on bias\n2 tablespoons (28 grams) unsalted butter, plus 2 tablespoons (28 grams) cut into 2 pieces and chilled\n¼ cup (45 grams) chicken broth\n2 tablespoons (42 grams) honey\n4 teaspoons (20 grams) lemon juice\n3 sprigs (1 gram) fresh thyme\nSalt and pepper\n2 tablespoons (4 grams) minced fresh chives\n\nUsing sous vide circulator, bring water to 190 °F (88 °C) in a 7-quart container.\n\nPlace carrots, 2 tablespoons (28 grams) butter, broth, honey, lemon juice, thyme sprigs, and ½ teaspoon (1.5 grams) salt in a 1-gallon zipper-lock freezer bag.  Seal bag, pressing out as much air as possible.  Place bag in a second 1-gallon zipper-lock freezer bag and seal.  Gently lower bags into prepared water bath, weight bag down (see page 14) until carrots are fully submerged, and then clip top corner of bag to side of water bath container, allowing remaining air bubbles to rise to top of bag.  Reopen 1 corner of zipper, release remaining air bubbles, and reseal bag.  Cover and cook for 1 to 2 hours.\n\nDrain carrots through fine-mesh strainer set over 12-inch skillet; transfer carrots to bowl and discard thyme sprigs.  Bring cooking liquid to a simmer over medium-high heat and cook until reduced to 2 tablespoons (40 grams), 5 to 7 minutes.  Off heat, whisk in remaining 2 tablespoons chilled butter until mixture is smooth and glossy.  Add carrots and chives and toss to combine.  Season with salt and pepper to taste.  Serve.\n\n### Variation: Honey-Ginger Glazed Carrots\n\nSubstitute 1 1-inch piece fresh ginger (12 grams), peeled and sliced thin, and ¼ teaspoon cayenne pepper for the thyme sprigs.",
+    "tags": [
+      "sous-vide",
+      "vegetables",
+      "carrots",
       "side"
     ]
   },
