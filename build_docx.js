@@ -22,6 +22,12 @@ const {
 
 const recipes = JSON.parse(fs.readFileSync(path.join(__dirname, "docs", "recipes.json"), "utf8"));
 
+// Cross-listings are duplicates of Sous Vide recipes that live in their natural
+// section for discovery (e.g. Sous Vide Tri-Tip also appears under Beef).
+// They don't contribute to the global recipe count.
+const isCounted = (r) => !r._crosslisting;
+const countedRecipes = recipes.filter(isCounted);
+
 // ── Palette (warm "Mom Kitchen") ────────────────────────────────────────────
 const COLORS = {
   primary:    "A04A3B",
@@ -172,6 +178,22 @@ function subsectionHeading(parentSection, text) {
   });
 }
 
+// Build the run array for a recipe title.  When the title starts with
+// "SOUS VIDE - " (the cross-listing convention), the "SOUS VIDE" prefix is
+// rendered in a smaller italic sage accent so the actual recipe name reads
+// naturally in title case — matching the web app's styling.
+function titleRuns(title) {
+  const m = title.match(/^(SOUS VIDE)\s*-\s*(.+)$/);
+  if (m) {
+    return [
+      new TextRun({ text: m[1], italics: true, bold: false, color: COLORS.sage, size: Math.round(SIZE.h3 * 0.72), font: "Georgia" }),
+      new TextRun({ text: " — ", color: COLORS.accent, size: SIZE.h3, font: "Georgia" }),
+      new TextRun({ text: m[2], bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" }),
+    ];
+  }
+  return [new TextRun({ text: title, bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" })];
+}
+
 function recipeTitle(title, recipeId) {
   return new Paragraph({
     heading: HeadingLevel.HEADING_3,
@@ -180,7 +202,7 @@ function recipeTitle(title, recipeId) {
     children: [
       new Bookmark({
         id: bmRecipe(recipeId),
-        children: [new TextRun({ text: title, bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" })],
+        children: titleRuns(title),
       }),
     ],
     border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: COLORS.cream, space: 4 } },
@@ -332,7 +354,7 @@ function coverParagraphs() {
     new Paragraph({
       alignment: AlignmentType.CENTER,
       spacing: { before: 800, after: 0 },
-      children: [new TextRun({ text: `${recipes.length} recipes`, color: COLORS.textLight, size: SIZE.coverMeta, font: "Georgia" })],
+      children: [new TextRun({ text: `${countedRecipes.length} recipes`, color: COLORS.textLight, size: SIZE.coverMeta, font: "Georgia" })],
     }),
     new Paragraph({
       alignment: AlignmentType.CENTER,

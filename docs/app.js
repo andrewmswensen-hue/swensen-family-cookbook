@@ -118,7 +118,7 @@ fetch("recipes.json", { cache: "no-cache" })
   .then(data => {
     RECIPES = data;
     BY_ID = new Map(RECIPES.map(r => [r.id, r]));
-    countEl.textContent = `${RECIPES.length} recipes`;
+    countEl.textContent = `${RECIPES.filter(isCounted).length} recipes`;
     window.addEventListener("hashchange", routeWithScroll);
     route();
     applyScroll(location.hash || "#/");
@@ -154,6 +154,22 @@ function escapeHtml(str) {
     .replace(/'/g, "&#39;");
 }
 function escapeAttr(str) { return escapeHtml(str); }
+
+// Render a recipe title as HTML.  When the title starts with "SOUS VIDE - "
+// (the cross-listing convention), only that prefix is styled in caps/italic
+// accent; the rest of the title renders in normal title case.
+function renderTitleHTML(title) {
+  const m = title.match(/^(SOUS VIDE)\s*-\s*(.+)$/);
+  if (m) {
+    return `<span class="sv-prefix">${escapeHtml(m[1])}</span><span class="sv-dash"> &mdash; </span>${escapeHtml(m[2])}`;
+  }
+  return escapeHtml(title);
+}
+
+// A "real" recipe is one that contributes to the global recipe count.
+// Cross-listings (sous vide entries duplicated into Main Dishes / Veggies for
+// discovery) carry _crosslisting: true and are skipped when counting.
+function isCounted(r) { return !r._crosslisting; }
 
 function recipesInSection(section, subsection) {
   return RECIPES.filter(r =>
@@ -316,13 +332,14 @@ function wireSearchInput({ inputEl, resultsEl, gridEl, initialQuery }) {
       return;
     }
     const matches = searchRecipes(q);
+    const countedMatches = matches.filter(isCounted).length;
     if (gridEl) gridEl.style.display = "none";
     if (resultsEl) {
       resultsEl.style.display = "block";
       resultsEl.innerHTML = `
         <header class="section-header">
           <h1>Search: "${escapeHtml(q)}"</h1>
-          <div class="subtitle">${matches.length} ${matches.length === 1 ? "match" : "matches"}</div>
+          <div class="subtitle">${countedMatches} ${countedMatches === 1 ? "match" : "matches"}${matches.length > countedMatches ? ` <span style="color:var(--text-light)">(plus ${matches.length - countedMatches} cross-listed)</span>` : ""}</div>
         </header>
         ${renderRecipeList(matches)}
       `;
@@ -363,7 +380,7 @@ const SEARCH_BAR_HTML = (placeholder = "Search recipes, ingredients, or tags…"
 function renderHome() {
   const sections = SECTION_META.map(meta => ({
     ...meta,
-    count: RECIPES.filter(r => r.section === meta.name).length,
+    count: RECIPES.filter(r => r.section === meta.name && isCounted(r)).length,
   })).filter(s => s.count > 0);
 
   const cards = sections.map(s => `
@@ -386,7 +403,7 @@ function renderHome() {
   app.innerHTML = `
     <section class="hero">
       <h1>What are we cooking?</h1>
-      <p>${RECIPES.length} family recipes, one search away.</p>
+      <p>${RECIPES.filter(isCounted).length} family recipes, one search away.</p>
       ${SEARCH_BAR_HTML()}
       <a class="home-promo" href="#/section/${encodeURIComponent("Sous Vide")}">
         <span class="badge">New</span>
@@ -427,7 +444,7 @@ function renderSection(sectionName, subsection) {
   if (!showingSubsection && subsections.length > 0) {
     const subsectionCards = subsections.map(sub => {
       const subRecipes = recipesInSection(sectionName, sub);
-      const count = subRecipes.length;
+      const count = subRecipes.filter(isCounted).length;
       const subIcon = SUBSECTION_META[sub] || icon;
       // When a subsection has exactly one entry whose title matches the
       // subsection name (i.e. it's a single guide page, not a recipe
@@ -463,12 +480,13 @@ function renderSection(sectionName, subsection) {
   }
 
   // Case 2: flat list (no subsections, or a specific subsection is selected)
+  const countedHere = recipes.filter(isCounted).length;
   app.innerHTML = `
     ${back}
     ${subBreadcrumb}
     <header class="section-header">
       <h1>${showingSubsection ? (SUBSECTION_META[subsection] || icon) : icon} ${escapeHtml(subsection || sectionName)}</h1>
-      <div class="subtitle">${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"}</div>
+      <div class="subtitle">${countedHere} ${countedHere === 1 ? "recipe" : "recipes"}</div>
     </header>
     ${renderRecipeList(recipes)}
   `;
@@ -480,8 +498,8 @@ function renderRecipeList(items) {
   }
   return `<ul class="recipe-list">${items.map(r => `
     <li>
-      <a href="#/recipe/${encodeURIComponent(r.id)}">
-        <span class="recipe-title">${escapeHtml(r.title)}</span>
+      <a href="#/recipe/${encodeURIComponent(r.id)}"${r._crosslisting ? ' class="crosslisting"' : ""}>
+        <span class="recipe-title">${renderTitleHTML(r.title)}</span>
         ${r.credit ? `<span class="recipe-credit">— ${escapeHtml(r.credit)}</span>` : ""}
         ${r.tags && r.tags.length ? `<div class="tags">${r.tags.slice(0, 5).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>` : ""}
       </a>
@@ -511,7 +529,7 @@ function renderRecipe(id) {
         ${escapeHtml(recipe.section)}${recipe.subsection ? ` · ${escapeHtml(recipe.subsection)}` : ""}
       </div>
       <header class="recipe-meta">
-        <h1>${escapeHtml(recipe.title)}</h1>
+        <h1>${renderTitleHTML(recipe.title)}</h1>
         ${recipe.alt_title ? `<span class="alt-title">(${escapeHtml(recipe.alt_title)})</span>` : ""}
         ${recipe.credit ? `<span class="credit">— ${escapeHtml(recipe.credit)}</span>` : ""}
       </header>
@@ -548,7 +566,7 @@ function renderDownloads() {
       <div class="subtitle">The full cookbook, ready to print or keep on your device</div>
     </header>
     <p style="max-width: 640px; line-height: 1.6;">
-      All ${RECIPES.length} recipes — plus the How to Sous Vide guide — in a
+      All ${RECIPES.filter(isCounted).length} recipes — plus the How to Sous Vide guide — in a
       single document.  Download either format and you've got the entire
       cookbook offline.
     </p>

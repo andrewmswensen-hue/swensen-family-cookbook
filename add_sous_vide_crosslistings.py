@@ -44,20 +44,30 @@ def slug(s):
 
 
 def make_crosslisting(source, section, subsection):
-    """Build a cross-listing entry from an existing sous vide recipe."""
+    """Build a cross-listing entry from an existing sous vide recipe.
+
+    Title format: "SOUS VIDE - <Regular Title Case Recipe Name>".
+    The web app and printable cookbook detect that prefix at render time and
+    style only the "SOUS VIDE" part in caps/italic accent.
+    """
     stripped = strip_sous_vide(source["title"])
-    title = f"SOUS VIDE - {stripped.upper()}"
+    title = f"SOUS VIDE - {stripped}"
     new_id = f"{slug(section)}-sous-vide-{slug(stripped)}"
     return {
-        "id":         new_id,
-        "title":      title,
-        "alt_title":  source.get("alt_title"),
-        "section":    section,
-        "subsection": subsection,
-        "credit":     source.get("credit"),
-        "body":       source["body"],
-        "tags":       list(set((source.get("tags") or []) + ["sous-vide"])),
-        "_source_id": source["id"],   # for traceability; harmless to the app
+        "id":           new_id,
+        "title":        title,
+        "alt_title":    source.get("alt_title"),
+        "section":      section,
+        "subsection":   subsection,
+        "credit":       source.get("credit"),
+        "body":         source["body"],
+        "tags":         list(set((source.get("tags") or []) + ["sous-vide"])),
+        # _source_id traces back to the canonical recipe in the Sous Vide section.
+        # _crosslisting=True flags this entry as a duplicate so the web app and
+        # printable cookbook skip it when computing recipe COUNTS (it still
+        # appears in browse lists).
+        "_source_id":   source["id"],
+        "_crosslisting": True,
     }
 
 
