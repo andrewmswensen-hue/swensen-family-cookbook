@@ -15,17 +15,17 @@ let BY_ID = new Map();
 
 // Section ordering + emoji icons for the home grid
 const SECTION_META = [
-  { name: "Appetizers", icon: "🧀" },
-  { name: "Beverages", icon: "🥤" },
-  { name: "Breads", icon: "🥖" },
-  { name: "Soups", icon: "🍲" },
-  { name: "Salads", icon: "🥗" },
-  { name: "Sandwiches", icon: "🥪" },
-  { name: "Vegetables & Sides", icon: "🥦" },
-  { name: "Rice, Beans & Pasta", icon: "🍚" },
   { name: "Main Dishes", icon: "🍽️" },
+  { name: "Appetizers", icon: "🧀" },
+  { name: "Salads", icon: "🥗" },
+  { name: "Vegetables & Sides", icon: "🥦" },
+  { name: "Soups", icon: "🍲" },
+  { name: "Rice, Beans & Pasta", icon: "🍚" },
+  { name: "Sandwiches", icon: "🥪" },
+  { name: "Breads", icon: "🥖" },
   { name: "Breakfast", icon: "🍳" },
   { name: "Desserts", icon: "🍰" },
+  { name: "Beverages", icon: "🥤" },
   { name: "Kid's Stuff", icon: "🎨" },
   { name: "Sous Vide", icon: "🌡️" },
 ];
