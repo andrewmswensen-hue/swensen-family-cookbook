@@ -211,12 +211,18 @@ function subHeaderLine(text) {
   });
 }
 
-// Convert "plain text with [link text](https://...) inline links" into an
-// array of TextRun + ExternalHyperlink children.  Used for ingredients and
-// step paragraphs so markdown-style links in recipes.json render as real
-// hyperlinks in the printable cookbook.
+function slugForBookmark(s) {
+  return String(s).toLowerCase().replace(/[^\w]+/g, "_").replace(/^_|_$/g, "");
+}
+
+// Convert "plain text with [link text](url) inline links" into an array of
+// TextRun + ExternalHyperlink/InternalHyperlink children.  Recognizes both
+// external URLs (`https://...`) and internal SPA routes (`#/recipe/foo` or
+// `#/recipe/foo/anchor`).  For internal recipe links, the URL maps to the
+// recipe's bookmark in the printable cookbook (the anchor segment is dropped
+// for print since we don't bookmark every subheader).
 function inlineRuns(rawText, baseStyle) {
-  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|#\/[^\s)]+)\)/g;
   const runs = [];
   let pos = 0;
   let m;
@@ -224,16 +230,34 @@ function inlineRuns(rawText, baseStyle) {
     if (m.index > pos) {
       runs.push(new TextRun({ ...baseStyle, text: rawText.slice(pos, m.index) }));
     }
-    runs.push(new ExternalHyperlink({
-      link: m[2],
-      children: [new TextRun({
-        ...baseStyle,
-        text: m[1],
-        style: "Hyperlink",
-        color: COLORS.primary,
-        underline: {},
-      })],
-    }));
+    const linkText = m[1];
+    const url = m[2];
+    if (/^https?:/.test(url)) {
+      runs.push(new ExternalHyperlink({
+        link: url,
+        children: [new TextRun({
+          ...baseStyle, text: linkText,
+          style: "Hyperlink", color: COLORS.primary, underline: {},
+        })],
+      }));
+    } else {
+      // Internal SPA route — translate `#/recipe/foo[/anchor]` into a Word
+      // InternalHyperlink targeting the recipe's bookmark.
+      const intMatch = url.match(/^#\/recipe\/([^/]+)(?:\/[^/]+)?$/);
+      if (intMatch) {
+        const recipeId = decodeURIComponent(intMatch[1]);
+        runs.push(new InternalHyperlink({
+          anchor: bmRecipe(recipeId),
+          children: [new TextRun({
+            ...baseStyle, text: linkText,
+            style: "Hyperlink", color: COLORS.primary, underline: {},
+          })],
+        }));
+      } else {
+        // Unknown internal route — render the link text plainly.
+        runs.push(new TextRun({ ...baseStyle, text: linkText }));
+      }
+    }
     pos = m.index + m[0].length;
   }
   if (pos < rawText.length) {

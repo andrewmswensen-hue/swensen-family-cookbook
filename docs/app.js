@@ -83,7 +83,17 @@ function saveScroll() {
   scrollPositions[lastHash] = window.scrollY || document.documentElement.scrollTop;
 }
 function applyScroll(newHash) {
-  if (backNav && scrollPositions[newHash] !== undefined) {
+  // Anchor URLs always win — if the hash points at a recipe-section anchor
+  // like `#/recipe/foo/basic-workflow`, scroll the matching <h3 id> into
+  // view after layout settles, regardless of forward or back navigation.
+  const anchorMatch = newHash.match(/^#\/recipe\/[^/]+\/(.+)$/);
+  if (anchorMatch) {
+    requestAnimationFrame(() => {
+      const el = document.getElementById(decodeURIComponent(anchorMatch[1]));
+      if (el) el.scrollIntoView({ block: "start" });
+      else window.scrollTo(0, 0);
+    });
+  } else if (backNav && scrollPositions[newHash] !== undefined) {
     requestAnimationFrame(() => window.scrollTo(0, scrollPositions[newHash]));
   } else {
     window.scrollTo(0, 0);
@@ -127,7 +137,7 @@ function route() {
     if (parts.length === 2) return renderSection(parts[1]);
     if (parts.length === 3) return renderSection(parts[1], parts[2]);
   }
-  if (parts[0] === "recipe" && parts[1]) return renderRecipe(parts[1]);
+  if (parts[0] === "recipe" && parts[1]) return renderRecipe(parts[1]);   // anchor (parts[2]) handled by applyScroll
   if (parts[0] === "search" && parts[1]) return renderSearch(parts[1]);
 
   return renderHome();
@@ -246,26 +256,45 @@ function classifyLine(raw) {
   return { type: "step", text: line };
 }
 
-// Inline-markdown linkifier: converts `[text](https://…)` to anchors while
-// escaping everything else.
+// Slugify a heading text into an HTML id (e.g. "Basic supplies" → "basic-supplies").
+function anchorSlug(text) {
+  return text.toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+// Inline-markdown linkifier: converts `[text](https://…)` and `[text](#/…)` to
+// anchors while escaping everything else.  External http(s) links open in a
+// new tab; internal hash routes stay in the SPA.
 function renderInline(rawText) {
-  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|#\/[^\s)]+)\)/g;
   const out = [];
   let pos = 0;
   let m;
   while ((m = linkRe.exec(rawText)) !== null) {
     if (m.index > pos) out.push(escapeHtml(rawText.slice(pos, m.index)));
-    out.push(`<a href="${escapeAttr(m[2])}" target="_blank" rel="noopener noreferrer">${escapeHtml(m[1])}</a>`);
+    const isExternal = /^https?:/.test(m[2]);
+    const target = isExternal ? ` target="_blank" rel="noopener noreferrer"` : "";
+    out.push(`<a href="${escapeAttr(m[2])}"${target}>${escapeHtml(m[1])}</a>`);
     pos = m.index + m[0].length;
   }
   if (pos < rawText.length) out.push(escapeHtml(rawText.slice(pos)));
   return out.join("");
 }
 
-function renderBody(bodyMd) {
+function renderBody(bodyMd, recipeId) {
   const lines = bodyMd.split("\n").map(classifyLine).filter(Boolean);
   return lines.map(item => {
-    if (item.type === "subheader")  return `<h3 class="subheader">${escapeHtml(item.text)}</h3>`;
+    if (item.type === "subheader") {
+      const slug = anchorSlug(item.text);
+      const href = recipeId
+        ? `#/recipe/${encodeURIComponent(recipeId)}/${slug}`
+        : `#${slug}`;
+      // The "#" anchor link sits to the right and surfaces a permalink to the
+      // section.  Always visible but subtle; on hover/focus it darkens.
+      return `<h3 class="subheader" id="${slug}">${escapeHtml(item.text)}<a class="anchor-link" href="${href}" aria-label="Link to ${escapeAttr(item.text)}">#</a></h3>`;
+    }
     if (item.type === "ingredient") return `<div class="ingredient">${renderInline(item.text)}</div>`;
     return `<p class="step">${renderInline(item.text)}</p>`;
   }).join("\n");
@@ -478,7 +507,7 @@ function renderRecipe(id) {
         ${recipe.alt_title ? `<span class="alt-title">(${escapeHtml(recipe.alt_title)})</span>` : ""}
         ${recipe.credit ? `<span class="credit">— ${escapeHtml(recipe.credit)}</span>` : ""}
       </header>
-      <div class="recipe-body">${renderBody(recipe.body)}</div>
+      <div class="recipe-body">${renderBody(recipe.body, recipe.id)}</div>
       ${recipe.tags && recipe.tags.length ? `<div class="recipe-tags">${recipe.tags.map(t => `<a class="tag" href="#/search/${encodeURIComponent(t)}">${escapeHtml(t)}</a>`).join("")}</div>` : ""}
     </article>
   `;

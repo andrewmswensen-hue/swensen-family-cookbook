@@ -150,6 +150,26 @@ main {
 }
 .recipe-body a:hover { color: var(--primary-dk); border-bottom-color: var(--primary-dk); }
 
+/* ── Anchor # link next to each section header in a guide page ────────── */
+.recipe-body h3.subheader {
+  position: relative;
+  scroll-margin-top: 1rem;
+}
+.recipe-body h3.subheader a.anchor-link {
+  margin-left: 0.5rem;
+  color: var(--accent);
+  font-weight: 400;
+  border-bottom: none;
+  text-decoration: none;
+  opacity: 0.55;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+.recipe-body h3.subheader a.anchor-link:hover {
+  opacity: 1;
+  color: var(--primary);
+  border-bottom: none;
+}
+
 /* ── Section grid (home) ──────────────────────────────────────────────── */
 .section-grid {
   display: grid;

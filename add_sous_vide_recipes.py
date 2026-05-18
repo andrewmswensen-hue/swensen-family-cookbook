@@ -26,7 +26,7 @@ For the seasoning, Andrew likes [Big Papa's Double Secret Steak Seasoning]({LINK
 
 If you'd like, cut the tri-tip into two equal pieces by weight. Half feeds one to two people; the whole tri-tip serves three to four.
 
-Cover the meat generously with seasoning on all sides. Place it in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.
+Cover the meat generously with seasoning on all sides. Place it in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).
 
 Sous vide at 132 °F for a good medium-rare, or 140 °F for medium. Two to four hours is plenty; six hours is even better. Add one hour if cooking from frozen.
 
@@ -38,7 +38,7 @@ CHICKEN_BODY = """2 to 4 chicken breasts, marinated as you like
 
 Andrew's shortcut is to grab a tray of pre-marinated raw chicken from Harmon's. Otherwise, take plain chicken breasts and marinate them in whatever sauce you love — Italian dressing, teriyaki, lemon-herb, anything goes — for a few hours or overnight.
 
-Place the chicken in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.
+Place the chicken in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).
 
 Sous vide at 150 °F for 90 minutes. Add one hour if cooking from frozen.
 
@@ -49,7 +49,7 @@ PORK_BODY = """2 to 4 pork chops, about 1 inch thick
 Marinade or dry rub of choice (see notes)
 1 Tbl butter or oil, for searing
 
-Andrew's favorite marinade is Newman's Own Balsamic Vinaigrette; for a dry rub, Spade L Pork seasoning works great. Coat the pork chops generously in your chosen marinade or rub. Place the chops in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.
+Andrew's favorite marinade is Newman's Own Balsamic Vinaigrette; for a dry rub, Spade L Pork seasoning works great. Coat the pork chops generously in your chosen marinade or rub. Place the chops in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).
 
 Sous vide at 140 °F for 2 to 4 hours. Add one hour if cooking from frozen.
 
