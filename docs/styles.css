@@ -232,6 +232,22 @@ main {
   .download-cta { grid-column: 1 / -1; text-align: right; }
 }
 
+/* ── Submit-a-Recipe embedded Google Form ─────────────────────────────── */
+.submit-form-frame {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: 2950px;            /* tall enough for the full form; page scrolls naturally */
+  border: none;
+  border-radius: var(--radius);
+  background: white;
+  margin-top: 1.4rem;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 540px) {
+  .submit-form-frame { height: 3400px; }   /* form reflows narrower → taller */
+}
+
 /* ── Anchor # link next to each section header in a guide page ────────── */
 .recipe-body h3.subheader {
   position: relative;

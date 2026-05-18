@@ -125,17 +125,15 @@ fetch("recipes.json", { cache: "no-cache" })
     BY_ID = new Map(RECIPES.map(r => [r.id, r]));
     countEl.textContent = `${RECIPES.filter(isCounted).length} recipes`;
 
-    // Unhide and wire up the footer "Submit a recipe" link.
+    // Unhide the footer Submit link.  Its href is set statically in
+    // index.html to #/submit, but the slot was display:none until we
+    // confirmed the route existed and the form was wired up.
     const submitLink = document.getElementById("submit-recipe-link");
     const submitSep  = document.getElementById("submit-sep");
     if (submitLink && submitSep) {
-      submitLink.href = SUBMIT_FORM_URL;
       submitLink.style.display = "";
-      submitSep.style.display = "";
+      submitSep.style.display  = "";
     }
-    // Same for the header button.
-    const headerSubmit = document.getElementById("header-submit");
-    if (headerSubmit) headerSubmit.href = SUBMIT_FORM_URL;
     window.addEventListener("hashchange", routeWithScroll);
     route();
     applyScroll(location.hash || "#/");
@@ -157,6 +155,7 @@ function route() {
   if (parts[0] === "recipe" && parts[1]) return renderRecipe(parts[1]);   // anchor (parts[2]) handled by applyScroll
   if (parts[0] === "search" && parts[1]) return renderSearch(parts[1]);
   if (parts[0] === "downloads") return renderDownloads();
+  if (parts[0] === "submit")    return renderSubmitForm();
 
   return renderHome();
 }
@@ -406,7 +405,7 @@ function renderHome() {
       </div>
       <div class="count">PDF &middot; Word doc</div>
     </a>
-    <a class="section-card section-card-extra" href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">
+    <a class="section-card section-card-extra" href="#/submit">
       <div>
         <div class="icon">✍️</div>
         <div class="name">Submit a recipe</div>
@@ -487,7 +486,7 @@ function renderSection(sectionName, subsection) {
       ${back}
       <header class="section-header">
         <h1>${icon} ${escapeHtml(sectionName)}</h1>
-        <div class="subtitle">${countedTotal} ${countedTotal === 1 ? "recipe" : "recipes"} in ${subsections.length} ${subsections.length === 1 ? "category" : "categories"} &nbsp;&middot;&nbsp; <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener" class="inline-submit">Submit a recipe</a></div>
+        <div class="subtitle">${countedTotal} ${countedTotal === 1 ? "recipe" : "recipes"} in ${subsections.length} ${subsections.length === 1 ? "category" : "categories"} &nbsp;&middot;&nbsp; <a href="#/submit" class="inline-submit">Submit a recipe</a></div>
       </header>
       <div class="section-grid">${subsectionCards}</div>
     `;
@@ -501,7 +500,7 @@ function renderSection(sectionName, subsection) {
     ${subBreadcrumb}
     <header class="section-header">
       <h1>${showingSubsection ? (SUBSECTION_META[subsection] || icon) : icon} ${escapeHtml(subsection || sectionName)}</h1>
-      <div class="subtitle">${countedHere} ${countedHere === 1 ? "recipe" : "recipes"} &nbsp;&middot;&nbsp; <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener" class="inline-submit">Submit a recipe</a></div>
+      <div class="subtitle">${countedHere} ${countedHere === 1 ? "recipe" : "recipes"} &nbsp;&middot;&nbsp; <a href="#/submit" class="inline-submit">Submit a recipe</a></div>
     </header>
     ${renderRecipeList(recipes)}
   `;
@@ -606,6 +605,32 @@ function renderDownloads() {
     <p style="margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
       Files update whenever new recipes are added to the cookbook.  Bookmark
       this page and re-download any time you want the latest copy.
+    </p>
+  `;
+}
+
+function renderSubmitForm() {
+  app.innerHTML = `
+    <a href="#/" class="btn btn-back">← Back to home</a>
+    <header class="section-header">
+      <h1>✍️ Submit a Recipe</h1>
+      <div class="subtitle">Got a family recipe to share?  Drop it here.</div>
+    </header>
+    <p style="max-width: 720px; line-height: 1.6;">
+      Fill in the form below and Andrew will add your recipe to
+      <strong>swensen.recipes</strong> within a week or two — both online
+      and in the downloadable PDF and Word version.  Required fields are
+      recipe title, category, ingredients, and instructions; everything
+      else is optional.
+    </p>
+    <iframe class="submit-form-frame"
+            src="${escapeAttr(SUBMIT_FORM_URL)}?embedded=true"
+            title="Swensen Family Cookbook recipe submission form"
+            loading="lazy" frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+    <p style="margin-top: 1rem; color: var(--text-light); font-size: 0.9rem; max-width: 720px;">
+      Can't see the form?  <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">Open it in a new tab on Google Forms</a>.
     </p>
   `;
 }
