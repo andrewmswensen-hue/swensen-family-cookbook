@@ -150,19 +150,6 @@ main {
 }
 .recipe-body a:hover { color: var(--primary-dk); border-bottom-color: var(--primary-dk); }
 
-/* ── "SOUS VIDE - " prefix styling on cross-listed recipe titles ──────── */
-/* Renders the all-caps method prefix in a smaller italic accent color so the
-   recipe name itself reads naturally in title case. */
-.sv-prefix {
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: var(--sage);
-  font-size: 0.78em;
-  vertical-align: 0.05em;
-}
-.sv-dash { color: var(--accent); }
-
 /* ── Special "Downloadable version" card on the home grid ────────────── */
 .section-card.section-card-extra {
   background: var(--cream);
@@ -496,6 +483,12 @@ main {
   background: var(--cream);
 }
 .site-footer .sep { color: var(--accent); margin: 0 0.5rem; }
+.site-footer .footer-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.site-footer .footer-link:hover { color: var(--primary-dk); text-decoration: underline; }
 
 /* ── Empty / no-results state ─────────────────────────────────────────── */
 .empty-state {

@@ -155,17 +155,6 @@ function escapeHtml(str) {
 }
 function escapeAttr(str) { return escapeHtml(str); }
 
-// Render a recipe title as HTML.  When the title starts with "SOUS VIDE - "
-// (the cross-listing convention), only that prefix is styled in caps/italic
-// accent; the rest of the title renders in normal title case.
-function renderTitleHTML(title) {
-  const m = title.match(/^(SOUS VIDE)\s*-\s*(.+)$/);
-  if (m) {
-    return `<span class="sv-prefix">${escapeHtml(m[1])}</span><span class="sv-dash"> &mdash; </span>${escapeHtml(m[2])}`;
-  }
-  return escapeHtml(title);
-}
-
 // A "real" recipe is one that contributes to the global recipe count.
 // Cross-listings (sous vide entries duplicated into Main Dishes / Veggies for
 // discovery) carry _crosslisting: true and are skipped when counting.
@@ -331,15 +320,16 @@ function wireSearchInput({ inputEl, resultsEl, gridEl, initialQuery }) {
       if (gridEl) gridEl.style.display = "grid";
       return;
     }
-    const matches = searchRecipes(q);
-    const countedMatches = matches.filter(isCounted).length;
+    // Filter duplicates: when the same recipe shows up via its canonical
+    // entry AND its cross-listing, just show the canonical one.
+    const matches = searchRecipes(q).filter(isCounted);
     if (gridEl) gridEl.style.display = "none";
     if (resultsEl) {
       resultsEl.style.display = "block";
       resultsEl.innerHTML = `
         <header class="section-header">
           <h1>Search: "${escapeHtml(q)}"</h1>
-          <div class="subtitle">${countedMatches} ${countedMatches === 1 ? "match" : "matches"}${matches.length > countedMatches ? ` <span style="color:var(--text-light)">(plus ${matches.length - countedMatches} cross-listed)</span>` : ""}</div>
+          <div class="subtitle">${matches.length} ${matches.length === 1 ? "match" : "matches"}</div>
         </header>
         ${renderRecipeList(matches)}
       `;
@@ -498,8 +488,8 @@ function renderRecipeList(items) {
   }
   return `<ul class="recipe-list">${items.map(r => `
     <li>
-      <a href="#/recipe/${encodeURIComponent(r.id)}"${r._crosslisting ? ' class="crosslisting"' : ""}>
-        <span class="recipe-title">${renderTitleHTML(r.title)}</span>
+      <a href="#/recipe/${encodeURIComponent(r.id)}">
+        <span class="recipe-title">${escapeHtml(r.title)}</span>
         ${r.credit ? `<span class="recipe-credit">— ${escapeHtml(r.credit)}</span>` : ""}
         ${r.tags && r.tags.length ? `<div class="tags">${r.tags.slice(0, 5).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>` : ""}
       </a>
@@ -529,7 +519,7 @@ function renderRecipe(id) {
         ${escapeHtml(recipe.section)}${recipe.subsection ? ` · ${escapeHtml(recipe.subsection)}` : ""}
       </div>
       <header class="recipe-meta">
-        <h1>${renderTitleHTML(recipe.title)}</h1>
+        <h1>${escapeHtml(recipe.title)}</h1>
         ${recipe.alt_title ? `<span class="alt-title">(${escapeHtml(recipe.alt_title)})</span>` : ""}
         ${recipe.credit ? `<span class="credit">— ${escapeHtml(recipe.credit)}</span>` : ""}
       </header>

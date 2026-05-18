@@ -46,12 +46,12 @@ def slug(s):
 def make_crosslisting(source, section, subsection):
     """Build a cross-listing entry from an existing sous vide recipe.
 
-    Title format: "SOUS VIDE - <Regular Title Case Recipe Name>".
-    The web app and printable cookbook detect that prefix at render time and
-    style only the "SOUS VIDE" part in caps/italic accent.
+    Title is identical to the source recipe — the cross-listing visually
+    matches the original in the Sous Vide section.  The _crosslisting flag
+    is what excludes it from total recipe counts; no special prefix needed.
     """
-    stripped = strip_sous_vide(source["title"])
-    title = f"SOUS VIDE - {stripped}"
+    title = source["title"]
+    stripped = strip_sous_vide(title)
     new_id = f"{slug(section)}-sous-vide-{slug(stripped)}"
     return {
         "id":           new_id,

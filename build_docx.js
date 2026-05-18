@@ -178,22 +178,6 @@ function subsectionHeading(parentSection, text) {
   });
 }
 
-// Build the run array for a recipe title.  When the title starts with
-// "SOUS VIDE - " (the cross-listing convention), the "SOUS VIDE" prefix is
-// rendered in a smaller italic sage accent so the actual recipe name reads
-// naturally in title case — matching the web app's styling.
-function titleRuns(title) {
-  const m = title.match(/^(SOUS VIDE)\s*-\s*(.+)$/);
-  if (m) {
-    return [
-      new TextRun({ text: m[1], italics: true, bold: false, color: COLORS.sage, size: Math.round(SIZE.h3 * 0.72), font: "Georgia" }),
-      new TextRun({ text: " — ", color: COLORS.accent, size: SIZE.h3, font: "Georgia" }),
-      new TextRun({ text: m[2], bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" }),
-    ];
-  }
-  return [new TextRun({ text: title, bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" })];
-}
-
 function recipeTitle(title, recipeId) {
   return new Paragraph({
     heading: HeadingLevel.HEADING_3,
@@ -202,7 +186,7 @@ function recipeTitle(title, recipeId) {
     children: [
       new Bookmark({
         id: bmRecipe(recipeId),
-        children: titleRuns(title),
+        children: [new TextRun({ text: title, bold: true, color: COLORS.accent, size: SIZE.h3, font: "Georgia" })],
       }),
     ],
     border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: COLORS.cream, space: 4 } },
