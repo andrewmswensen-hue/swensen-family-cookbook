@@ -26,6 +26,8 @@ LINK_VAC_SEALER = ("https://www.costco.com/p/-/foodsaver-preserve-vacuum-sealer-
                    "appliance-with-bags-and-marinate-container/4201009385"
                    "?DM_PersistentCookieCreated=true&langId=-1")
 LINK_ATK_BOOK   = "https://a.co/d/0ad3miMl"
+LINK_SV_RACK    = "https://a.co/d/09TNT8uY"
+LINK_SV_MAGNETS = "https://a.co/d/00QPz3CV"
 
 
 HOW_TO_BODY = f"""### What is Sous Vide?
@@ -56,7 +58,15 @@ A way to sear at the end — a cast-iron skillet ripping hot, or a propane/butan
 
 ### Basic workflow
 
-Season your food. Drop it in a bag with any aromatics — butter, garlic, herbs. Remove the air and seal the bag.
+Season your food. Drop it in a bag with any aromatics — butter, garlic, herbs.
+
+Now seal the bag and get all the air out. You have two methods depending on what you're using.
+
+If you're using a vacuum sealer, run the bag through it. The sealer pulls the air out and heat-seals the bag in one step. Once it's sealed, drop the whole bag straight into the water bath. This is the cleanest approach, especially for long cooks, because the seal is permanent.
+
+If you're using a heavy-duty zip-top freezer bag or a reusable silicone bag, use the water-displacement method (sometimes called the Archimedes method): seal the bag almost all the way, leaving a small opening at one corner. Slowly lower the bag into the water bath with the opening above the surface. The water pressure pushes the air out through the gap. Just before the opening reaches the waterline, finish sealing it. Either way, make sure no water can get into the bag.
+
+A note on floating: even with a good seal, food can release gas during long cooks (especially vegetables and tough cuts of meat), and the bag rises to the top. If any of the food pokes above the waterline it won't cook through. Two easy fixes — a [sous vide rack]({LINK_SV_RACK}) holds the bags vertical and submerged, or [silicone waterproof magnets]({LINK_SV_MAGNETS}) anchor the bag to the side or bottom of the container.
 
 Heat your water bath to the target temperature using the circulator.
 
