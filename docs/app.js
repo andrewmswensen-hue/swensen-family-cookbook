@@ -139,6 +139,7 @@ function route() {
   }
   if (parts[0] === "recipe" && parts[1]) return renderRecipe(parts[1]);   // anchor (parts[2]) handled by applyScroll
   if (parts[0] === "search" && parts[1]) return renderSearch(parts[1]);
+  if (parts[0] === "downloads") return renderDownloads();
 
   return renderHome();
 }
@@ -373,7 +374,14 @@ function renderHome() {
       </div>
       <div class="count">${s.count} ${s.count === 1 ? "recipe" : "recipes"}</div>
     </a>
-  `).join("");
+  `).join("") + `
+    <a class="section-card section-card-extra" href="#/downloads">
+      <div>
+        <div class="icon">📦</div>
+        <div class="name">Downloadable version</div>
+      </div>
+      <div class="count">PDF &middot; Word doc</div>
+    </a>`;
 
   app.innerHTML = `
     <section class="hero">
@@ -530,6 +538,43 @@ function renderSearch(query) {
     initialQuery: query,
   });
   document.getElementById("search-input").focus();
+}
+
+function renderDownloads() {
+  app.innerHTML = `
+    <a href="#/" class="btn btn-back">← Back to home</a>
+    <header class="section-header">
+      <h1>📦 Downloadable version</h1>
+      <div class="subtitle">The full cookbook, ready to print or keep on your device</div>
+    </header>
+    <p style="max-width: 640px; line-height: 1.6;">
+      All ${RECIPES.length} recipes — plus the How to Sous Vide guide — in a
+      single document.  Download either format and you've got the entire
+      cookbook offline.
+    </p>
+    <div class="download-grid">
+      <a class="download-card" href="downloads/Swensen_Family_Cookbook.pdf" download>
+        <div class="download-icon">📄</div>
+        <div>
+          <div class="download-title">PDF</div>
+          <div class="download-meta">Best for reading on phones, tablets, and printing</div>
+        </div>
+        <div class="download-cta">Download →</div>
+      </a>
+      <a class="download-card" href="downloads/Swensen_Family_Cookbook.docx" download>
+        <div class="download-icon">📝</div>
+        <div>
+          <div class="download-title">Word document</div>
+          <div class="download-meta">Best if you want to edit, copy, or print with your own tweaks</div>
+        </div>
+        <div class="download-cta">Download →</div>
+      </a>
+    </div>
+    <p style="margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
+      Files update whenever new recipes are added to the cookbook.  Bookmark
+      this page and re-download any time you want the latest copy.
+    </p>
+  `;
 }
 
 function renderNotFound(msg) {

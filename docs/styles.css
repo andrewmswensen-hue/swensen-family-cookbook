@@ -150,6 +150,74 @@ main {
 }
 .recipe-body a:hover { color: var(--primary-dk); border-bottom-color: var(--primary-dk); }
 
+/* ── Special "Downloadable version" card on the home grid ────────────── */
+.section-card.section-card-extra {
+  background: var(--cream);
+  border: 1.5px dashed var(--accent);
+}
+.section-card.section-card-extra:hover {
+  border-style: solid;
+  background: white;
+}
+
+/* ── Downloads page ──────────────────────────────────────────────────── */
+.download-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  max-width: 640px;
+}
+.download-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1.2rem;
+  background: white;
+  border: 1.5px solid var(--cream-dk);
+  border-left: 5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: all 0.15s ease;
+}
+.download-card:hover {
+  border-color: var(--accent);
+  border-left-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--text);
+}
+.download-icon { font-size: 2rem; line-height: 1; }
+.download-title {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+.download-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+.download-cta {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+@media (max-width: 540px) {
+  .download-card {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.3rem 1rem;
+  }
+  .download-cta { grid-column: 1 / -1; text-align: right; }
+}
+
 /* ── Anchor # link next to each section header in a guide page ────────── */
 .recipe-body h3.subheader {
   position: relative;

@@ -542,17 +542,31 @@ function buildDocument() {
 (async () => {
   const doc = buildDocument();
   const buffer = await Packer.toBuffer(doc);
-  const out = path.join(__dirname, "Swensen_Family_Cookbook.docx");
-  fs.writeFileSync(out, buffer);
-  console.log(`Wrote ${out}  (${buffer.length.toLocaleString()} bytes, ${recipes.length} recipes)`);
+  const downloadsDir = path.join(__dirname, "docs", "downloads");
+  fs.mkdirSync(downloadsDir, { recursive: true });
+  const docxOut = path.join(downloadsDir, "Swensen_Family_Cookbook.docx");
+  fs.writeFileSync(docxOut, buffer);
+  console.log(`Wrote ${docxOut}  (${buffer.length.toLocaleString()} bytes, ${recipes.length} recipes)`);
 
   // docx-js has a bug where every <w:bookmarkStart> gets w:id="1".  Run the
   // post-processor to renumber them so internal hyperlinks resolve correctly.
   const { spawnSync } = require("child_process");
   const fixer = path.join(__dirname, "fix_bookmarks.py");
-  const result = spawnSync("python3", [fixer, out], { stdio: "inherit" });
-  if (result.status !== 0) {
+  const fixed = spawnSync("python3", [fixer, docxOut], { stdio: "inherit" });
+  if (fixed.status !== 0) {
     console.error("fix_bookmarks.py failed");
-    process.exit(result.status || 1);
+    process.exit(fixed.status || 1);
+  }
+
+  // Also export a fresh PDF alongside the DOCX so both downloads stay in sync.
+  console.log("Exporting PDF via LibreOffice...");
+  const pdf = spawnSync("soffice", [
+    "--headless", "--convert-to", "pdf",
+    "--outdir", downloadsDir,
+    docxOut,
+  ], { stdio: "inherit" });
+  if (pdf.status !== 0) {
+    console.error("PDF export failed");
+    process.exit(pdf.status || 1);
   }
 })();
