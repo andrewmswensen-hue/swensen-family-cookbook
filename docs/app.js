@@ -13,6 +13,11 @@ const countEl = document.getElementById("recipe-count");
 let RECIPES = [];
 let BY_ID = new Map();
 
+// Google Form URL where family members can submit new recipes.  Linked from
+// the header, the home grid, every section page, the footer, and a pill
+// under the search bar — change this in one place and it updates everywhere.
+const SUBMIT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf2meGhqZ3tRaEpqgvh31Jc_wR_Wa9w1qjvmCdFGUO-bJC6SQ/viewform";
+
 // Section ordering + emoji icons for the home grid
 const SECTION_META = [
   { name: "Main Dishes", icon: "🍽️" },
@@ -119,6 +124,18 @@ fetch("recipes.json", { cache: "no-cache" })
     RECIPES = data;
     BY_ID = new Map(RECIPES.map(r => [r.id, r]));
     countEl.textContent = `${RECIPES.filter(isCounted).length} recipes`;
+
+    // Unhide and wire up the footer "Submit a recipe" link.
+    const submitLink = document.getElementById("submit-recipe-link");
+    const submitSep  = document.getElementById("submit-sep");
+    if (submitLink && submitSep) {
+      submitLink.href = SUBMIT_FORM_URL;
+      submitLink.style.display = "";
+      submitSep.style.display = "";
+    }
+    // Same for the header button.
+    const headerSubmit = document.getElementById("header-submit");
+    if (headerSubmit) headerSubmit.href = SUBMIT_FORM_URL;
     window.addEventListener("hashchange", routeWithScroll);
     route();
     applyScroll(location.hash || "#/");
@@ -388,6 +405,13 @@ function renderHome() {
         <div class="name">Downloadable version</div>
       </div>
       <div class="count">PDF &middot; Word doc</div>
+    </a>
+    <a class="section-card section-card-extra" href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">
+      <div>
+        <div class="icon">✍️</div>
+        <div class="name">Submit a recipe</div>
+      </div>
+      <div class="count">Add yours to the cookbook</div>
     </a>`;
 
   app.innerHTML = `
@@ -399,6 +423,9 @@ function renderHome() {
         <span class="badge">New</span>
         <span>How to Sous Vide + recipes</span>
         <span class="arrow">→</span>
+      </a>
+      <a class="home-promo home-promo-secondary" href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">
+        <span>+ Submit a recipe</span>
       </a>
     </section>
     <div id="inline-results" style="display:none"></div>
@@ -458,11 +485,12 @@ function renderSection(sectionName, subsection) {
       `;
     }).join("");
 
+    const countedTotal = recipes.filter(isCounted).length;
     app.innerHTML = `
       ${back}
       <header class="section-header">
         <h1>${icon} ${escapeHtml(sectionName)}</h1>
-        <div class="subtitle">${recipes.length} ${recipes.length === 1 ? "recipe" : "recipes"} in ${subsections.length} ${subsections.length === 1 ? "category" : "categories"}</div>
+        <div class="subtitle">${countedTotal} ${countedTotal === 1 ? "recipe" : "recipes"} in ${subsections.length} ${subsections.length === 1 ? "category" : "categories"} &nbsp;&middot;&nbsp; <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener" class="inline-submit">Submit a recipe</a></div>
       </header>
       <div class="section-grid">${subsectionCards}</div>
     `;
@@ -476,7 +504,7 @@ function renderSection(sectionName, subsection) {
     ${subBreadcrumb}
     <header class="section-header">
       <h1>${showingSubsection ? (SUBSECTION_META[subsection] || icon) : icon} ${escapeHtml(subsection || sectionName)}</h1>
-      <div class="subtitle">${countedHere} ${countedHere === 1 ? "recipe" : "recipes"}</div>
+      <div class="subtitle">${countedHere} ${countedHere === 1 ? "recipe" : "recipes"} &nbsp;&middot;&nbsp; <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener" class="inline-submit">Submit a recipe</a></div>
     </header>
     ${renderRecipeList(recipes)}
   `;

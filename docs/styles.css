@@ -141,6 +141,33 @@ main {
 .home-promo:hover .badge { background: white; color: var(--accent); }
 .home-promo .arrow { font-weight: 600; }
 
+/* Secondary promo (stacked under the primary): same shape, gentler color */
+.home-promo.home-promo-secondary {
+  margin-top: 0.5rem;
+  border-color: var(--cream-dk);
+  color: var(--text);
+  font-weight: 500;
+}
+.home-promo.home-promo-secondary:hover {
+  background: var(--cream);
+  border-color: var(--accent);
+  color: var(--primary);
+}
+
+/* Inline " · Submit a recipe" link in section-page subtitles */
+.inline-submit {
+  color: var(--primary);
+  font-weight: 500;
+  border-bottom: 1px dotted var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.inline-submit:hover {
+  color: var(--primary-dk);
+  border-bottom-color: var(--primary-dk);
+  text-decoration: none;
+}
+
 /* ── Recipe-body links (e.g. supplies in How to Sous Vide) ────────────── */
 .recipe-body a {
   color: var(--primary);
