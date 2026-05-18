@@ -424,9 +424,6 @@ function renderHome() {
         <span>How to Sous Vide + recipes</span>
         <span class="arrow">→</span>
       </a>
-      <a class="home-promo home-promo-secondary" href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">
-        <span>+ Submit a recipe</span>
-      </a>
     </section>
     <div id="inline-results" style="display:none"></div>
     <div id="section-grid" class="section-grid">${cards}</div>
