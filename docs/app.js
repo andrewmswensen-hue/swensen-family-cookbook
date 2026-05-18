@@ -612,17 +612,6 @@ function renderDownloads() {
 function renderSubmitForm() {
   app.innerHTML = `
     <a href="#/" class="btn btn-back">← Back to home</a>
-    <header class="section-header">
-      <h1>✍️ Submit a Recipe</h1>
-      <div class="subtitle">Got a family recipe to share?  Drop it here.</div>
-    </header>
-    <p style="max-width: 720px; line-height: 1.6;">
-      Fill in the form below and Andrew will add your recipe to
-      <strong>swensen.recipes</strong> within a week or two — both online
-      and in the downloadable PDF and Word version.  Required fields are
-      recipe title, category, ingredients, and instructions; everything
-      else is optional.
-    </p>
     <iframe class="submit-form-frame"
             src="${escapeAttr(SUBMIT_FORM_URL)}?embedded=true"
             title="Swensen Family Cookbook recipe submission form"
