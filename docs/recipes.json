@@ -4284,6 +4284,96 @@
     ]
   },
   {
+    "id": "sous-vide-how-to-sous-vide",
+    "title": "How to Sous Vide",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "How to Sous Vide",
+    "credit": "Adapted from America's Test Kitchen",
+    "body": "### What is Sous Vide?\n\nSous vide (French for \"under vacuum\") is a method of cooking food sealed in a bag, submerged in a precisely temperature-controlled water bath. The water is heated to your target serving temperature — say 130 °F for medium-rare steak — and the food cooks gradually to exactly that temperature. Because the water never goes hotter than your target, the food cannot overcook.\n\n### Why it's a game-changer\n\nImpossible to overcook. Once your steak is at 130 °F, leaving it in for another hour still leaves it at 130 °F. The technique forgives you for forgetting it on the counter.\n\nJuicier results, especially for lean meats. Chicken breast, pork chops, fish, and turkey are easy to dry out with conventional cooking. Sous vide keeps every fiber at the exact temperature it should be, edge to edge, never a degree higher.\n\nEven cooking. No more gray overdone ring around a pink center — sous vide steak is medium-rare from crust to crust.\n\nHands-off. Drop it in, walk away, sear at the end.\n\n### Basic supplies\n\nA sous vide immersion circulator — clips onto a pot and circulates the water at a set temperature. Popular brands: Anova, Joule, Inkbird.\n\nA pot or food-safe container — anything that holds 6 to 12 quarts of water. A standard stockpot works fine; insulated containers retain heat better.\n\nSealable bags — vacuum-sealer bags are ideal, but heavy-duty zip-top freezer bags work too. Use the water-displacement method: slowly lower the bag into water with the zipper open until the bag's air is squeezed out, then seal at the surface.\n\nA way to sear at the end — a cast-iron skillet ripping hot, or a propane/butane torch. The interior comes out perfect from the sous vide; the crust comes from the post-cook sear.\n\n### Basic workflow\n\nSeason your food. Drop it in a bag with any aromatics — butter, garlic, herbs. Remove the air and seal the bag.\n\nHeat your water bath to the target temperature using the circulator.\n\nOnce the bath is at temperature, lower the sealed bag in. Set a timer.\n\nWhen the timer goes off, pull the bag out. Pat the meat dry — this is critical for a good sear.\n\nSear hard on a screaming-hot pan with a little oil and butter, 30 to 60 seconds per side, or torch the surface. Rest 5 minutes. Slice and serve.\n\n### Where to learn more\n\nAmerica's Test Kitchen's \"Sous Vide for Everybody\" is a great starting point — clear technique, tested recipes, and time/temperature tables for everything from eggs to short ribs.",
+    "tags": [
+      "sous-vide",
+      "guide",
+      "technique"
+    ]
+  },
+  {
+    "id": "sous-vide-meat-temperature-guide",
+    "title": "Meat Temperature Guide",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Meat Temperature Guide",
+    "credit": "America's Test Kitchen",
+    "body": "Per America's Test Kitchen's tested sous vide times and temperatures. Add about 1 hour to any of these if the meat goes into the bath frozen.\n\n### Chicken\n\n150 °F (66 °C) for 90 minutes. Yields chicken breast that is fully cooked, safe, and remarkably juicy — the meat stays moist instead of drying out the way it does past 165 °F in a conventional oven.\n\n### Pork chops\n\n140 °F (60 °C) for 2 to 3 hours. Tender and rosy-pink throughout, never overdone. Sear hard at the end for the crust.\n\n### Steak, medium rare\n\n126 to 134 °F (52 to 57 °C) for 90 minutes up to 3 hours. Choose the lower end of the range for a deeper red center, the higher end for warm-pink edge to edge. Always sear hard at the end — a torch or smoking-hot cast iron is ideal.\n\n### Cooking from frozen\n\nAdd about 1 hour to all times above. The food safely thaws and cooks through inside the temperature window — no need to thaw first.\n\n### Always sear at the end\n\nSous vide gets the interior right. The crust comes from the sear. Pat the meat dry, then sear in a screaming-hot pan with oil for 30 to 60 seconds per side, or use a propane torch on the surface.",
+    "tags": [
+      "sous-vide",
+      "guide",
+      "temperature",
+      "meat"
+    ]
+  },
+  {
+    "id": "sous-vide-tri-tip",
+    "title": "Sous Vide Tri-Tip",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Beef",
+    "credit": null,
+    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "tags": [
+      "sous-vide",
+      "beef",
+      "main",
+      "placeholder"
+    ]
+  },
+  {
+    "id": "sous-vide-pork-chops",
+    "title": "Sous Vide Pork Chops",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Pork",
+    "credit": null,
+    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "tags": [
+      "sous-vide",
+      "pork",
+      "main",
+      "placeholder"
+    ]
+  },
+  {
+    "id": "sous-vide-marinated-chicken-breast",
+    "title": "Sous Vide Marinated Chicken Breast",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Chicken",
+    "credit": null,
+    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "tags": [
+      "sous-vide",
+      "chicken",
+      "poultry",
+      "main",
+      "placeholder"
+    ]
+  },
+  {
+    "id": "sous-vide-carrots",
+    "title": "Sous Vide Carrots",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Veggies",
+    "credit": null,
+    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "tags": [
+      "sous-vide",
+      "vegetables",
+      "side",
+      "placeholder"
+    ]
+  },
+  {
     "id": "breakfast-todds-sour-cream-pancakes",
     "title": "Todd's Sour Cream Pancakes",
     "alt_title": null,

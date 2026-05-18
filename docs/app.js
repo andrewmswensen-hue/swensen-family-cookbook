@@ -24,6 +24,7 @@ const SECTION_META = [
   { name: "Vegetables & Sides", icon: "🥦" },
   { name: "Rice, Beans & Pasta", icon: "🍚" },
   { name: "Main Dishes", icon: "🍽️" },
+  { name: "Sous Vide", icon: "🌡️" },
   { name: "Breakfast", icon: "🍳" },
   { name: "Desserts", icon: "🍰" },
   { name: "Kid's Stuff", icon: "🎨" },
@@ -54,6 +55,12 @@ const SUBSECTION_META = {
   "Chicken & Turkey": "🍗",
   "Pork & Sausage": "🥓",
   "Seafood": "🐟",
+  // Sous Vide
+  "How to Sous Vide": "📖",
+  "Meat Temperature Guide": "🌡️",
+  "Pork": "🥓",
+  "Chicken": "🍗",
+  "Veggies": "🥦",
   // Desserts
   "Cookies": "🍪",
   "Brownies & Bars": "🟫",
