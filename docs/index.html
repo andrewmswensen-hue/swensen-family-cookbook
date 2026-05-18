@@ -58,6 +58,20 @@
     <span>Made with love · 2026</span>
   </footer>
 
-  <script src="app.js?v=2026-05-18i" defer></script>
+  <script src="app.js?v=2026-05-18j" defer></script>
+
+  <!-- GoatCounter analytics — privacy-friendly, no cookies, no consent banner needed.
+       Dashboard: https://andrewswensen.goatcounter.com
+       The `path` function below makes the hash route part of the recorded URL so
+       per-recipe / per-section page views show up in the dashboard (the SPA
+       never does a full page reload).  routeWithScroll() in app.js calls
+       window.goatcounter.count(...) on every hash change for the same reason. -->
+  <script>
+    window.goatcounter = {
+      path: function () { return location.pathname + location.search + location.hash; }
+    };
+  </script>
+  <script data-goatcounter="https://andrewswensen.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

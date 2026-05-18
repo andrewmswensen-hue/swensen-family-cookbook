@@ -110,6 +110,16 @@ function routeWithScroll() {
   saveScroll();
   route();
   applyScroll(location.hash || "#/");
+  // Ping GoatCounter on every route change so per-recipe page views show up in
+  // the analytics dashboard (the SPA never reloads the page itself).  The
+  // initial pageview is counted by count.js automatically; this handles every
+  // subsequent hash change.
+  if (window.goatcounter && typeof window.goatcounter.count === "function") {
+    window.goatcounter.count({
+      path:  location.pathname + location.search + location.hash,
+      title: document.title,
+    });
+  }
 }
 
 // ── Boot ──────────────────────────────────────────────────────────────────
