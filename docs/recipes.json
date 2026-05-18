@@ -4318,28 +4318,28 @@
     "alt_title": null,
     "section": "Sous Vide",
     "subsection": "Beef",
-    "credit": null,
-    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "credit": "Andrew",
+    "body": "1 whole tri-tip (Costco is a great source)\n2 to 3 Tbl steak seasoning of choice (see notes)\n1 Tbl butter, for searing\n\nFor the seasoning, Andrew likes [Big Papa's Double Secret Steak Seasoning](https://a.co/d/0j8JB0d6) or [Spade L Beef Seasoning](https://a.co/d/0e6Bz0Cu).\n\nIf you'd like, cut the tri-tip into two equal pieces by weight. Half feeds one to two people; the whole tri-tip serves three to four.\n\nCover the meat generously with seasoning on all sides. Place it in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.\n\nSous vide at 132 °F for a good medium-rare, or 140 °F for medium. Two to four hours is plenty; six hours is even better. Add one hour if cooking from frozen.\n\nTo finish, pat the meat dry and sear hard — on a screaming-hot grill, or in a cast-iron pan with butter, about 45 to 60 seconds per side and on each edge. Slice against the grain to serve.",
     "tags": [
       "sous-vide",
       "beef",
       "main",
-      "placeholder"
+      "easy"
     ]
   },
   {
     "id": "sous-vide-pork-chops",
-    "title": "Sous Vide Pork Chops",
+    "title": "Juicy Sous Vide Pork Chops",
     "alt_title": null,
     "section": "Sous Vide",
     "subsection": "Pork",
-    "credit": null,
-    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "credit": "Andrew",
+    "body": "2 to 4 pork chops, about 1 inch thick\nMarinade or dry rub of choice (see notes)\n1 Tbl butter or oil, for searing\n\nAndrew's favorite marinade is Newman's Own Balsamic Vinaigrette; for a dry rub, Spade L Pork seasoning works great. Coat the pork chops generously in your chosen marinade or rub. Place the chops in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.\n\nSous vide at 140 °F for 2 to 4 hours. Add one hour if cooking from frozen.\n\nPat dry and finish on a screaming-hot grill or in a cast-iron pan, about 60 seconds per side. The result is a chop that's edge-to-edge tender and juicier than anything you'd get on the grill alone.",
     "tags": [
       "sous-vide",
       "pork",
       "main",
-      "placeholder"
+      "easy"
     ]
   },
   {
@@ -4348,29 +4348,59 @@
     "alt_title": null,
     "section": "Sous Vide",
     "subsection": "Chicken",
-    "credit": null,
-    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "credit": "Andrew",
+    "body": "2 to 4 chicken breasts, marinated as you like\n1 Tbl butter or oil, for searing\n\nAndrew's shortcut is to grab a tray of pre-marinated raw chicken from Harmon's. Otherwise, take plain chicken breasts and marinate them in whatever sauce you love — Italian dressing, teriyaki, lemon-herb, anything goes — for a few hours or overnight.\n\nPlace the chicken in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the How to Sous Vide guide.\n\nSous vide at 150 °F for 90 minutes. Add one hour if cooking from frozen.\n\nTo finish, pat dry and sear in a screaming-hot pan, cast-iron, or on the grill — about 60 seconds per side. Go a little longer if you want more pronounced grill marks.",
     "tags": [
       "sous-vide",
       "chicken",
       "poultry",
       "main",
-      "placeholder"
+      "easy"
     ]
   },
   {
-    "id": "sous-vide-carrots",
-    "title": "Sous Vide Carrots",
+    "id": "sous-vide-better-than-braised-beets",
+    "title": "Better-Than-Braised Beets",
     "alt_title": null,
     "section": "Sous Vide",
     "subsection": "Veggies",
-    "credit": null,
-    "body": "Recipe coming soon.\n\nAndrew will add his method here. Start with the Meat Temperature Guide for the time and temperature, then sear hard at the end.",
+    "credit": "America's Test Kitchen",
+    "body": "2 pounds beets, trimmed\n3 Tbl extra-virgin olive oil\n2 Tbl sherry vinegar\n4 sprigs fresh thyme\nSalt and pepper\n2 Tbl minced fresh chives\n\nHeat the water bath to 191 °F.\n\nIn a bowl, toss the beets with olive oil, vinegar, thyme, 1¼ tsp salt, and ¾ tsp pepper. Place the mixture in a 1-gallon zip-top freezer bag, pressing out as much air as possible. Drop that bag inside a second 1-gallon zip-top freezer bag — double-bagging protects against seam failure on long cooks. Use the water-displacement method to remove the remaining air, then seal.\n\nLower the bag into the water bath. Beets float, so weight them down with a sous vide rack or silicone magnets so they stay fully submerged. Cook for 4 to 6 hours.\n\nTransfer the beets to a cutting board and pour the cooking liquid into a large bowl. Discard the thyme sprigs. When the beets are cool enough to handle, rub the skins off with a paper towel and cut into ½-inch wedges. Add the beets and chives to the bowl with the cooking liquid and toss. Season with salt and pepper. Serve.\n\n### Make ahead\n\nCooked beets can be chilled in an ice bath and refrigerated for up to 7 days. Bring to room temperature before serving.",
     "tags": [
       "sous-vide",
       "vegetables",
-      "side",
-      "placeholder"
+      "beets",
+      "side"
+    ]
+  },
+  {
+    "id": "sous-vide-perfect-asparagus",
+    "title": "Perfect Asparagus with Tomato-Basil Vinaigrette",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Veggies",
+    "credit": "America's Test Kitchen",
+    "body": "2 pounds thick asparagus, trimmed\n1 tomato, cored, seeded, and chopped fine (about ¾ cup)\n1 shallot, minced\n1½ Tbl lemon juice\n1 Tbl chopped fresh basil\n3 Tbl extra-virgin olive oil\nSalt and pepper\n\nHeat the water bath to 180 °F.\n\nArrange the asparagus in a single layer in a 1-gallon zip-top freezer bag and seal, pressing out as much air as possible. Double-bag for safety. Lower the bag into the water bath. Asparagus has a tendency to float — make sure it stays fully submerged, using a rack or magnets if needed.\n\nCook for 20 minutes.\n\nWhile the asparagus cooks, whisk the tomato, shallot, lemon juice, basil, olive oil, and ¼ tsp salt in a bowl. Season with salt and pepper to taste.\n\nTransfer the asparagus to a serving platter and drizzle with the vinaigrette. Serve.\n\n### Variations\n\n**Soy-Ginger Vinaigrette** — Substitute 2 minced scallions (¼ cup) and 3 Tbl lime juice for the tomato and basil. Add 1 Tbl sesame oil, 2 Tbl soy sauce, 1 Tbl honey, 1 Tbl grated fresh ginger, and 2 minced garlic cloves.\n\n**Mustard-Thyme Vinaigrette** — Substitute 1 Tbl chopped fresh thyme and ¼ tsp Dijon mustard for the tomato and basil.",
+    "tags": [
+      "sous-vide",
+      "vegetables",
+      "asparagus",
+      "side"
+    ]
+  },
+  {
+    "id": "sous-vide-crispy-smashed-potatoes",
+    "title": "Crispy Smashed Potatoes",
+    "alt_title": null,
+    "section": "Sous Vide",
+    "subsection": "Veggies",
+    "credit": "America's Test Kitchen",
+    "body": "2 pounds small red potatoes, scrubbed\n½ cup chicken broth\nSalt and pepper\n6 Tbl vegetable oil\n1 Tbl chopped fresh rosemary\n3 garlic cloves, minced\n\nHeat the water bath to 194 °F.\n\nCombine the potatoes, broth, and ¾ tsp salt in a 1-gallon zip-top freezer bag. Seal and double-bag. Lower into the water bath, keeping the bag fully submerged (use a rack or magnets if it tries to float). Cook for 60 to 75 minutes.\n\nAdjust an oven rack to upper-middle position and heat the oven to 450 °F. In a microwave-safe bowl, microwave the oil, rosemary, and garlic, stirring occasionally, until the garlic begins to brown — 2 to 4 minutes. Strain into a large bowl, reserving the garlic and rosemary.\n\nDrain the potatoes and let them sit until the surfaces are dry, about 10 minutes. Add the potatoes and ½ tsp salt to the bowl with the herb oil and toss. Arrange the potatoes on a rimmed baking sheet, place a second baking sheet on top, and press firmly to flatten each potato to ⅓ to ½ inch thick. Remove the top sheet.\n\nRoast for 40 to 50 minutes, flipping halfway through, until the potatoes are crisp and well browned. Transfer to a serving bowl, add the reserved garlic and rosemary, and gently toss to combine. Season with salt and pepper to taste. Serve.",
+    "tags": [
+      "sous-vide",
+      "vegetables",
+      "potatoes",
+      "side"
     ]
   },
   {

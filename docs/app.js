@@ -239,7 +239,7 @@ function classifyLine(raw) {
     return { type: "subheader", text: line.slice(4).replace(/:$/, "").trim() };
   }
   const measureRe = /^(\d+|\½|\¼|\¾|\⅓|\⅔|\⅛|\⅜|\⅝|\⅞)/;
-  const namedRe = /^(salt|pepper|oil|flour|sugar|water|butter|garlic|onion|milk|eggs?|vanilla|cheese|chicken|beef|pork|fish|shrimp)\b/i;
+  const namedRe = /^(salt|pepper|oil|flour|sugar|water|butter|garlic|onion|milk|eggs?|vanilla|cheese|chicken|beef|pork|fish|shrimp|seasoning|marinade|rub|spice(s)?|dressing|sauce|broth|stock|vinegar|wine|lemon|lime|herbs?|tomato|potato|onion|carrot|beet|asparagus|mushroom|bacon|ham|sausage|cream|yeast)\b/i;
   const isMeasured = line.length < 90 && measureRe.test(line);
   const isNamed = line.length < 60 && namedRe.test(line) && !/\.\s*$/.test(line);
   if (isMeasured || isNamed) return { type: "ingredient", text: line };

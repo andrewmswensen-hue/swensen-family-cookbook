@@ -130,7 +130,7 @@ function classifyBodyLine(raw) {
   const looksMeasured = line.length < 100 && ingredientHints.test(line);
   const looksNamed =
     line.length < 60
-    && /^(salt|pepper|oil|flour|sugar|water|butter|garlic|onion|milk|eggs?|vanilla|cheese|chicken|beef|pork|fish|shrimp)\b/i.test(line)
+    && /^(salt|pepper|oil|flour|sugar|water|butter|garlic|onion|milk|eggs?|vanilla|cheese|chicken|beef|pork|fish|shrimp|seasoning|marinade|rub|spice(s)?|dressing|sauce|broth|stock|vinegar|wine|lemon|lime|herbs?|tomato|potato|onion|carrot|beet|asparagus|mushroom|bacon|ham|sausage|cream|yeast)\b/i.test(line)
     && !/\.\s*$/.test(line);
   if (looksMeasured || looksNamed) return { type: "ingredient", text: line };
   return { type: "text", text: line };
