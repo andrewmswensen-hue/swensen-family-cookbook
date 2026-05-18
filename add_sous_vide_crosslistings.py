@@ -40,6 +40,7 @@ CROSSLISTINGS = [
     ("sous-vide-crispy-smashed-potatoes",       "Vegetables & Sides", "Potatoes"),
     # Second ATK batch (added May 2026)
     ("sous-vide-foolproof-poached-chicken",     "Main Dishes",        "Chicken, Turkey & Poultry"),
+    ("sous-vide-shredded-chicken-tacos",        "Main Dishes",        "Chicken, Turkey & Poultry"),
     ("sous-vide-seared-duck-breasts",           "Main Dishes",        "Chicken, Turkey & Poultry"),
     ("sous-vide-easy-boneless-turkey-breast",   "Main Dishes",        "Chicken, Turkey & Poultry"),
     ("sous-vide-short-rib-pot-roast",           "Main Dishes",        "Beef"),
