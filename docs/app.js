@@ -24,10 +24,10 @@ const SECTION_META = [
   { name: "Vegetables & Sides", icon: "🥦" },
   { name: "Rice, Beans & Pasta", icon: "🍚" },
   { name: "Main Dishes", icon: "🍽️" },
-  { name: "Sous Vide", icon: "🌡️" },
   { name: "Breakfast", icon: "🍳" },
   { name: "Desserts", icon: "🍰" },
   { name: "Kid's Stuff", icon: "🎨" },
+  { name: "Sous Vide", icon: "🌡️" },
 ];
 
 const SUBSECTION_META = {
@@ -246,12 +246,28 @@ function classifyLine(raw) {
   return { type: "step", text: line };
 }
 
+// Inline-markdown linkifier: converts `[text](https://…)` to anchors while
+// escaping everything else.
+function renderInline(rawText) {
+  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const out = [];
+  let pos = 0;
+  let m;
+  while ((m = linkRe.exec(rawText)) !== null) {
+    if (m.index > pos) out.push(escapeHtml(rawText.slice(pos, m.index)));
+    out.push(`<a href="${escapeAttr(m[2])}" target="_blank" rel="noopener noreferrer">${escapeHtml(m[1])}</a>`);
+    pos = m.index + m[0].length;
+  }
+  if (pos < rawText.length) out.push(escapeHtml(rawText.slice(pos)));
+  return out.join("");
+}
+
 function renderBody(bodyMd) {
   const lines = bodyMd.split("\n").map(classifyLine).filter(Boolean);
   return lines.map(item => {
-    if (item.type === "subheader") return `<h3 class="subheader">${escapeHtml(item.text)}</h3>`;
-    if (item.type === "ingredient") return `<div class="ingredient">${escapeHtml(item.text)}</div>`;
-    return `<p class="step">${escapeHtml(item.text)}</p>`;
+    if (item.type === "subheader")  return `<h3 class="subheader">${escapeHtml(item.text)}</h3>`;
+    if (item.type === "ingredient") return `<div class="ingredient">${renderInline(item.text)}</div>`;
+    return `<p class="step">${renderInline(item.text)}</p>`;
   }).join("\n");
 }
 
@@ -335,6 +351,11 @@ function renderHome() {
       <h1>What are we cooking?</h1>
       <p>${RECIPES.length} family recipes, one search away.</p>
       ${SEARCH_BAR_HTML()}
+      <a class="home-promo" href="#/section/${encodeURIComponent("Sous Vide")}">
+        <span class="badge">New</span>
+        <span>How to Sous Vide + recipes</span>
+        <span class="arrow">→</span>
+      </a>
     </section>
     <div id="inline-results" style="display:none"></div>
     <div id="section-grid" class="section-grid">${cards}</div>
@@ -368,15 +389,27 @@ function renderSection(sectionName, subsection) {
   // Case 1: subsection cards (intermediate level)
   if (!showingSubsection && subsections.length > 0) {
     const subsectionCards = subsections.map(sub => {
-      const count = recipesInSection(sectionName, sub).length;
+      const subRecipes = recipesInSection(sectionName, sub);
+      const count = subRecipes.length;
       const subIcon = SUBSECTION_META[sub] || icon;
+      // When a subsection has exactly one entry whose title matches the
+      // subsection name (i.e. it's a single guide page, not a recipe
+      // category that just happens to have one entry yet), link the card
+      // straight to that entry — skip the intermediate one-item list.
+      const isSingletonGuide = count === 1 && subRecipes[0].title === sub;
+      const href = isSingletonGuide
+        ? `#/recipe/${encodeURIComponent(subRecipes[0].id)}`
+        : `#/section/${encodeURIComponent(sectionName)}/${encodeURIComponent(sub)}`;
+      const countLabel = isSingletonGuide
+        ? "Guide"
+        : `${count} ${count === 1 ? "recipe" : "recipes"}`;
       return `
-        <a class="section-card" href="#/section/${encodeURIComponent(sectionName)}/${encodeURIComponent(sub)}">
+        <a class="section-card" href="${href}">
           <div>
             <div class="icon">${subIcon}</div>
             <div class="name">${escapeHtml(sub)}</div>
           </div>
-          <div class="count">${count} ${count === 1 ? "recipe" : "recipes"}</div>
+          <div class="count">${countLabel}</div>
         </a>
       `;
     }).join("");
@@ -427,7 +460,9 @@ function renderRecipe(id) {
   backLinks.push(`<a href="#/" class="btn btn-back">← Home</a>`);
   backLinks.push(`<span class="sep">·</span>`);
   backLinks.push(`<a href="#/section/${encodeURIComponent(recipe.section)}" class="btn btn-back">← ${escapeHtml(recipe.section)}</a>`);
-  if (recipe.subsection) {
+  // Skip the subsection crumb when it's the same as the recipe title — that
+  // means it's a singleton guide page reached directly from the section grid.
+  if (recipe.subsection && recipe.subsection !== recipe.title) {
     backLinks.push(`<span class="sep">·</span>`);
     backLinks.push(`<a href="#/section/${encodeURIComponent(recipe.section)}/${encodeURIComponent(recipe.subsection)}" class="btn btn-back">← ${escapeHtml(recipe.subsection)}</a>`);
   }

@@ -78,12 +78,6 @@ const SECTION_ORDER = [
   ["Main Dishes", "Chicken & Turkey"],
   ["Main Dishes", "Pork & Sausage"],
   ["Main Dishes", "Seafood"],
-  ["Sous Vide", "How to Sous Vide"],
-  ["Sous Vide", "Meat Temperature Guide"],
-  ["Sous Vide", "Beef"],
-  ["Sous Vide", "Pork"],
-  ["Sous Vide", "Chicken"],
-  ["Sous Vide", "Veggies"],
   ["Breakfast", null],
   ["Desserts", "Cookies"],
   ["Desserts", "Brownies & Bars"],
@@ -93,6 +87,12 @@ const SECTION_ORDER = [
   ["Desserts", "Frostings & Icings"],
   ["Desserts", "Candy"],
   ["Kid's Stuff", null],
+  ["Sous Vide", "How to Sous Vide"],
+  ["Sous Vide", "Meat Temperature Guide"],
+  ["Sous Vide", "Beef"],
+  ["Sous Vide", "Pork"],
+  ["Sous Vide", "Chicken"],
+  ["Sous Vide", "Veggies"],
 ];
 
 function bucketRecipes() {
@@ -211,6 +211,37 @@ function subHeaderLine(text) {
   });
 }
 
+// Convert "plain text with [link text](https://...) inline links" into an
+// array of TextRun + ExternalHyperlink children.  Used for ingredients and
+// step paragraphs so markdown-style links in recipes.json render as real
+// hyperlinks in the printable cookbook.
+function inlineRuns(rawText, baseStyle) {
+  const linkRe = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const runs = [];
+  let pos = 0;
+  let m;
+  while ((m = linkRe.exec(rawText)) !== null) {
+    if (m.index > pos) {
+      runs.push(new TextRun({ ...baseStyle, text: rawText.slice(pos, m.index) }));
+    }
+    runs.push(new ExternalHyperlink({
+      link: m[2],
+      children: [new TextRun({
+        ...baseStyle,
+        text: m[1],
+        style: "Hyperlink",
+        color: COLORS.primary,
+        underline: {},
+      })],
+    }));
+    pos = m.index + m[0].length;
+  }
+  if (pos < rawText.length) {
+    runs.push(new TextRun({ ...baseStyle, text: rawText.slice(pos) }));
+  }
+  return runs;
+}
+
 function ingredientLine(text) {
   return new Paragraph({
     keepNext: true, keepLines: true,
@@ -218,7 +249,7 @@ function ingredientLine(text) {
     spacing: { before: 0, after: 40, line: 280 },
     children: [
       new TextRun({ text: "• ", color: COLORS.accent, bold: true, size: SIZE.body }),
-      new TextRun({ text, color: COLORS.text, size: SIZE.body }),
+      ...inlineRuns(text, { color: COLORS.text, size: SIZE.body }),
     ],
   });
 }
@@ -228,7 +259,7 @@ function textLine(text, isLast) {
     keepNext: !isLast,
     keepLines: true,
     spacing: { before: 80, after: 100, line: 300 },
-    children: [new TextRun({ text, color: COLORS.text, size: SIZE.body })],
+    children: inlineRuns(text, { color: COLORS.text, size: SIZE.body }),
   });
 }
 
