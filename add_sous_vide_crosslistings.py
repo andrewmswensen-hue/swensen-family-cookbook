@@ -59,12 +59,15 @@ def slug(s):
 def make_crosslisting(source, section, subsection):
     """Build a cross-listing entry from an existing sous vide recipe.
 
-    Title is identical to the source recipe — the cross-listing visually
-    matches the original in the Sous Vide section.  The _crosslisting flag
-    is what excludes it from total recipe counts; no special prefix needed.
+    Title gets a "Sous Vide: " prefix when shown outside the Sous Vide
+    section, so a visitor browsing Main Dishes > Beef can tell at a glance
+    which entries are sous-vide-specific.  Recipes whose source title already
+    contains "Sous Vide" anywhere (e.g. "Sous Vide Tri-Tip", "Juicy Sous Vide
+    Pork Chops") keep their original title — no need to double-stamp.
     """
-    title = source["title"]
-    stripped = strip_sous_vide(title)
+    src_title = source["title"]
+    stripped = strip_sous_vide(src_title)
+    title = src_title if "sous vide" in src_title.lower() else f"Sous Vide: {src_title}"
     new_id = f"{slug(section)}-sous-vide-{slug(stripped)}"
     return {
         "id":           new_id,
