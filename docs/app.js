@@ -684,8 +684,8 @@ function installPageShell(title, browserBlocks, video) {
     <header class="section-header">
       <h1>${title}</h1>
     </header>
-    ${video || ""}
     <div class="install-browsers">${browserBlocks}</div>
+    ${video || ""}
   `;
 }
 
@@ -698,7 +698,7 @@ const IPHONE_VIDEO_HTML = `
       Your browser can't play this video.
       <a href="media/iphone-install-safari.mp4">Download the walkthrough</a> instead.
     </video>
-    <figcaption>Quick visual walkthrough (about 15 seconds, no sound).  Step-by-step text below.</figcaption>
+    <figcaption>Quick visual walkthrough of the steps above — about 15 seconds, no sound.</figcaption>
   </figure>
 `;
 
