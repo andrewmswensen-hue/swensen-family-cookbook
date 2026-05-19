@@ -674,7 +674,7 @@ function renderInstallPicker() {
   `;
 }
 
-function installPageShell(title, browserBlocks) {
+function installPageShell(title, browserBlocks, video) {
   return `
     <div class="recipe-back-nav">
       <a href="#/" class="btn btn-back">← Home</a>
@@ -684,9 +684,23 @@ function installPageShell(title, browserBlocks) {
     <header class="section-header">
       <h1>${title}</h1>
     </header>
+    ${video || ""}
     <div class="install-browsers">${browserBlocks}</div>
   `;
 }
+
+const IPHONE_VIDEO_HTML = `
+  <figure class="install-video-wrap">
+    <video class="install-video"
+           controls playsinline preload="metadata"
+           poster="media/iphone-install-safari-poster.jpg">
+      <source src="media/iphone-install-safari.mp4" type="video/mp4">
+      Your browser can't play this video.
+      <a href="media/iphone-install-safari.mp4">Download the walkthrough</a> instead.
+    </video>
+    <figcaption>Quick visual walkthrough (about 15 seconds, no sound).  Step-by-step text below.</figcaption>
+  </figure>
+`;
 
 function installBrowserBlock(name, badge, steps, footnote) {
   const stepsHtml = steps.map(s => `<li>${s}</li>`).join("");
@@ -727,7 +741,7 @@ function renderInstallIphone() {
     ],
     null
   );
-  app.innerHTML = installPageShell("🍎 Save on iPhone", safari + chrome);
+  app.innerHTML = installPageShell("🍎 Save on iPhone", safari + chrome, IPHONE_VIDEO_HTML);
 }
 
 function renderInstallAndroid() {

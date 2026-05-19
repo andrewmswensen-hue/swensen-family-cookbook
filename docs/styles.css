@@ -328,6 +328,31 @@ main {
   font-size: 0.92rem;
 }
 
+/* Visual walkthrough video — embedded on the iPhone install page above
+   the step-by-step blocks.  Sized to look like a phone screen on
+   desktop (~360px wide), full-width on smaller viewports. */
+.install-video-wrap {
+  display: block;
+  margin: 0.4rem auto 1.6rem;
+  text-align: center;
+  max-width: 360px;
+}
+.install-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  background: black;
+  box-shadow: var(--shadow-lg);
+}
+.install-video-wrap figcaption {
+  margin-top: 0.6rem;
+  color: var(--text-light);
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 /* ── Submit-a-Recipe embedded Google Form ─────────────────────────────── */
 .submit-form-frame {
   display: block;
