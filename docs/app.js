@@ -705,22 +705,25 @@ function installBrowserBlock(name, badge, steps, footnote) {
 function renderInstallIphone() {
   const safari = installBrowserBlock(
     "Safari",
-    "recommended",
+    null,
     [
-      "Tap the <strong>Share</strong> button (the square with an up-arrow) at the bottom of the screen.",
-      "Scroll down and tap <strong>Add to Home Screen</strong>.",
-      "Edit the name if you'd like, then tap <strong>Add</strong> in the upper right.",
+      "Tap the <strong>Share</strong> button — the square with an up-arrow icon, in the <strong>bottom toolbar</strong>.",
+      "The iOS share sheet pops up.  <strong>Scroll down</strong> past the row of contacts and app icons until you see a list of actions.",
+      "Tap <strong>Add to Home Screen</strong>.  If you don't see it in the list, tap <strong>View More</strong> at the bottom and scroll to it.",
+      "Edit the name if you'd like, then tap <strong>Add</strong> in the <strong>upper right</strong>.",
       "Done — the cookbook icon now sits on your home screen like any other app."
     ],
-    "Safari produces the cleanest install on iPhone — if you have a choice, use it."
+    null
   );
   const chrome = installBrowserBlock(
     "Chrome",
     null,
     [
-      "Tap the <strong>Share</strong> icon (the square with an up-arrow) in the address bar.",
-      "Scroll down in the iOS share sheet and tap <strong>Add to Home Screen</strong>.",
-      "Edit the name if you'd like, then tap <strong>Add</strong>."
+      "Tap the <strong>Share</strong> icon in the address bar — the square with an up-arrow, usually in the <strong>top right</strong> of the screen.",
+      "The iOS share sheet pops up.  <strong>Scroll down</strong> past the row of contacts and app icons until you see a list of actions.",
+      "Tap <strong>Add to Home Screen</strong>.  If you don't see it, tap <strong>View More</strong> at the bottom and scroll to it.",
+      "On the confirmation screen, make sure <strong>Open as web app</strong> is toggled <strong>on</strong> — this is what makes the cookbook launch full-screen like a real app instead of opening inside Chrome.",
+      "Edit the name if you'd like, then tap <strong>Add</strong> in the <strong>upper right</strong>."
     ],
     null
   );
