@@ -166,6 +166,11 @@ function route() {
   if (parts[0] === "search" && parts[1]) return renderSearch(parts[1]);
   if (parts[0] === "downloads") return renderDownloads();
   if (parts[0] === "submit")    return renderSubmitForm();
+  if (parts[0] === "install") {
+    if (parts[1] === "iphone")  return renderInstallIphone();
+    if (parts[1] === "android") return renderInstallAndroid();
+    return renderInstallPicker();
+  }
 
   return renderHome();
 }
@@ -421,6 +426,13 @@ function renderHome() {
         <div class="name">Submit a recipe</div>
       </div>
       <div class="count">Add yours to the cookbook</div>
+    </a>
+    <a class="section-card section-card-extra" href="#/install">
+      <div>
+        <div class="icon">📲</div>
+        <div class="name">Save to home screen</div>
+      </div>
+      <div class="count">Use it like an app</div>
     </a>`;
 
   app.innerHTML = `
@@ -632,6 +644,122 @@ function renderSubmitForm() {
       Can't see the form?  <a href="${escapeAttr(SUBMIT_FORM_URL)}" target="_blank" rel="noopener">Open it in a new tab on Google Forms</a>.
     </p>
   `;
+}
+
+// ── "Save to home screen" install flow ───────────────────────────────────
+function renderInstallPicker() {
+  app.innerHTML = `
+    <a href="#/" class="btn btn-back">← Back to home</a>
+    <header class="section-header">
+      <h1>📲 Save to your home screen</h1>
+      <div class="subtitle">Use the cookbook like an app — no App Store needed</div>
+    </header>
+    <p style="max-width: 640px; line-height: 1.6;">
+      Pick your phone below and follow the short steps.  Once it's on your
+      home screen, the cookbook opens like any other app — full screen, no
+      browser bars.
+    </p>
+    <div class="install-picker">
+      <a class="install-pick-card" href="#/install/iphone">
+        <div class="install-pick-icon">🍎</div>
+        <div class="install-pick-name">iPhone</div>
+        <div class="install-pick-meta">Safari · Chrome</div>
+      </a>
+      <a class="install-pick-card" href="#/install/android">
+        <div class="install-pick-icon">🤖</div>
+        <div class="install-pick-name">Android</div>
+        <div class="install-pick-meta">Chrome · Samsung Internet · Firefox</div>
+      </a>
+    </div>
+  `;
+}
+
+function installPageShell(title, browserBlocks) {
+  return `
+    <div class="recipe-back-nav">
+      <a href="#/" class="btn btn-back">← Home</a>
+      <span class="sep">·</span>
+      <a href="#/install" class="btn btn-back">← Save to home screen</a>
+    </div>
+    <header class="section-header">
+      <h1>${title}</h1>
+    </header>
+    <div class="install-browsers">${browserBlocks}</div>
+  `;
+}
+
+function installBrowserBlock(name, badge, steps, footnote) {
+  const stepsHtml = steps.map(s => `<li>${s}</li>`).join("");
+  return `
+    <section class="install-browser">
+      <header class="install-browser-head">
+        <h2>${name}</h2>
+        ${badge ? `<span class="install-badge">${badge}</span>` : ""}
+      </header>
+      <ol class="install-steps">${stepsHtml}</ol>
+      ${footnote ? `<p class="install-footnote">${footnote}</p>` : ""}
+    </section>
+  `;
+}
+
+function renderInstallIphone() {
+  const safari = installBrowserBlock(
+    "Safari",
+    "recommended",
+    [
+      "Tap the <strong>Share</strong> button (the square with an up-arrow) at the bottom of the screen.",
+      "Scroll down and tap <strong>Add to Home Screen</strong>.",
+      "Edit the name if you'd like, then tap <strong>Add</strong> in the upper right.",
+      "Done — the cookbook icon now sits on your home screen like any other app."
+    ],
+    "Safari produces the cleanest install on iPhone — if you have a choice, use it."
+  );
+  const chrome = installBrowserBlock(
+    "Chrome",
+    null,
+    [
+      "Tap the <strong>Share</strong> icon (the square with an up-arrow) in the address bar.",
+      "Scroll down in the iOS share sheet and tap <strong>Add to Home Screen</strong>.",
+      "Edit the name if you'd like, then tap <strong>Add</strong>."
+    ],
+    null
+  );
+  app.innerHTML = installPageShell("🍎 Save on iPhone", safari + chrome);
+}
+
+function renderInstallAndroid() {
+  const chrome = installBrowserBlock(
+    "Chrome",
+    "most common",
+    [
+      "Tap the <strong>three-dot menu (⋮)</strong> in the upper-right corner.",
+      "Tap <strong>Add to Home screen</strong> (or <strong>Install app</strong> if you see it — same thing).",
+      "Confirm the name and tap <strong>Add</strong> or <strong>Install</strong>.",
+      "The cookbook icon appears on your home screen."
+    ],
+    null
+  );
+  const samsung = installBrowserBlock(
+    "Samsung Internet",
+    null,
+    [
+      "Tap the <strong>menu (≡)</strong> at the bottom right of the screen.",
+      "Tap <strong>Add page to</strong>, then <strong>Home screen</strong>.",
+      "Confirm and tap <strong>Add</strong>."
+    ],
+    null
+  );
+  const firefox = installBrowserBlock(
+    "Firefox",
+    null,
+    [
+      "Tap the <strong>three-dot menu (⋮)</strong> in the address bar.",
+      "Tap <strong>Install</strong> (or <strong>Add to Home screen</strong>).",
+      "Confirm and tap <strong>Add</strong>."
+    ],
+    null
+  );
+  app.innerHTML = installPageShell("🤖 Save on Android", chrome + samsung + firefox);
 }
 
 function renderNotFound(msg) {

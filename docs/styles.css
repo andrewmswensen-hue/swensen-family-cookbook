@@ -232,6 +232,102 @@ main {
   .download-cta { grid-column: 1 / -1; text-align: right; }
 }
 
+/* ── 'Save to home screen' install flow ──────────────────────────────── */
+.install-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: 640px;
+  margin-top: 1.5rem;
+}
+.install-pick-card {
+  background: white;
+  border: 1.5px solid var(--cream-dk);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: all 0.15s ease;
+}
+.install-pick-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--text);
+}
+.install-pick-icon { font-size: 2.6rem; line-height: 1; margin-bottom: 0.5rem; }
+.install-pick-name {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+.install-pick-meta {
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.install-browsers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 720px;
+  margin-top: 0.5rem;
+}
+.install-browser {
+  background: white;
+  border-radius: var(--radius);
+  border-left: 5px solid var(--accent);
+  padding: 1.2rem 1.4rem;
+  box-shadow: var(--shadow);
+}
+.install-browser-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.install-browser h2 {
+  font-family: 'Lora', serif;
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+.install-badge {
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.install-steps {
+  margin: 0;
+  padding-left: 1.3rem;
+  line-height: 1.7;
+}
+.install-steps li {
+  padding-left: 0.3rem;
+  margin: 0.35rem 0;
+}
+.install-steps li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+.install-footnote {
+  margin: 0.8rem 0 0;
+  color: var(--text-light);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
 /* ── Submit-a-Recipe embedded Google Form ─────────────────────────────── */
 .submit-form-frame {
   display: block;
