@@ -81,23 +81,23 @@ Sear hard on a screaming-hot pan with a little oil and butter, 30 to 60 seconds 
 America's Test Kitchen's [Sous Vide for Everybody]({LINK_ATK_BOOK}) is a great starting point — clear technique, tested recipes, and time/temperature tables for everything from eggs to short ribs."""
 
 
-MEAT_TEMP_BODY = """Per America's Test Kitchen's tested sous vide times and temperatures. Add about 1 hour to any of these if the meat goes into the bath frozen.
+MEAT_TEMP_BODY = """Per America's Test Kitchen's tested sous vide times and temperatures.  Most cuts need about 1 extra hour if they go into the bath frozen — see the chicken note below for nuance based on cut thickness.
 
 ### Chicken
 
-150 °F (66 °C) for 90 minutes. Yields chicken breast that is fully cooked, safe, and remarkably juicy — the meat stays moist instead of drying out the way it does past 165 °F in a conventional oven. (Add one hour if cooking from frozen.)
+150 °F (66 °C) for 90 minutes.  Yields chicken breast that is fully cooked, safe, and remarkably juicy — the meat stays moist instead of drying out the way it does past 165 °F in a conventional oven.  (Add 30 to 40 minutes if cooking thinner cuts or wings from frozen, or 60 minutes for thicker cuts or thick breasts.)
 
 ### Pork chops
 
-140 °F (60 °C) for 2 to 3 hours. Tender and rosy-pink throughout, never overdone. Sear hard at the end for the crust. (Add one hour if cooking from frozen.)
+140 °F (60 °C) for 2 to 3 hours.  Tender and rosy-pink throughout, never overdone.  Sear hard at the end for the crust.  (Add one hour if cooking from frozen.)
 
 ### Steak, medium rare
 
-126 to 134 °F (52 to 57 °C) for 90 minutes up to 3 hours. Choose the lower end of the range for a deeper red center, the higher end for warm-pink edge to edge. Always sear hard at the end — a torch or smoking-hot cast iron is ideal. (Add one hour if cooking from frozen.)
+126 to 134 °F (52 to 57 °C) for 90 minutes up to 3 hours.  Choose the lower end of the range for a deeper red center, the higher end for warm-pink edge to edge.  Always sear hard at the end — a torch or smoking-hot cast iron is ideal.  (Add one hour if cooking from frozen.)
 
 ### Cooking from frozen
 
-Add about 1 hour to all times above. The food safely thaws and cooks through inside the temperature window — no need to thaw first.
+For pork and steak, add about 1 hour to the times above.  For chicken, add 30 to 40 minutes for thinner cuts or wings, or 60 minutes for thicker cuts or thick breasts.  The food safely thaws and cooks through inside the temperature window — no need to thaw first.
 
 ### Always sear at the end
 

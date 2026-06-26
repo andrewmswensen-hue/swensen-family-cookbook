@@ -40,7 +40,7 @@ Andrew's shortcut is to grab a tray of pre-marinated raw chicken from Harmon's. 
 
 Place the chicken in a vacuum-seal bag or zip-top freezer bag, sealing per the workflow in the [How to Sous Vide guide](#/recipe/sous-vide-how-to-sous-vide/basic-workflow).
 
-Sous vide at 150 °F for 90 minutes. Add one hour if cooking from frozen.
+Sous vide at 150 °F for 90 minutes.  Add 30 to 40 minutes if cooking thinner cuts or wings from frozen, or 60 minutes for thicker cuts or thick breasts.
 
 To finish, pat dry and sear in a screaming-hot pan, cast-iron, or on the grill — about 60 seconds per side. Go a little longer if you want more pronounced grill marks."""
 
