@@ -141,6 +141,48 @@ main {
 .home-promo:hover .badge { background: white; color: var(--accent); }
 .home-promo .arrow { font-weight: 600; }
 
+/* Summer favorites row — a label plus two mini-pill recipe shortcuts,
+   sits directly under the primary Sous Vide promo pill. */
+.home-promo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 10px;
+  margin: 0.7rem auto 0;
+  max-width: 540px;
+}
+.home-promo-label {
+  color: var(--sage);
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.home-promo-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.35rem 0.85rem;
+  background: white;
+  border: 1.5px solid var(--cream-dk);
+  border-radius: 999px;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  box-shadow: var(--shadow);
+}
+.home-promo-mini:hover {
+  border-color: var(--accent);
+  background: var(--cream);
+  color: var(--primary-dk);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
 /* Inline " · Submit a recipe" link in section-page subtitles */
 .inline-submit {
   color: var(--primary);
