@@ -110,13 +110,29 @@ main {
 }
 .search-bar input::placeholder { color: var(--text-light); }
 
-/* ── Home: "new!" promo link under the search bar ─────────────────────── */
-.home-promo {
+/* ── Home: seasonal favorites row under the search bar ───────────────── */
+.home-favorites {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 12px;
+  margin: 1.2rem auto 0;
+  max-width: 620px;
+}
+.home-favorites-label {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--sage);
+  font-size: 1.05rem;
+  margin-right: 4px;
+}
+.home-favorite-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin: 1.2rem auto 0;
-  padding: 0.55rem 1.2rem;
+  gap: 6px;
+  padding: 0.55rem 1.1rem;
   background: white;
   border: 1.5px solid var(--accent);
   border-radius: 999px;
@@ -127,59 +143,10 @@ main {
   box-shadow: var(--shadow);
   transition: all 0.15s ease;
 }
-.home-promo:hover { background: var(--accent); color: white; text-decoration: none; box-shadow: var(--shadow-lg); }
-.home-promo .badge {
+.home-favorite-btn:hover {
   background: var(--accent);
   color: white;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 3px 9px;
-  border-radius: 999px;
-  text-transform: uppercase;
-}
-.home-promo:hover .badge { background: white; color: var(--accent); }
-.home-promo .arrow { font-weight: 600; }
-
-/* Summer favorites row — a label plus two mini-pill recipe shortcuts,
-   sits directly under the primary Sous Vide promo pill. */
-.home-promo-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px 10px;
-  margin: 0.7rem auto 0;
-  max-width: 540px;
-}
-.home-promo-label {
-  color: var(--sage);
-  font-family: 'Lora', Georgia, serif;
-  font-style: italic;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-.home-promo-mini {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 0.35rem 0.85rem;
-  background: white;
-  border: 1.5px solid var(--cream-dk);
-  border-radius: 999px;
-  color: var(--primary);
-  font-size: 0.9rem;
-  font-weight: 500;
   text-decoration: none;
-  transition: all 0.15s ease;
-  box-shadow: var(--shadow);
-}
-.home-promo-mini:hover {
-  border-color: var(--accent);
-  background: var(--cream);
-  color: var(--primary-dk);
-  text-decoration: none;
-  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 

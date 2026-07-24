@@ -440,15 +440,10 @@ function renderHome() {
       <h1>What are we cooking?</h1>
       <p>${RECIPES.filter(isCounted).length} family recipes, one search away.</p>
       ${SEARCH_BAR_HTML()}
-      <a class="home-promo" href="#/section/${encodeURIComponent("Sous Vide")}">
-        <span class="badge">New</span>
-        <span>How to Sous Vide + recipes</span>
-        <span class="arrow">→</span>
-      </a>
-      <div class="home-promo-row">
-        <span class="home-promo-label">☀️ Summer favorites:</span>
-        <a class="home-promo-mini" href="#/recipe/desserts-homemade-peach-ice-cream">🍑 Peach Ice Cream</a>
-        <a class="home-promo-mini" href="#/recipe/desserts-moms-heavenly-hot-fudge-sauce">🍫 Hot Fudge</a>
+      <div class="home-favorites">
+        <span class="home-favorites-label">☀️ Summer favorites</span>
+        <a class="home-favorite-btn" href="#/recipe/desserts-homemade-peach-ice-cream">🍑 Peach Ice Cream</a>
+        <a class="home-favorite-btn" href="#/recipe/desserts-moms-heavenly-hot-fudge-sauce">🍫 Hot Fudge</a>
       </div>
     </section>
     <div id="inline-results" style="display:none"></div>
