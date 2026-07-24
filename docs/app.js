@@ -443,7 +443,7 @@ function renderHome() {
       <div class="home-favorites">
         <span class="home-favorites-label">☀️ Summer favorites</span>
         <a class="home-favorite-btn" href="#/recipe/desserts-homemade-peach-ice-cream">🍑 Peach Ice Cream</a>
-        <a class="home-favorite-btn" href="#/recipe/desserts-moms-heavenly-hot-fudge-sauce">🍫 Hot Fudge</a>
+        <a class="home-favorite-btn" href="#/recipe/desserts-moms-heavenly-hot-fudge-sauce">🍨 Hot Fudge Topping</a>
       </div>
     </section>
     <div id="inline-results" style="display:none"></div>
