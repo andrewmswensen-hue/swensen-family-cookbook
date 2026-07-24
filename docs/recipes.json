@@ -801,6 +801,20 @@
     ]
   },
   {
+    "id": "breads-mom-ks-white-bread",
+    "title": "Mom K's White Bread",
+    "alt_title": null,
+    "section": "Breads",
+    "subsection": "Loaf & Quick Breads",
+    "credit": "Tamara Kimball",
+    "body": "2¾ cups warm water\n1 Tbl yeast\n6 Tbl oil\n6 Tbl sugar\n1 Tbl salt\n7 cups flour\n\nCombine water with yeast and 1 tsp sugar.  Allow yeast to bloom.  Add oil, sugar, salt, and 1 cup of flour.  Mix well.  Continue to add flour, 1 cup at a time, blending well after each addition.  Knead for 5 to 7 minutes.  Cover and allow to rise TWICE for 45 to 60 minutes each.  Form into 2 loaves of bread or 24 rolls and place in or on greased pans.  Allow dough to rise one more time.  Preheat oven to 350 degrees.  Bake the loaves 35 minutes or rolls 18 to 20 minutes.",
+    "tags": [
+      "bread",
+      "yeast",
+      "baked"
+    ]
+  },
+  {
     "id": "breads-todd-stephs-pizza-dough",
     "title": "Todd & Steph's Pizza Dough",
     "alt_title": null,
@@ -5085,6 +5099,21 @@
     ]
   },
   {
+    "id": "breakfast-granola",
+    "title": "Granola",
+    "alt_title": null,
+    "section": "Breakfast",
+    "subsection": null,
+    "credit": "Mom K",
+    "body": "6 cups rolled oats\n½ cup wheat germ\n1 cup raw sunflower seeds\n1 cup sliced almonds\n1 cup unsweetened coconut\n1 tsp cinnamon\n¼ cup butter\n¼ cup coconut oil (or butter)\n1 tsp vanilla\n½ cup honey\n\nCombine oats, wheat germ, sunflower seeds, almonds, coconut, and cinnamon in a large bowl and stir to mix completely.\n\nHeat the butter, coconut oil, vanilla, and honey together in a saucepan.  Pour over the dry ingredients and mix well.\n\nPour onto a cookie sheet and bake at 310 degrees for 25 minutes, until it is all golden brown, flipping or stirring halfway through.  You want it to be crisp but not overly brown.",
+    "tags": [
+      "breakfast",
+      "granola",
+      "baked",
+      "oats"
+    ]
+  },
+  {
     "id": "desserts-mrs-fields-chocolate-chip-cookies",
     "title": "Mrs. Field's Chocolate Chip Cookies",
     "alt_title": null,
@@ -5352,6 +5381,22 @@
     ]
   },
   {
+    "id": "desserts-soft-mandm-cookies",
+    "title": "Soft M&M Cookies",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Cookies",
+    "credit": "Andrew",
+    "body": "1 cup butter\n1 cup brown sugar\n1/3 cup white sugar\n1 egg\n1½ tsp vanilla\n2¼ cups flour\n½ tsp baking soda\n½ tsp baking powder\n1 tsp salt\nM&Ms\n\nCream together the butter and sugars until fluffy.  Add vanilla and egg and beat until fluffy.  Combine the dry ingredients, then add slowly to the batter.  Stir in the M&Ms.\n\nBake at 350 degrees for about 10 minutes.  Do not over bake.  Makes about 2 dozen.",
+    "tags": [
+      "cookies",
+      "dessert",
+      "chocolate",
+      "baked",
+      "easy"
+    ]
+  },
+  {
     "id": "desserts-cookie-dough-brownies",
     "title": "Cookie Dough Brownies",
     "alt_title": null,
@@ -5516,6 +5561,38 @@
       "easy",
       "pie",
       "pumpkin"
+    ]
+  },
+  {
+    "id": "desserts-janaes-best-brownies",
+    "title": "JaNae's Best Brownies",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Brownies & Bars",
+    "credit": "JaNae Swensen",
+    "body": "1 cup butter\n2 cups sugar\n¼ tsp salt\n1/3 cup cocoa\n4 eggs\n1½ cups flour\n2 tsp vanilla\n\nCream the butter, sugar, salt, and cocoa.  Add the eggs one at a time, beating well after each addition.  Add the flour and vanilla.  DO NOT OVERMIX.\n\nBake in a 9x13 greased pan at 350 degrees for 30 to 40 minutes.  Check at 30 minutes and cook until just done.\n\nCan also double the recipe and bake in a large cookie pan; check at 20 minutes for doneness.",
+    "tags": [
+      "brownies",
+      "dessert",
+      "chocolate",
+      "baked"
+    ]
+  },
+  {
+    "id": "desserts-chocolate-chip-cream-cheese-bars",
+    "title": "Chocolate Chip Cream Cheese Bars",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Brownies & Bars",
+    "credit": "Andrew",
+    "body": "2 regular packages chocolate chip cookie dough\n2 8-oz packages cream cheese, softened\n1 cup sugar\n2 eggs\n\nCombine the cream cheese, sugar, and eggs and beat well.\n\nSpread one package of cookie dough in a greased 9\" x 13\" cake pan.  Spread on the cream cheese mixture.  Drop flattened pieces of the other package of cookie dough on top of the cream cheese mixture (it will be mostly covered).\n\nBake at 350 degrees for about 30 minutes.  The cookie part should be lightly browned and the cream cheese filling should be just the littlest bit jiggly.  If you cook it until the filling is solid, it will be overdone.",
+    "tags": [
+      "bars",
+      "dessert",
+      "chocolate",
+      "cream cheese",
+      "baked",
+      "easy"
     ]
   },
   {
@@ -5808,6 +5885,21 @@
       "cake",
       "cookie",
       "dessert"
+    ]
+  },
+  {
+    "id": "desserts-yellow-pound-cake",
+    "title": "Yellow Pound Cake",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Cakes",
+    "credit": "Western Family",
+    "body": "1 box Western Family yellow cake mix (use this brand!)\n¾ cup vegetable oil\n½ cup white sugar\n4 large eggs, beaten well\n1 cup sour cream (regular, light, or fat free)\n1 tsp almond extract\n\nPreheat oven to 350 degrees.  Grease a 12-cup Bundt pan.\n\nIn a large bowl, combine all ingredients and mix until blended.  Pour into the pan and bake for 45 to 50 minutes.  Cool before serving.\n\nServe with strawberries and whipped cream.",
+    "tags": [
+      "cake",
+      "dessert",
+      "baked",
+      "easy"
     ]
   },
   {
@@ -6268,10 +6360,13 @@
     "section": "Desserts",
     "subsection": "Other Desserts",
     "credit": "Steph",
-    "body": "36 large marshmallows\n\n½ cup margarine\n\n1½ tsp vanilla\n\n1½ tsp green food coloring\n\n5 cups corn flakes\n\nMelt marshmallows and margarine, Add vanilla and food coloring. Mix in\ncorn flakes and shape into wreaths. Place on waxed paper. Decorate with\nred hot candies for berries.",
+    "body": "36 large marshmallows\n½ cup margarine\n1½ tsp vanilla\n1½ tsp green food coloring\n5 cups corn flakes\nRed hot candies (for decoration)\n\nMelt the marshmallows and margarine.  Add the vanilla and food coloring.  Mix in the corn flakes and shape into wreaths.  Place on waxed paper.  Decorate with red hot candies for berries.",
     "tags": [
-      "dessert",
-      "snack"
+      "holiday",
+      "christmas",
+      "no-bake",
+      "kid-friendly",
+      "dessert"
     ]
   },
   {
@@ -6405,6 +6500,84 @@
       "cheese",
       "dessert",
       "snack"
+    ]
+  },
+  {
+    "id": "desserts-homemade-peach-ice-cream",
+    "title": "Homemade Peach Ice Cream",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Other Desserts",
+    "credit": "Todd",
+    "body": "4 eggs\n2½ cups sugar\n1 to 1½ Tbl vanilla\n½ tsp salt\n1 to 2 blenders full of fruit\n1 pint whipping cream\n1 quart half-n-half\n\nBlend eggs, sugar, vanilla, and salt.  Pour into the ice cream tub.  Add fruit and stir.  Add cream and enough half-n-half to fill the freezer tub.\n\nTurn on your ice cream maker and go for it!\n\nBig Andrew uses 2 Tbl of English custard mix to replace the eggs.",
+    "tags": [
+      "ice cream",
+      "dessert",
+      "peach",
+      "fruit"
+    ]
+  },
+  {
+    "id": "desserts-chewy-caramel-corn",
+    "title": "Chewy Caramel Corn",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Other Desserts",
+    "credit": "Jenifer Pullman",
+    "body": "¾ cup brown sugar\n¾ cup sugar\n½ cup dark Karo syrup\n½ cup water\n1/8 tsp cream of tartar\n½ cup butter\n¼ tsp baking soda\n1 batch air-popped popcorn\n\nCook the brown sugar, white sugar, Karo syrup, water, cream of tartar, and butter over medium heat until it reaches the soft ball stage.  Take off heat and add the baking soda.\n\nCovers one batch of air-popped popcorn.",
+    "tags": [
+      "popcorn",
+      "caramel",
+      "dessert",
+      "snack",
+      "candy"
+    ]
+  },
+  {
+    "id": "desserts-microwave-caramel-corn",
+    "title": "Microwave Caramel Corn",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Other Desserts",
+    "credit": "Mom S. & Kris",
+    "body": "1 cup unpopped popcorn kernels, popped\n1½ cups brown sugar\n¾ cup butter (1½ cubes)\n1/3 cup white corn syrup\n½ tsp baking soda\n\nMelt the butter; stir in the sugar and corn syrup.  Put in the microwave for 3½ to 4 minutes or until boiling.  Cook on high for 2 minutes.  Add the baking soda and stir.\n\nPour over popped popcorn in a large paper bag.  Cook in the microwave on high 1½ minutes, shake, and cook 1½ minutes more.  Shake the bag well, then pour onto a cookie sheet to dry.",
+    "tags": [
+      "popcorn",
+      "caramel",
+      "dessert",
+      "snack",
+      "microwave"
+    ]
+  },
+  {
+    "id": "desserts-malted-pretzel-crunch",
+    "title": "Malted Pretzel Crunch",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Other Desserts",
+    "credit": "Parselysagesweet.com",
+    "body": "Recipe by Christina Tosi, via Epicurious.\n\nPrep 10 min.  Cook 20 min.  Yields about 4 cups.\n\n4 cups salted mini pretzels (about ½ of a 16-ounce bag)\n½ cup tightly packed brown sugar\n¼ cup granulated sugar\n6 Tbl milk powder\n¼ cup malted milk powder\n½ tsp salt (optional — only if pretzels aren't salty enough)\n14 Tbl butter (1 stick, plus 6 Tbl), melted\n\nPreheat oven to 275 °F.\n\nPour the pretzels in a large bowl and crush them with your hands to one-quarter of their original size.  (Tip: throw them in a Ziplock bag and hammer them with a mallet — easier.)  Add the milk powder, malted milk powder, granulated sugar, brown sugar, and salt (if using) and toss to mix.  Pour the butter over the pretzel mix and toss to coat — as you toss, the butter acts as glue, binding the dry ingredients to the pretzels and creating small clusters.\n\nSpread the clusters on a parchment- or silpat-lined sheet pan and bake for about 20 minutes, until it looks toasted, smells buttery, and crunches gently when you bite into it.\n\nCool completely before storing, eating, or using in a recipe.  Stored in an airtight container at room temperature, the crunch keeps 1 week.  In the fridge or freezer, 1 month.\n\n### Notes\n\nMalted milk powder is in the aisle with powdered milk, or the baking aisle.\n\nOnly add salt if your pretzels aren't salty enough — taste the mixture before baking to decide.\n\nThis would be fantastic in cookies with chocolate chunks, or drizzle melted chocolate over the top of the sheet of pretzel crunch, let it set, then break into pieces like toffee.",
+    "tags": [
+      "snack",
+      "dessert",
+      "pretzels",
+      "baked"
+    ]
+  },
+  {
+    "id": "desserts-moms-heavenly-hot-fudge-sauce",
+    "title": "Mom's Heavenly Hot Fudge Sauce",
+    "alt_title": null,
+    "section": "Desserts",
+    "subsection": "Other Desserts",
+    "credit": "Mom S.",
+    "body": "2 (1-oz) squares of unsweetened baking chocolate\n½ cup butter\n3 cups sugar\n1 (12-oz) can evaporated milk\n½ tsp salt\n\nMelt the butter and chocolate over low heat.  Gradually stir in the sugar.  Boil until the sugar dissolves.  Stir in the salt and milk.\n\nServe over ice cream, or store in the fridge.",
+    "tags": [
+      "chocolate",
+      "sauce",
+      "dessert",
+      "ice cream",
+      "topping"
     ]
   },
   {
