@@ -6,6 +6,7 @@
 //   #/section/:section/:subsection  flat recipe list for that subsection
 //   #/recipe/:id                    individual recipe
 //   #/search/:query                 permalink to a search result
+//   #/cook/:id                      full-screen cook mode (cook-mode.js) over the recipe
 
 const app = document.getElementById("app");
 const countEl = document.getElementById("recipe-count");
@@ -133,6 +134,9 @@ fetch("recipes.json", { cache: "no-cache" })
   .then(data => {
     RECIPES = data;
     BY_ID = new Map(RECIPES.map(r => [r.id, r]));
+    // Cook mode (cook-mode.js) looks up the original of a cross-listed recipe
+    // so both copies share one set of cooking progress and timers.
+    if (window.CookMode) window.CookMode.setLookup(id => BY_ID.get(id));
     countEl.textContent = `${RECIPES.filter(isCounted).length} recipes`;
 
     // Unhide the footer Submit link.  Its href is set statically in
@@ -156,6 +160,15 @@ fetch("recipes.json", { cache: "no-cache" })
 function route() {
   const hash = location.hash || "#/";
   const parts = hash.replace(/^#\//, "").split("/").map(decodeURIComponent);
+
+  // #/cook/:id opens full-screen cook mode on top of the recipe page.  Any
+  // other route closes it.
+  if (parts[0] === "cook" && parts[1] && window.CookMode && BY_ID.has(parts[1])) {
+    renderRecipe(parts[1]);
+    window.CookMode.open(BY_ID.get(parts[1]), { backHash: lastHash });
+    return;
+  }
+  if (window.CookMode && window.CookMode.isOpen()) window.CookMode.close();
 
   if (!parts[0]) return renderHome();
   if (parts[0] === "section") {
@@ -569,10 +582,21 @@ function renderRecipe(id) {
         ${recipe.alt_title ? `<span class="alt-title">(${escapeHtml(recipe.alt_title)})</span>` : ""}
         ${recipe.credit ? `<span class="credit">— ${escapeHtml(recipe.credit)}</span>` : ""}
       </header>
+      ${cookButton(recipe)}
       <div class="recipe-body">${renderBody(recipe.body, recipe.id)}</div>
       ${recipe.tags && recipe.tags.length ? `<div class="recipe-tags">${recipe.tags.map(t => `<a class="tag" href="#/search/${encodeURIComponent(t)}">${escapeHtml(t)}</a>`).join("")}</div>` : ""}
     </article>
   `;
+}
+
+// "Start cooking" button (or "Resume cooking" if this device has unfinished
+// progress).  Hidden on guide pages and anything without instructions.
+function cookButton(recipe) {
+  if (!window.CookMode || !window.CookMode.canCook(recipe)) return "";
+  const p = window.CookMode.progress(recipe);
+  const label = p ? "Resume cooking" : "Start cooking";
+  const note = p ? `<span class="cook-start-note">You're on step ${p.step} of ${p.total}</span>` : "";
+  return `<div class="cook-start-row"><a href="#/cook/${encodeURIComponent(recipe.id)}" class="btn btn-primary cook-start"><span aria-hidden="true">🍳</span> ${label}</a>${note}</div>`;
 }
 
 function renderSearch(query) {

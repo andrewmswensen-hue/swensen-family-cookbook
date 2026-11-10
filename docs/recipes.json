@@ -4827,7 +4827,120 @@
       "vegetables",
       "potatoes",
       "side"
-    ]
+    ],
+    "cook": {
+      "ingredients": [
+        {
+          "id": "potatoes",
+          "qty": 2,
+          "unit": "pounds",
+          "item": "small red potatoes, scrubbed"
+        },
+        {
+          "id": "broth",
+          "qty": 0.5,
+          "unit": "cup",
+          "item": "chicken broth"
+        },
+        {
+          "id": "salt-pepper",
+          "item": "Salt and pepper"
+        },
+        {
+          "id": "oil",
+          "qty": 6,
+          "unit": "Tbl",
+          "item": "vegetable oil"
+        },
+        {
+          "id": "rosemary",
+          "qty": 1,
+          "unit": "Tbl",
+          "item": "chopped fresh rosemary"
+        },
+        {
+          "id": "garlic",
+          "qty": 3,
+          "item": "garlic cloves, minced"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Heat the water bath",
+          "text": "Heat the water bath to 194 °F.",
+          "ingredients": [],
+          "timer": null
+        },
+        {
+          "title": "Sous vide the potatoes",
+          "text": "Combine the potatoes, broth, and ¾ tsp salt in a 1-gallon zip-top freezer bag. Seal and double-bag. Lower into the water bath, keeping the bag fully submerged (use a rack or magnets if it tries to float). Cook for 60 to 75 minutes.",
+          "ingredients": [
+            "potatoes",
+            "broth",
+            "salt-pepper"
+          ],
+          "timer": {
+            "min": 3600,
+            "max": 4500,
+            "label": "Sous vide potatoes"
+          }
+        },
+        {
+          "title": "Make the garlic-rosemary oil",
+          "text": "Adjust an oven rack to upper-middle position and heat the oven to 450 °F. In a microwave-safe bowl, microwave the oil, rosemary, and garlic, stirring occasionally, until the garlic begins to brown, 2 to 4 minutes. Strain into a large bowl, reserving the garlic and rosemary.",
+          "ingredients": [
+            "oil",
+            "rosemary",
+            "garlic"
+          ],
+          "timer": {
+            "min": 120,
+            "max": 240,
+            "label": "Garlic oil"
+          },
+          "cue": "The garlic begins to brown."
+        },
+        {
+          "title": "Dry and smash the potatoes",
+          "text": "Drain the potatoes and let them sit until the surfaces are dry, about 10 minutes. Add the potatoes and ½ tsp salt to the bowl with the herb oil and toss. Arrange the potatoes on a rimmed baking sheet, place a second baking sheet on top, and press firmly to flatten each potato to ⅓ to ½ inch thick. Remove the top sheet.",
+          "ingredients": [
+            "potatoes",
+            "salt-pepper"
+          ],
+          "timer": {
+            "min": 600,
+            "label": "Potatoes drying"
+          },
+          "cue": "The surfaces are dry."
+        },
+        {
+          "title": "Roast until crisp",
+          "text": "Roast for 40 to 50 minutes, flipping halfway through, until the potatoes are crisp and well browned.",
+          "ingredients": [],
+          "timer": [
+            {
+              "min": 1200,
+              "max": 1500,
+              "label": "Flip the potatoes"
+            },
+            {
+              "min": 2400,
+              "max": 3000,
+              "label": "Roast potatoes"
+            }
+          ],
+          "cue": "Crisp and well browned."
+        },
+        {
+          "title": "Toss and serve",
+          "text": "Transfer to a serving bowl, add the reserved garlic and rosemary, and gently toss to combine. Season with salt and pepper to taste. Serve.",
+          "ingredients": [
+            "salt-pepper"
+          ],
+          "timer": null
+        }
+      ]
+    }
   },
   {
     "id": "sous-vide-honey-glazed-carrots",

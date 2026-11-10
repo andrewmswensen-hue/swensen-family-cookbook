@@ -17,11 +17,15 @@ Family Cookbook/
 ├── cookbook_raw.md                   # Pandoc dump of the original (intermediate)
 ├── parse_cookbook.py                 # Parses raw markdown → docs/recipes.json
 ├── build_docx.js                     # Builds the formatted printable DOCX
+├── add_cook_data.py                  # Adds hand-checked cook-mode data (see "Cook mode")
 ├── recipes_inventory.md              # Human-readable index of every recipe
 └── docs/                             # GitHub Pages serves from this folder
     ├── index.html                    # web app entry
     ├── styles.css
     ├── app.js
+    ├── cook-mode.js                  # full-screen "Start cooking" view + timers
+    ├── cook-mode.css                 # its styles (scoped under .cm / .cook-*)
+    ├── sw.js                         # tiny service worker: timer notifications only, NO caching
     ├── favicon.svg                   # browser tab icon
     ├── apple-touch-icon.png          # iOS home-screen icon
     ├── og.png                        # social-preview card
@@ -46,6 +50,34 @@ Each recipe is an object with these fields:
 - `credit` — who contributed it (e.g. "Mom K.", "Steph"), or `null`
 - `body` — markdown-formatted ingredients + instructions; use `### Header` for sub-parts
 - `tags` — auto-generated search tags
+- `cook` — OPTIONAL hand-checked data for cook mode (see below). Most recipes don't have it.
+
+## Cook mode ("Start cooking")
+Every recipe page (except the two Sous Vide guide pages) shows a **Start cooking**
+button that opens `#/cook/<id>`: a full-screen, one-step-at-a-time view with
+timers, a checkable ingredient sheet, batch scaling, and saved progress.
+All of it lives in `docs/cook-mode.js` + `docs/cook-mode.css`; `app.js` only
+adds the route and the button (`cookButton()`).
+
+- **Automatic by default.** Steps, titles, timers and per-step ingredients are
+  worked out from `body` text. Long one-paragraph methods are split into steps
+  of 1 to 3 sentences, ending a step at each cooking time.
+- **Explicit data wins.** A recipe's optional `cook` block (written by
+  `add_cook_data.py`, schema documented at the top of that script) overrides the
+  automatic version field by field. `"timer": null` means "no timer". Step text,
+  cues and batch notes must come from the recipe or its source, never invented.
+  So far only `sous-vide-crispy-smashed-potatoes` has one (the test recipe).
+- **Cross-listings** (`_source_id`) use the original's data and share its progress.
+- **Timers** store the clock time they end, so they stay right through a locked
+  phone or a refresh. A locked phone can't beep until it's unlocked (browser
+  limit); notifications on iPhone only work from the home-screen app.
+- **Saved on the device** (localStorage key `swensen-cook:v1:<id>`): step,
+  checked ingredients, batch size, timers. "Start over" clears it.
+- **Batch size:** ½× to 3× buttons; a Serves stepper appears instead when the
+  recipe has `cook.servings` or plainly says "Serves N". Amounts with a kitchen
+  measure inside step text scale too (highlighted).
+- **Quick check of the automatic output** for any recipe: load `cook-mode.js` in
+  Node with small browser stubs and call `CookMode._buildModel(recipe)`.
 
 ## Editing recipes — typical workflow
 
